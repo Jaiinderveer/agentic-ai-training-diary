@@ -9,7 +9,7 @@ for(let day = 1; day <= 30; day++) {
     card.innerHTML = `
         <h3>Day ${day}</h3>
         <p>Training entry</p>
-        <button class="day-btn">
+        <button class="day-btn" disabled>
             Not Available Yet
         </button>
     `;

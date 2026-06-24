@@ -165,3 +165,8 @@ section{
 .day-btn:hover{
     opacity:0.9;
 }
+.day-btn:disabled{
+    color: white;
+    cursor:not-allowed;
+    opacity:0.6;
+}
