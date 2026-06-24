@@ -148,3 +148,14 @@ section{
     border-radius:15px;
     text-align:center;
 }
+.day-btn{
+    margin-top:10px;
+    padding:10px 16px;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+}
+
+.day-btn:hover{
+    opacity:0.9;
+}
