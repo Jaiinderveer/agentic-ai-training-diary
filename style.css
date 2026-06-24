@@ -72,15 +72,21 @@ nav{
 
 .diary-container{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-    gap:20px;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
     margin-top:20px;
 }
 
 .day-card{
     background:#1e293b;
-    padding:20px;
-    border-radius:12px;
+    padding:25px;
+    border-radius:15px;
+    min-height:180px;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+
     transition:0.3s;
 }
 
