@@ -14,7 +14,7 @@ for(let day = 1; day <= TOTAL_DAYS; day++){
             <h3>Day 1</h3>
             <p>MVC Architecture & Introduction</p>
 
-            <a href="diary/day1.html">
+            <a href="Diary/Day1.html">
                 <button class="day-btn">
                     View Entry
                 </button>
