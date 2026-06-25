@@ -1,5 +1,6 @@
 const diaryContainer = document.getElementById("diaryContainer");
 const TOTAL_DAYS = 30;
+const btn = document.querySelector('#latestEntryBtn');
 const completedEntries = [1];
 const COMPLETED_DAYS = completedEntries.length;
 const progressPercentage =
@@ -14,6 +15,7 @@ document.getElementById("progressBar").style.width =
     `${progressPercentage}%`;
 document.getElementById("progressLabel").textContent =
     `${progressPercentage}% Complete`;
+btn.setAttribute('href',`Diary/Day${completedEntries.at(-1)}.html`)
 for (let day = 1; day <= TOTAL_DAYS; day++) {
 
     const card = document.createElement("div");
