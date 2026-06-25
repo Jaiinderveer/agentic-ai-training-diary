@@ -1,18 +1,37 @@
 const diaryContainer = document.getElementById("diaryContainer");
 
-for(let day = 1; day <= 30; day++) {
+const TOTAL_DAYS = 30;
+
+for(let day = 1; day <= TOTAL_DAYS; day++){
 
     const card = document.createElement("div");
 
     card.classList.add("day-card");
 
-    card.innerHTML = `
-        <h3>Day ${day}</h3>
-        <p>Training entry</p>
-        <button class="day-btn" disabled>
-            Not Available Yet
-        </button>
-    `;
+    if(day === 1){
+
+        card.innerHTML = `
+            <h3>Day 1</h3>
+            <p>MVC Architecture & Introduction</p>
+
+            <a href="diary/day1.html">
+                <button class="day-btn">
+                    View Entry
+                </button>
+            </a>
+        `;
+    }
+    else{
+
+        card.innerHTML = `
+            <h3>Day ${day}</h3>
+            <p>Entry Pending</p>
+
+            <button class="day-btn" disabled>
+                Coming Soon
+            </button>
+        `;
+    }
 
     diaryContainer.appendChild(card);
 }

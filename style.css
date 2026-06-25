@@ -40,7 +40,7 @@ nav{
 }
 
 .progress-fill{
-    width:0%;
+    width:3.3%;
     height:100%;
     background:#22c55e;
 }
@@ -155,18 +155,59 @@ section{
     text-align:center;
 }
 .day-btn{
-    margin-top:10px;
-    padding:10px 16px;
+    margin-top:15px;
+    padding:10px 18px;
+
     border:none;
     border-radius:8px;
+
+    background:#2563eb;
+    color:white;
+
     cursor:pointer;
 }
 
 .day-btn:hover{
-    opacity:0.9;
+    background:#1d4ed8;
 }
+
 .day-btn:disabled{
-    color: white;
+    background:#475569;
     cursor:not-allowed;
-    opacity:0.6;
+}
+.day-page {
+    max-width: 900px;
+    margin: auto;
+    padding: 50px 20px;
+    line-height: 1.8;
+}
+
+.day-page h1 {
+    margin-bottom: 15px;
+}
+
+.day-page h2 {
+    margin-top: 35px;
+    margin-bottom: 15px;
+}
+
+.day-page h3 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.day-page ul {
+    padding-left: 25px;
+}
+
+.day-page hr {
+    margin: 25px 0;
+    border: 1px solid #334155;
+}
+.activity-image{
+    width:100%;
+    max-width:800px;
+    display:block;
+    margin:20px auto;
+    border-radius:12px;
 }
