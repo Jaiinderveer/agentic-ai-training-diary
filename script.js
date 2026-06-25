@@ -1,27 +1,39 @@
 const diaryContainer = document.getElementById("diaryContainer");
-
 const TOTAL_DAYS = 30;
+const completedEntries = [1];
+const COMPLETED_DAYS = completedEntries.length;
+const progressPercentage =
+    ((COMPLETED_DAYS / TOTAL_DAYS) * 100).toFixed(1);
+document.getElementById("completedDays").textContent =
+    COMPLETED_DAYS;
 
-for(let day = 1; day <= TOTAL_DAYS; day++){
+document.getElementById("progressText").textContent =
+    `${progressPercentage}%`;
+
+document.getElementById("progressBar").style.width =
+    `${progressPercentage}%`;
+document.getElementById("progressLabel").textContent =
+    `${progressPercentage}% Complete`;
+for (let day = 1; day <= TOTAL_DAYS; day++) {
 
     const card = document.createElement("div");
 
     card.classList.add("day-card");
 
-    if(day === 1){
+    if (completedEntries.includes(day)) {
 
         card.innerHTML = `
-            <h3>Day 1</h3>
-            <p>MVC Architecture & Introduction</p>
+    <h3>Day ${day}</h3>
+    <p>Training Entry Available</p>
 
-            <a href="Diary/Day1.html">
-                <button class="day-btn">
-                    View Entry
-                </button>
-            </a>
-        `;
+    <a href="Diary/Day${day}.html">
+        <button class="day-btn">
+            View Entry
+        </button>
+    </a>
+`;
     }
-    else{
+    else {
 
         card.innerHTML = `
             <h3>Day ${day}</h3>
