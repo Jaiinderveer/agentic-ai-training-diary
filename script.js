@@ -15,7 +15,7 @@ document.getElementById("progressBar").style.width =
     `${progressPercentage}%`;
 document.getElementById("progressLabel").textContent =
     `${progressPercentage}% Complete`;
-btn.setAttribute('href',`Diary/Day${completedEntries.at(-1)}.html`)
+btn.setAttribute('href',`diary/day${completedEntries.at(-1)}.html`)
 for (let day = 1; day <= TOTAL_DAYS; day++) {
 
     const card = document.createElement("div");
@@ -28,7 +28,7 @@ for (let day = 1; day <= TOTAL_DAYS; day++) {
     <h3>Day ${day}</h3>
     <p>Training Entry Available</p>
 
-    <a href="Diary/Day${day}.html">
+    <a href="diary/day${day}.html">
         <button class="day-btn">
             View Entry
         </button>
