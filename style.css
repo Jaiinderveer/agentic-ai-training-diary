@@ -211,3 +211,28 @@ section{
     margin:20px auto;
     border-radius:12px;
 }
+.resource-links {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.resource-links a {
+    text-decoration: none;
+    color: white;
+    background: #1e2b45;
+    padding: 14px 20px;
+    border-radius: 12px;
+    border: 1px solid #334155;
+    transition: 0.3s ease;
+}
+
+.resource-links a:hover {
+    background: #2d4ea2;
+    transform: translateY(-2px);
+}
+
+.diary h2:last-of-type {
+    margin-top: 60px;
+}
