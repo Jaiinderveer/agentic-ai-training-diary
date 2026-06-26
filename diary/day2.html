@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 2 - Agentic AI Training Diary</title>
+
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+    <div class="day-page">
+
+        <a href="../index.html" class="btn">← Back to Home</a>
+
+        <h1>Day 2 – Agentic AI with Python Training</h1>
+
+        <p><strong>Date:</strong> 26 June 2026</p>
+        <p><strong>Duration:</strong> 2:00 Hrs</p>
+        <p><strong>Training Company:</strong> Auribises Technologies</p>
+        <p><strong>Trainer:</strong> Ishant Kumar</p>
+
+        <hr>
+
+        <h2>Introduction</h2>
+
+        <p>
+            The second day focused on a deeper understanding of MVC Architecture,
+            Python fundamentals, memory management, and the internal working of
+            variables, references, stack memory, and heap memory.
+        </p>
+
+        <h2>Topics Covered</h2>
+
+        <ul>
+            <li>Python Special Variable (__name__)</li>
+            <li>Dunder Variables</li>
+            <li>Advanced MVC Architecture</li>
+            <li>Processes and Threads</li>
+            <li>Operating System, CPU and RAM</li>
+            <li>Stack and Heap Memory</li>
+            <li>Reference Variables</li>
+            <li>Hash Codes using id()</li>
+            <li>Single Value Containers</li>
+            <li>Multi Value Containers</li>
+            <li>Homogeneous and Heterogeneous Containers</li>
+            <li>Mutable and Immutable Objects</li>
+        </ul>
+
+        <h2>Python Special Variable (__name__)</h2>
+
+        <p>
+            The trainer introduced the special Python variable
+            <code>__name__</code>. It was explained that variables beginning
+            and ending with double underscores are commonly referred to as
+            <strong>dunder variables</strong> (double underscore variables).
+        </p>
+
+        <p>
+            The <code>__name__</code> variable helps Python determine whether a
+            file is being executed directly or imported as a module.
+        </p>
+
+        <h2>Advanced MVC Architecture</h2>
+
+        <p>
+            MVC Architecture was discussed in greater depth. The trainer
+            explained how the Model, View, and Controller components can be
+            mapped to Python applications.
+        </p>
+
+        <ul>
+            <li><strong>Model:</strong> Stores and manages data.</li>
+            <li><strong>View:</strong> Displays information to users.</li>
+            <li><strong>Controller:</strong> Processes logic and coordinates between Model and View.</li>
+        </ul>
+
+        <h2>Process and Thread Fundamentals</h2>
+
+        <p>
+            The trainer explained how an application runs as a process and how
+            multiple threads can be created from the main thread. The role of
+            the Operating System and CPU in process execution was also discussed.
+        </p>
+
+        <img src="../assets/images/day2-process-thread.png" alt="Process and Thread Diagram" class="activity-image">
+
+        <h2>Memory Management in Python</h2>
+
+        <p>
+            The trainer explained how Python stores variables and objects using stack
+            and heap memory. Variables act as references while actual objects are
+            stored in heap memory. The concepts of reference variables, literals,
+            and object identities using the id() function were also discussed.
+        </p>
+        <ul>
+            <li>Variables are stored as references.</li>
+            <li>Objects are stored in heap memory.</li>
+            <li>Stack memory maintains references to heap objects.</li>
+            <li>The <code>id()</code> function was used to observe object identities.</li>
+        </ul>
+
+        <h2>Hash Codes and Object References</h2>
+
+        <p>
+            Using the <code>id()</code> function, the trainer demonstrated how
+            Python objects are assigned unique identifiers. These identifiers
+            helped visualize how reference variables point to objects stored in
+            memory.
+        </p>
+
+        <h2>Python Programs Created</h2>
+
+        <h3>1. MyApp.py</h3>
+
+        <p>
+            Created a basic Python program using print statements to display
+            text output.
+        </p>
+
+        <pre>
+print(__name__)
+print('hello world')
+print("This is awesome")
+print("""This is amazing""")
+        </pre>
+
+        <h3>2. session2.py</h3>
+
+        <p>
+            Demonstrated variables, literals, reference variables,
+            <code>id()</code>, <code>type()</code>, and object deletion using
+            the <code>del</code> keyword.
+        </p>
+
+        <h3>3. session2A.py</h3>
+
+        <p>
+            Demonstrated user input and type conversion using the
+            <code>input()</code> and <code>int()</code> functions.
+        </p>
+
+        <pre>
+age = int(input("Enter Age:"))
+print(age)
+        </pre>
+
+        <h3>4. session2B.py</h3>
+
+        <p>
+            Demonstrated Python containers, lists, tuples, nested lists,
+            mutability, and memory storage concepts.
+        </p>
+
+        <h2>Single Value and Multi Value Containers</h2>
+
+        <p>
+            The trainer explained the concept of containers in Python.
+        </p>
+
+        <h3>Single Value Containers</h3>
+
+        <ul>
+            <li>int</li>
+            <li>float</li>
+            <li>str</li>
+            <li>bool</li>
+        </ul>
+
+        <h3>Multi Value Containers</h3>
+
+        <ul>
+            <li>list</li>
+            <li>tuple</li>
+            <li>set</li>
+            <li>dictionary</li>
+        </ul>
+
+        <h2>Homogeneous and Heterogeneous Containers</h2>
+
+        <p>
+            Homogeneous containers store values of the same type while
+            heterogeneous containers can store values of different types.
+        </p>
+
+        <p>
+            Example of a homogeneous collection.
+        </p>
+        <pre>
+[70, 80, 85]
+        </pre>
+
+        <p>
+            Example of a heterogeneous collection.
+        </p>
+
+        <pre>
+[70, 80, 85, "A", "B"]
+        </pre>
+
+
+        <h2>Mutable and Immutable Objects</h2>
+
+        <ul>
+            <li><strong>List:</strong> Mutable (can be modified).</li>
+            <li><strong>Tuple:</strong> Immutable (cannot be modified).</li>
+        </ul>
+
+        <h2>Task Assigned</h2>
+
+        <p>
+            The trainer assigned an activity to explain how a list of lists is stored
+            in stack and heap memory.
+        </p>
+
+        <pre>
+class_marks = [
+    [70, 80, 85],
+    [75, 90, 95]
+]
+</pre>
+
+        <p>
+            To understand this concept, I created the following memory representation
+            showing how the outer list stores references to inner lists and how the
+            actual objects are allocated in heap memory.
+        </p>
+
+        <img src="../assets/images/day2-stack-heap.png" alt="Stack and Heap Memory Representation"
+            class="activity-image">
+
+        <p>
+            The reference variable <code>class_marks</code> resides in stack memory and
+            points to the outer list object. The outer list further stores references
+            to the inner lists, which contain the actual values stored in heap memory.
+        </p>
+
+        <h2>Key Learning Outcomes</h2>
+
+        <ul>
+            <li>Understood the purpose of the __name__ variable.</li>
+            <li>Learned about dunder variables in Python.</li>
+            <li>Strengthened understanding of MVC Architecture.</li>
+            <li>Learned the difference between processes and threads.</li>
+            <li>Understood stack memory and heap memory.</li>
+            <li>Explored object references using id().</li>
+            <li>Studied Python containers and collections.</li>
+            <li>Learned the difference between mutable and immutable objects.</li>
+        </ul>
+
+        <h2>Personal Reflection</h2>
+
+        <p>
+            Today's session provided a deeper understanding of how Python works
+            internally. Learning about references, memory management, stack and
+            heap storage helped me understand what happens behind the scenes when
+            variables and objects are created. The practical examples and memory
+            diagrams made these concepts easier to visualize.
+        </p>
+
+        <h2>Next Session</h2>
+
+        <p>
+            The trainer will continue with Python fundamentals and further
+            explore MVC-based application development.
+        </p>
+
+    </div>
+
+</body>
+
+</html>
