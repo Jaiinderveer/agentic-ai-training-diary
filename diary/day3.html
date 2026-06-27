@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 3 - Agentic AI Training Diary</title>
+
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+    <div class="day-page">
+
+        <a href="../index.html" class="btn">← Back to Home</a>
+
+        <h1>Day 3 – Python Data Structures & Hashing</h1>
+
+        <p><strong>Date:</strong> 27 June 2026</p>
+        <p><strong>Duration:</strong> 2:00 Hrs</p>
+        <p><strong>Training Company:</strong> Auribises Technologies</p>
+        <p><strong>Trainer:</strong> Ishant Kumar</p>
+        <hr>
+
+        <h2>Introduction</h2>
+
+        <p>
+            Today's session focused on understanding how Python stores and manages
+            data internally using various data structures. We explored hashing,
+            lists, sets, dictionaries, reference copy operations, memory
+            representation, and real-world data modelling using nested data
+            structures.
+        </p>
+
+        <h2>Topics Covered</h2>
+
+        <ul>
+            <li>Memory Representation of Objects</li>
+            <li>Hashing Fundamentals</li>
+            <li>Single Value Containers</li>
+            <li>Multi Value Containers</li>
+            <li>List Storage in Memory</li>
+            <li>Reference Copy Operations</li>
+            <li>List Indexing</li>
+            <li>Sets and Hashing</li>
+            <li>Dictionaries (Hash Tables)</li>
+            <li>Nested Dictionaries</li>
+            <li>Collection Constructors</li>
+            <li>Real World Data Modelling</li>
+        </ul>
+        <h2>Memory Representation of Python Objects</h2>
+
+        <p>
+            The trainer demonstrated how Python handles memory allocation for
+            immutable and mutable objects. We explored how variables act as
+            references to objects stored in memory.
+        </p>
+
+        <img src="../assets/images/day3-memory-representation.png" alt="Memory Representation Diagram"
+            class="activity-image">
+
+        <p>
+            For immutable objects such as integers, Python may reuse the same
+            memory object when multiple variables contain identical values.
+        </p>
+
+        <pre>
+a = 10
+b = 10
+</pre>
+
+        <p>
+            Both variables can reference the same integer object in memory.
+        </p>
+
+        <p>
+            However, when two lists containing identical values are created,
+            Python allocates separate list objects because lists are mutable.
+        </p>
+
+        <pre>
+data = [10,20,30,40,50]
+numbers = [10,20,30,40,50]
+</pre>
+
+        <p>
+            Although the contents are the same, the two variables reference
+            different list objects stored in memory.
+        </p>
+
+        <h2>Hashing</h2>
+
+        <p>
+            The trainer introduced the concept of hashing using an online hashing
+            visualization tool. Hashing is a technique used to compute a hash
+            value and map data into buckets for efficient storage and retrieval.
+        </p>
+
+        <pre>
+hash(x) = x % n
+</pre>
+
+        <p>
+            where:
+        </p>
+
+        <ul>
+            <li><strong>x</strong> → Data value</li>
+            <li><strong>n</strong> → Number of buckets</li>
+        </ul>
+
+        <p>
+            We observed how different values are distributed among buckets and
+            learned how hashing improves lookup performance.
+        </p>
+
+        <p>
+            The concept of hashing forms the foundation of Python Sets and
+            Dictionaries.
+        </p>
+
+
+
+        <h2>Single Value and Multi Value Containers</h2>
+
+        <p>
+            The trainer explained the difference between storing a single value
+            and storing multiple values together.
+        </p>
+
+        <ul>
+            <li><strong>Single Value Container:</strong> Stores one value at a time.</li>
+            <li><strong>Multi Value Container:</strong> Stores multiple values together.</li>
+        </ul>
+
+        <p>
+            Lists, Sets, Tuples, and Dictionaries are examples of multi-value
+            containers in Python.
+        </p>
+
+        <h2>List Storage and Memory Representation</h2>
+
+        <p>
+            We explored how Python stores list objects in memory and how reference
+            variables point to objects stored in the heap. We also discussed the
+            relationship between stack memory and heap memory.
+        </p>
+
+        <h2>Reference Copy Operations</h2>
+
+        <p>
+            One of the most important concepts covered today was reference copy
+            operations.
+        </p>
+
+        <img src="../assets/images/day3-reference-copy.png" alt="Reference Copy Diagram" class="activity-image">
+
+        <p>
+            When one variable is assigned to another variable containing a list,
+            both variables refer to the same object in memory.
+        </p>
+
+        <pre>
+data = [10,20,30,40,50]
+numbers = data
+        </pre>
+
+        <p>
+            Modifying the list through one variable affects the other because
+            both references point to the same memory location.
+        </p>
+
+        <h2>Sets</h2>
+
+        <p>
+            Sets are unordered collections that store unique values only.
+            Duplicate values are automatically removed, and indexing is not
+            supported because sets use hashing internally.
+        </p>
+
+        <pre>
+data = {10,20,30,50,10,20}
+        </pre>
+
+        <h2>Dictionaries</h2>
+
+        <p>
+            Dictionaries store data as key-value pairs and provide fast access
+            using hashing.
+        </p>
+
+        <pre>
+students = {
+    101: "John",
+    201: "Fionna",
+    301: "Jennie"
+}
+        </pre>
+
+        <p>
+            We also learned how dictionaries can be nested to represent complex
+            real-world information.
+        </p>
+
+        <h2>Python Programs Created</h2>
+
+        <ul>
+            <li><strong>session3.py</strong> – Single and Multi Value Containers.</li>
+            <li><strong>session3A.py</strong> – Reference Copy Operations.</li>
+            <li><strong>session3B.py</strong> – Lists, Sets, and Indexing.</li>
+            <li><strong>session3C.py</strong> – Dictionaries and Nested Dictionaries.</li>
+            <li><strong>session3D.py</strong> – Collection Constructors.</li>
+            <li><strong>session3E.py</strong> – Menu Representation using Dictionaries.</li>
+            <li><strong>task.py</strong> – Real-world Coupon System Modelling Activity.</li>
+        </ul>
+
+        <h2>Class Activity</h2>
+
+        <p>
+            During the session, we were given a practical activity in which a
+            coupon and checkout section of a food ordering application had to be
+            represented using Python data structures.
+        </p>
+
+        <img src="../assets/images/day3-zomato-activity.png" alt="Coupon Data Structure Activity"
+            class="activity-image">
+
+        <p>
+            I implemented the solution using nested dictionaries to represent
+            order value, restaurant coupons, payment coupons, discount
+            conditions, and payment methods.
+        </p>
+
+        <p>
+            This activity demonstrated how real-world application data can be
+            modelled using Python dictionaries.
+        </p>
+
+        <h2>Assignments Given</h2>
+
+        <ul>
+            <li>
+                Represent a MakeMyTrip flight listing using a List of
+                Dictionaries.
+            </li>
+
+            <li>
+                Represent a cinema hall seating layout using a Dictionary of
+                Lists of Dictionaries.
+            </li>
+        </ul>
+        <h2>Assignment Solutions</h2>
+
+<p>
+The assignment solutions were implemented separately and uploaded to the
+training code repository.
+</p>
+
+<ul>
+    <li>
+        <a href="https://github.com/Jaiinderveer/agentic-ai-python-training/blob/main/day3/assignment1.py" target="_blank">
+            Assignment 1 – MakeMyTrip Flight Data Structure
+        </a>
+    </li>
+
+    <li>
+        <a href="https://github.com/Jaiinderveer/agentic-ai-python-training/blob/main/day3/assignment2.py" target="_blank">
+            Assignment 2 – Cinema Hall Data Structure
+        </a>
+    </li>
+</ul>
+        <h2>Key Learning Outcomes</h2>
+
+        <ul>
+            <li>Learned the fundamentals of hashing.</li>
+            <li>Understood single value and multi value containers.</li>
+            <li>Learned how Python stores data internally.</li>
+            <li>Explored reference copy operations and shared memory.</li>
+            <li>Understood the differences between Lists, Sets, and Dictionaries.</li>
+            <li>Learned nested dictionary structures.</li>
+            <li>Applied data modelling concepts to a real-world scenario.</li>
+        </ul>
+
+        <h2>Personal Reflection</h2>
+
+        <p>
+            Today's session helped me understand how data is actually stored and
+            managed inside Python. The practical examples involving reference
+            copies, hashing, and nested dictionaries made it easier to visualize
+            how real-world applications organize their data. The activity of
+            modelling a coupon system using dictionaries was particularly useful
+            because it connected programming concepts with real software systems.
+        </p>
+
+        <h2>Next Session</h2>
+
+        <p>
+            The upcoming session is expected to continue exploring Python
+            programming concepts and their application in software development
+            and Agentic AI systems.
+        </p>
+
+    </div>
+
+</body>
+
+</html>
