@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 4 - Agentic AI Training Diary</title>
+
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+    <div class="day-page">
+
+        <a href="../index.html" class="btn">← Back to Home</a>
+
+        <h1>Day 4 – Python Functions, Modules & Iteration</h1>
+
+        <p><strong>Date:</strong> 29 June 2026</p>
+        <p><strong>Duration:</strong> 2:00 Hrs</p>
+        <p><strong>Training Company:</strong> Auribises Technologies</p>
+        <p><strong>Trainer:</strong> Ishant Kumar</p>
+        <hr>
+
+        <h2>Introduction</h2>
+
+        <p>
+            Today's session focused on understanding how Sets and Dictionaries
+            are stored in memory, writing reusable Python functions, importing
+            modules, and implementing different types of loops. The session also
+            included a practical activity on generating a chessboard pattern
+            using nested loops.
+        </p>
+
+        <h2>Topics Covered</h2>
+
+        <ul>
+            <li>Set Memory Representation</li>
+            <li>Dictionary Memory Representation</li>
+            <li>Functions in Python</li>
+            <li>The <code>__name__</code> Variable</li>
+            <li>The <code>main()</code> Function</li>
+            <li>Importing Python Modules</li>
+            <li>For Loops</li>
+            <li>While Loops</li>
+            <li>Nested Loops</li>
+            <li>Chessboard Pattern Generation</li>
+        </ul>
+
+        <h2>Set Memory Representation</h2>
+
+        <p>
+            The trainer explained how Sets are represented internally in memory.
+            Unlike Lists, Sets store only unique values and rely on hashing for
+            efficient lookup and storage.
+        </p>
+
+        <img src="../assets/images/day4-set-memory.png" alt="Set Memory Representation" class="activity-image">
+
+        <p>
+            We observed how duplicate values are removed when converting a List
+            into a Set and how the Set object maintains references to unique
+            elements stored in memory.
+        </p>
+
+        <h2>Dictionary Memory Representation</h2>
+
+        <p>
+            We explored how Python Dictionaries store key-value pairs in memory.
+            Each key references its corresponding value, allowing fast retrieval
+            through hashing.
+        </p>
+
+        <img src="../assets/images/day4-dictionary-memory.png" alt="Dictionary Memory Representation"
+            class="activity-image">
+
+        <p>
+            The trainer demonstrated how modifying dictionary values updates the
+            corresponding entries while preserving the overall Dictionary object.
+        </p>
+
+        <h2>Functions and the <code>__name__</code> Variable</h2>
+
+        <p>
+            The session introduced user-defined functions and the purpose of the
+            special <code>__name__</code> variable.
+        </p>
+
+        <pre>
+def main():
+    print("Hello World")
+
+if __name__ == "__main__":
+    main()
+</pre>
+
+        <p>
+            We learned that code inside the <code>if __name__ == "__main__"</code>
+            block executes only when the file is run directly, making programs
+            modular and reusable.
+        </p>
+
+        <h2>Modules and Importing</h2>
+
+        <p>
+            We practiced importing one Python file into another and calling
+            functions defined in external modules.
+        </p>
+
+        <pre>
+import session4D
+
+session4D.hello()
+</pre>
+
+        <p>
+            This demonstrated how Python projects can be organized into multiple
+            reusable modules.
+        </p>
+
+        <h2>Iteration using Loops</h2>
+
+        <p>
+            Various iteration techniques were implemented using
+            <strong>for</strong>, <strong>while</strong>, and
+            <strong>nested for</strong> loops.
+        </p>
+
+        <ul>
+            <li>Traversing Lists using for loops</li>
+            <li>Updating List elements</li>
+            <li>Traditional while loops</li>
+            <li>Nested loops for two-dimensional patterns</li>
+        </ul>
+
+        <h2>Python Programs Created</h2>
+
+        <ul>
+            <li><strong>session4.py</strong> – Converting Lists into Sets and observing memory representation.</li>
+
+            <li><strong>session4A.py</strong> – Dictionary creation, updating values, and iterating through keys.</li>
+
+            <li><strong>session4B.py</strong> – Understanding the <code>main()</code> function and the
+                <code>__name__</code> variable.</li>
+
+            <li><strong>session4C.py</strong> – Creating user-defined functions and examining variable types and memory
+                addresses.</li>
+
+            <li><strong>session4D.py</strong> – Defining reusable functions inside modules.</li>
+
+            <li><strong>session4E.py</strong> – Importing modules and invoking external functions.</li>
+
+            <li><strong>session4F.py</strong> – Iterating through Lists using for and while loops.</li>
+
+            <li><strong>session4G.py</strong> – Nested loops and chessboard pattern generation.</li>
+        </ul>
+
+        <h2>Class Activity</h2>
+
+        <p>
+            During the practical session, we implemented a chessboard pattern
+            using nested loops and Unicode characters. The activity helped us
+            understand how nested iteration can generate two-dimensional
+            structures.
+        </p>
+
+        <pre class="code-output">
+■  □  ■  □  ■  □  ■  □
+♟ ♟ ♟ ♟ ♟ ♟ ♟ ♟
+■  □  ■  □  ■  □  ■  □
+□  ■  □  ■  □  ■  □  ■
+■  □  ■  □  ■  □  ■  □
+□  ■  □  ■  □  ■  □  ■
+♙ ♙ ♙ ♙ ♙ ♙ ♙ ♙
+□  ■  □  ■  □  ■  □  ■
+</pre>
+
+        <p>
+            The chessboard was generated by combining nested loops with
+            conditional statements to alternate black and white squares while
+            placing pawns on their respective rows.
+        </p>
+
+        <h2>Assignments Given</h2>
+
+        <ul>
+            <li>
+                Complete the chessboard plotting program by placing all chess
+                pieces in their correct starting positions.
+            </li>
+        </ul>
+
+        <h2>Assignment Solution</h2>
+
+        <p>
+            I completed the assignment by implementing a full chessboard with
+            all standard chess pieces positioned correctly using Unicode chess
+            symbols. The solution was developed using nested loops and
+            conditional statements.
+        </p>
+
+        <p>
+            The completed source code has been uploaded to my Python Training
+            Repository.
+        </p>
+
+        <ul>
+            <li>
+                <a href="https://github.com/Jaiinderveer/agentic-ai-python-training/blob/main/day4/assignment3.py"
+                    target="_blank">
+                    View Assignment Solution on GitHub
+                </a>
+            </li>
+        </ul>
+
+        <h2>Key Learning Outcomes</h2>
+
+        <ul>
+            <li>Learned how Sets and Dictionaries are represented in memory.</li>
+            <li>Understood Python functions and modular programming.</li>
+            <li>Learned the purpose of the <code>__name__</code> variable.</li>
+            <li>Practiced importing Python modules.</li>
+            <li>Implemented for, while, and nested loops.</li>
+            <li>Generated two-dimensional patterns using nested iteration.</li>
+            <li>Applied loops and conditional statements to build a chessboard.</li>
+        </ul>
+
+        <h2>Personal Reflection</h2>
+
+        <p>
+            Today's session helped me understand how larger Python programs are
+            organized using functions and modules. The practical exercises on
+            loops and module importing strengthened my programming skills, while
+            the chessboard activity demonstrated how logical thinking and nested
+            iteration can be applied to solve real programming challenges.
+        </p>
+
+        <h2>Next Session</h2>
+
+        <p>
+            According to the training roadmap, the next session will introduce
+            operators, conditional constructs, and searching, sorting, and
+            filtering techniques in Python.
+        </p>
+
+    </div>
+
+</body>
+
+</html>

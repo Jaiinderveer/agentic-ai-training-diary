@@ -236,3 +236,14 @@ section{
 .diary h2:last-of-type {
     margin-top: 60px;
 }
+.code-output {
+    background: #1e293b;
+    color: #f8fafc;
+    padding: 20px;
+    border-radius: 10px;
+    overflow-x: auto;
+    font-family: Consolas, monospace;
+    font-size: 18px;
+    line-height: 1.8;
+    text-align: center;
+}
