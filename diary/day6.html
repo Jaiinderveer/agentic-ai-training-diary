@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 6 - Agentic AI Training Diary</title>
+
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+    <div class="day-page">
+
+        <a href="../index.html" class="btn">← Back to Home</a>
+
+        <h1>Day 6 – Functions in Python</h1>
+
+        <p><strong>Date:</strong> 1 July 2026</p>
+        <p><strong>Duration:</strong> 2:00 Hrs</p>
+        <p><strong>Training Company:</strong> Auribises Technologies</p>
+        <p><strong>Trainer:</strong> Ishant Kumar</p>
+
+        <hr>
+
+        <h2>Session Overview</h2>
+
+        <p>
+            Today's session focused entirely on Python functions. The trainer
+            explained how functions help organize code, improve reusability, and
+            reduce duplication. Different methods of passing arguments, function
+            references, variable-length arguments, parameter passing, and an
+            introduction to recursion were demonstrated through practical
+            programming examples.
+        </p>
+
+        <h2>Function Basics</h2>
+
+        <p>
+            We began by understanding why functions are required in software
+            development. Instead of writing the same code multiple times, a
+            function can be created once and reused whenever required.
+        </p>
+
+        <p>
+            The trainer demonstrated how to define functions using the
+            <code>def</code> keyword and how parameters and return values help
+            make functions reusable.
+        </p>
+
+        <p>
+            A practical example involved creating a reusable function to find
+            the maximum element from a list.
+        </p>
+
+        <img src="../assets/images/day6-find-max.png" alt="Function Basics" class="activity-image">
+
+        <h2>Function Arguments</h2>
+
+        <p>
+            Various methods of supplying values to functions were explored.
+            Python provides flexible ways to pass arguments depending on the
+            application's requirements.
+        </p>
+
+        <ul>
+            <li>Positional Arguments</li>
+            <li>Keyword Arguments</li>
+            <li>Default Arguments</li>
+        </ul>
+
+        <p>
+            We experimented with different combinations of arguments and
+            observed how Python automatically maps values to parameters.
+        </p>
+
+        <pre>
+add_numbers(10,20)
+
+add_numbers(num1=100,num2=200)
+
+add_numbers(num2=110,num1=40)
+
+add_numbers(50)
+
+add_numbers()
+</pre>
+
+        <img src="../assets/images/day6-function-arguments.png" alt="Function Arguments" class="activity-image">
+
+        <h2>Functions are Objects</h2>
+
+        <p>
+            One interesting concept introduced today was that functions are
+            treated as objects in Python.
+        </p>
+
+        <p>
+            Just like variables, functions also occupy memory, have their own
+            identity, and can be assigned to another variable.
+        </p>
+
+        <pre>
+add = add_numbers
+</pre>
+
+        <p>
+            Multiple references can point to the same function object. The
+            trainer also demonstrated how deleting one reference does not remove
+            the function until all references are deleted.
+        </p>
+
+        <h2>Function Redefinition</h2>
+
+        <p>
+            Python allows redefining an existing function by creating another
+            function with the same name.
+        </p>
+
+        <p>
+            The new definition replaces the old one for future calls, while any
+            variables referencing the previous function continue pointing to the
+            original function object.
+        </p>
+
+        <img src="../assets/images/day6-function-redefinition.png" alt="Function Redefinition" class="activity-image">
+        <h2>Variable-Length Arguments</h2>
+
+        <p>
+            Python allows functions to accept a variable number of arguments,
+            making them flexible and reusable for different situations.
+        </p>
+
+        <h3>*args</h3>
+
+        <p>
+            The <code>*args</code> parameter collects multiple positional
+            arguments into a tuple. This allows a function to process any number
+            of input values without changing its definition.
+        </p>
+
+        <pre>
+def add_numbers(*numbers):
+    ...
+</pre>
+
+        <h3>**kwargs</h3>
+
+        <p>
+            The <code>**kwargs</code> parameter collects keyword arguments into
+            a dictionary. It is useful when passing named information whose
+            quantity may vary.
+        </p>
+
+        <pre>
+def student_details(**details):
+    ...
+</pre>
+
+        <p>
+            We also learned that <code>*args</code> and
+            <code>**kwargs</code> can be used together in the same function.
+        </p>
+
+        <img src="../assets/images/day6-variable-arguments.png" alt="Variable Length Arguments" class="activity-image">
+
+        <h2>Parameter Passing & Memory Behaviour</h2>
+
+        <p>
+            One of the most important concepts covered today was understanding
+            how Python passes objects to functions.
+        </p>
+
+        <p>
+            The trainer demonstrated the difference between immutable and
+            mutable objects and how modifications inside a function affect the
+            original object.
+        </p>
+
+        <ul>
+            <li>Passing integers (immutable objects)</li>
+            <li>Passing lists (mutable objects)</li>
+            <li>Reference behaviour of mutable objects</li>
+            <li>Copying lists before modification</li>
+        </ul>
+
+        <img src="../assets/images/day6-memory-functions.png" alt="Parameter Passing" class="activity-image">
+
+        <h2>Task Assigned</h2>
+
+        <p>
+            The trainer assigned us the task of implementing a
+            <strong>deep copy of a list inside a function</strong>.
+        </p>
+
+        <p>
+            Instead of directly modifying the original list passed to the
+            function, we were required to create a separate copy, perform the
+            required operations on the copied list, and ensure that the
+            original list remained unchanged.
+        </p>
+
+        <h2>Assignment Solution</h2>
+
+        <p>
+            I completed the assignment by creating a new list inside the
+            function and copying all elements before making any modifications.
+            This ensured that changes were applied only to the copied list while
+            preserving the original data structure.
+        </p>
+
+        <p>
+            Through this assignment, I understood the importance of deep copying
+            mutable objects to avoid unintended side effects during function
+            execution.
+        </p>
+
+        <ul>
+            <li>
+                <a href="https://github.com/Jaiinderveer/agentic-ai-python-training/blob/main/day6/session6F.py"
+                    target="_blank">
+                    View Assignment Solution on GitHub
+                </a>
+            </li>
+        </ul>
+
+        <h2>Introduction to Recursion</h2>
+
+        <p>
+            Towards the end of the session, the trainer introduced the basic
+            concept of recursion, where a function calls itself repeatedly until
+            a terminating condition is reached.
+        </p>
+
+        <p>
+            We implemented a simple recursive example to print numbers and were
+            informed that recursion and its memory representation would be
+            covered in greater detail during the next session.
+        </p>
+
+        <img src="../assets/images/day6-recursion.png" alt="Introduction to Recursion" class="activity-image">
+
+        <h2>Return Statements</h2>
+
+        <p>
+            We also learned the difference between printing a value and
+            returning a value from a function.
+        </p>
+
+        <p>
+            The <code>return</code> statement allows a function to send results
+            back to the calling program, making functions reusable in larger
+            applications.
+        </p>
+
+        <img src="../assets/images/day6-return.png" alt="Return Statement" class="activity-image">
+
+        <h2>Key Learning Outcomes</h2>
+
+        <ul>
+            <li>Understood the importance of reusable functions.</li>
+            <li>Learned positional, keyword and default arguments.</li>
+            <li>Explored function objects and function references.</li>
+            <li>Implemented variable-length arguments using <code>*args</code> and <code>**kwargs</code>.</li>
+            <li>Learned how mutable and immutable objects behave during function calls.</li>
+            <li>Implemented a deep copy of a list inside a function.</li>
+            <li>Received an introduction to recursion.</li>
+            <li>Understood the purpose of the <code>return</code> statement.</li>
+        </ul>
+        <h2>Programs Implemented</h2>
+
+        <ul>
+            <li>Maximum Element Finder using Functions</li>
+            <li>Function Arguments Demonstration</li>
+            <li>Function Redefinition Example</li>
+            <li>Variable-Length Arguments (*args and **kwargs)</li>
+            <li>Parameter Passing & Memory Behaviour</li>
+            <li>Deep Copy of a List in a Function</li>
+            <li>Introduction to Recursion</li>
+        </ul>
+        <h2>Personal Reflection</h2>
+
+        <p>
+            Today's session strengthened my understanding of one of the most
+            fundamental concepts in programming—functions. Learning how Python
+            handles function calls, arguments, references, and mutable objects
+            gave me a much clearer understanding of how larger applications are
+            built. The deep-copy assignment also highlighted the importance of
+            protecting original data when working with mutable objects. I am
+            looking forward to exploring recursion and its memory
+            representation in the next session.
+        </p>
+
+        <h2>Next Session</h2>
+
+        <p>
+            The trainer informed us that the next session will focus on
+            recursion in detail, including recursion trees, stack memory,
+            function call execution, and memory representation.
+        </p>
+
+    </div>
+
+</body>
+
+</html>
