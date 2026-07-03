@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 7 - Agentic AI with Python</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+    <div class="day-page">
+
+        <a href="../index.html" class="btn">← Back to Diary</a>
+
+        <h1>Day 7 - Recursion, Searching, Sorting & Filtering</h1>
+
+        <p class="date">
+        <p><strong>Date:</strong> 3 July 2026</p>
+        <p><strong>Duration:</strong> 2:00 Hrs</p>
+        <p><strong>Training Company:</strong> Auribises Technologies</p>
+        <p><strong>Trainer:</strong> Ishant Kumar</p>
+        </p>
+
+        <p>
+            Day 7 focused on understanding recursion in depth and applying
+            fundamental searching, sorting, and filtering algorithms in Python.
+            The trainer explained how recursive function calls are managed by
+            Stack Memory while Python objects continue to reside in Heap Memory,
+            providing a clear understanding of recursive program execution.
+        </p>
+
+        <hr>
+
+        <h2>Topics Covered</h2>
+
+        <ul>
+            <li>Recursion Fundamentals</li>
+            <li>Stack & Heap Memory Representation</li>
+            <li>Recursive Function Calls</li>
+            <li>Base Case and Recursive Case</li>
+            <li>Finding Maximum Element using Recursion</li>
+            <li>Product of List Elements using Recursion</li>
+            <li>Linear Search Algorithm</li>
+            <li>Bubble Sort Algorithm</li>
+            <li>Filtering Techniques</li>
+            <li>Search, Sort & Filter on List of Dictionaries</li>
+        </ul>
+
+
+        <h2>Recursion Fundamentals</h2>
+
+        <p>
+            The session began with an in-depth explanation of recursion.
+            We learned that recursion is a programming technique in which a
+            function repeatedly calls itself until a terminating condition,
+            known as the <strong>base case</strong>, is reached.
+        </p>
+
+        <p>
+            Instead of solving an entire problem at once, recursion divides it
+            into smaller instances of the same problem. Each recursive call is
+            stored inside the program's call stack until execution reaches the
+            base case, after which the calls return one by one.
+        </p>
+
+        <img src="../assets/images/day7-recursion.png" alt="Recursion Memory Representation" class="activity-image">
+
+
+
+        <h2>Finding Maximum Element using Recursion</h2>
+
+        <p>
+            We implemented a recursive function that finds the maximum element
+            in a list without using loops to compare all elements directly.
+            Each recursive call compared the current element with the maximum
+            value returned by the previous recursive call until only one
+            element remained.
+        </p>
+
+        <img src="../assets/images/day7-recursive-max.png" alt="Recursive Maximum Element" class="activity-image">
+
+        <h2>Product of List Elements using Recursion</h2>
+
+        <p>
+            We implemented another recursive program to calculate the product
+            of all elements present inside a list.
+            Instead of using a loop, each recursive call multiplied the current
+            element with the result returned by the previous recursive call,
+            eventually producing the final product.
+        </p>
+
+        <img src="../assets/images/day7-recursive-product.png" alt="Recursive Product" class="activity-image">
+
+
+        <h2>Linear Search</h2>
+
+        <p>
+            After recursion, we implemented the Linear Search algorithm.
+            The algorithm traverses every element of a list sequentially until
+            the required element is found or the entire list has been searched.
+        </p>
+
+        <p>
+            We also practiced writing reusable search functions using parameters
+            and keyword arguments instead of hardcoding values.
+        </p>
+
+        <ul>
+            <li>Sequential searching</li>
+            <li>Reusable search functions</li>
+            <li>Searching using function parameters</li>
+            <li>Time Complexity: O(n)</li>
+        </ul>
+
+        <img src="../assets/images/day7-linear-search.png" alt="Linear Search" class="activity-image">
+
+        <h2>Bubble Sort</h2>
+
+        <p>
+            The trainer explained Bubble Sort by repeatedly comparing adjacent
+            elements and swapping them whenever they were in the wrong order.
+            Using nested loops, the largest element gradually "bubbled" toward
+            the end of the list after each pass.
+        </p>
+
+        <p>
+            Although Bubble Sort is not the most efficient sorting algorithm,
+            implementing it helped understand the logic behind comparison-based
+            sorting techniques.
+        </p>
+
+        <ul>
+            <li>Nested loops</li>
+            <li>Adjacent element comparison</li>
+            <li>Element swapping</li>
+            <li>Ascending order sorting</li>
+        </ul>
+
+        <img src="../assets/images/day7-bubble-sort.png" alt="Bubble Sort" class="activity-image">
+
+
+        <h2>Filtering Data</h2>
+
+        <p>
+            We also explored filtering techniques by selecting only those
+            elements that satisfy a particular condition.
+            This concept is widely used while processing datasets,
+            retrieving records and implementing search systems.
+        </p>
+
+        <img src="../assets/images/day7-filter.png" alt="Filtering" class="activity-image">
+
+
+        <h2>Flight Search, Sort & Filter System</h2>
+
+        <p>
+            Towards the end of the session, we moved from simple lists to a
+            real-world data structure consisting of a
+            <strong>list of dictionaries</strong>.
+            Each dictionary represented an individual flight and stored
+            attributes such as flight code, airline, source, destination,
+            fare and duration.
+        </p>
+
+        <p>
+            We implemented reusable functions that could search flights using
+            flight codes and dynamically sort the dataset based on different
+            fields like fare or duration.
+            This demonstrated how the same algorithm can work with complex
+            real-world data structures.
+        </p>
+
+        <img src="../assets/images/day7-flight-data.png" alt="Flight Data" class="activity-image">
+
+        <img src="../assets/images/day7-flight-sort.png" alt="Flight Sorting" class="activity-image">
+
+        <h2>Assignment</h2>
+
+        <p>
+            The assignment was to complete the filtering functionality of the
+            Flight Management System.
+            The objective was to design a reusable function capable of filtering
+            flights using different criteria supplied by the user.
+        </p>
+
+        <p>
+            The completed solution supports filtering flights based on:
+        </p>
+
+        <ul>
+            <li>Carrier</li>
+            <li>Fare (Greater Than / Less Than)</li>
+            <li>Duration (Greater Than / Less Than)</li>
+            <li>Source</li>
+            <li>Destination</li>
+        </ul>
+
+        <p>
+            To improve the implementation, the program also validates user input,
+            uses a reusable display function, performs case-insensitive matching
+            for text fields, and handles numeric filtering separately for fare
+            and duration.
+        </p>
+        <img src="../assets/images/day7-assignment.png" alt="Flight Filtering Assignment" class="activity-image">
+        <ul>
+            <li>
+                <a href="https://github.com/Jaiinderveer/agentic-ai-python-training/blob/main/day7/session7G.py"
+                    target="_blank">
+                    View Assignment Solution on GitHub
+                </a>
+            </li>
+        </ul>
+
+        <hr>
+
+        <h2>Key Learning Outcomes</h2>
+
+        <ul>
+
+            <li>Understanding how recursion works internally using stack frames.</li>
+
+            <li>Importance of defining proper base cases in recursive functions.</li>
+
+            <li>Using recursion to solve mathematical and list-processing problems.</li>
+
+            <li>Implementing reusable search algorithms using functions.</li>
+
+            <li>Understanding Bubble Sort through nested loop implementation.</li>
+
+            <li>Filtering datasets using conditional logic.</li>
+
+            <li>Working with real-world datasets represented as a list of dictionaries.</li>
+
+            <li>Designing reusable Search, Sort and Filter functions for structured data.</li>
+
+        </ul>
+
+        <hr>
+
+        <h2>Session Summary</h2>
+
+        <p>
+            Day 7 was one of the most algorithm-oriented sessions of the training.
+            We moved beyond basic Python syntax and focused on understanding how
+            recursive algorithms execute in memory and how common operations such
+            as searching, sorting and filtering can be implemented from scratch.
+        </p>
+
+        <p>
+            The practical exercises demonstrated how the same programming
+            techniques can be applied to increasingly complex data structures,
+            preparing us for solving larger real-world programming problems.
+        </p>
+
+        <h2>Personal Reflection</h2>
+
+        <p>
+            Today's session was one of the most algorithm-focused sessions of the
+            training. Understanding recursion through stack and heap memory diagrams
+            made it much easier to visualize how recursive calls are executed.
+            Implementing searching, sorting and filtering algorithms on a flight
+            dataset also showed how these concepts are used together while working
+            with structured real-world data.
+        </p>
+        <h2>Next Session</h2>
+
+        <p>
+            The trainer informed us that the next session will continue with recursion,
+            memory representation and more advanced function-related concepts before
+            moving towards object-oriented programming.
+        </p>
+    </div>
+
+</body>
+
+</html>

@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Day 5 - Agentic AI Training Diary</title>
+    <title>Day 7 - Agentic AI Training Diary</title>
 
     <link rel="stylesheet" href="../style.css">
 </head>
@@ -15,205 +15,292 @@
 
         <a href="../index.html" class="btn">← Back to Home</a>
 
-        <h1>Day 5 – Operators, Conditional Constructs & Loops</h1>
+        <h1>Day 7 – Recursion, Searching, Sorting & Filtering</h1>
 
-        <p><strong>Date:</strong> 30 June 2026</p>
+        <p><strong>Date:</strong> 2 July 2026</p>
         <p><strong>Duration:</strong> 2:00 Hrs</p>
         <p><strong>Training Company:</strong> Auribises Technologies</p>
         <p><strong>Trainer:</strong> Ishant Kumar</p>
+
         <hr>
 
         <h2>Session Overview</h2>
 
         <p>
-            Today's session focused on strengthening Python fundamentals by learning
-            how Python performs calculations, comparisons, decision making and
-            repetition. We explored various operators, conditional statements and
-            looping constructs through several practical coding examples.
+            Today's session focused on understanding recursion in depth and
+            visualizing how recursive function calls are executed using Stack
+            and Heap memory. We also implemented searching, sorting and
+            filtering algorithms, and finally applied these concepts to a
+            real-world flight management dataset represented as a list of
+            dictionaries.
         </p>
 
-        <h2>Arithmetic Operators</h2>
+        <h2>Recursion</h2>
 
         <p>
-            Learned Python arithmetic operators used for mathematical calculations:
+            The trainer explained recursion as a technique where a function
+            repeatedly calls itself until a terminating condition, known as the
+            base case, is reached. We learned that every recursive call creates
+            a new stack frame, allowing Python to remember the execution state
+            of each function until it returns.
+        </p>
+
+        <p>
+            Practical programs were implemented to understand recursive
+            execution, base cases, recursive calls and how problems can be
+            divided into smaller sub-problems.
+        </p>
+
+        <img src="../assets/images/day7-recursion.png"
+            alt="Recursion"
+            class="activity-image">
+
+        <h2>Stack & Heap Memory Representation</h2>
+
+        <p>
+            One of the most interesting parts of today's session was
+            understanding how recursion is represented in memory.
+        </p>
+
+        <p>
+            The trainer demonstrated how every recursive function call creates
+            a separate stack frame while Python objects continue to reside in
+            heap memory. As recursion reaches the base case, stack frames are
+            removed one by one until execution returns to the original
+            function.
+        </p>
+
+        <img src="../assets/images/day7-stack-heap.png"
+            alt="Stack and Heap Memory Representation"
+            class="activity-image">
+
+        <h2>Recursive Programs</h2>
+
+        <p>
+            Multiple recursive programs were implemented to strengthen our
+            understanding of recursion.
         </p>
 
         <ul>
-            <li>Addition (+)</li>
-            <li>Subtraction (-)</li>
-            <li>Multiplication (*)</li>
-            <li>Division (/)</li>
-            <li>Floor Division (//)</li>
-            <li>Modulus (%)</li>
-            <li>Exponent (**)</li>
+            <li>Finding the maximum element of a list recursively.</li>
+            <li>Calculating the product of list elements using recursion.</li>
         </ul>
 
-        <img src="../assets/images/day5-arithmetic-operators.png" alt="Arithmetic Operators" class="activity-image">
+        <p>
+            These programs demonstrated how recursive functions process data by
+            reducing the problem size with each function call until the base
+            condition is satisfied.
+        </p>
 
-        <h2>Assignment Operators</h2>
+        <img src="../assets/images/day7-recursive-programs.png"
+            alt="Recursive Programs"
+            class="activity-image">
+
+        <h2>Searching Algorithms</h2>
 
         <p>
-            Practiced assignment operators including:
+            After recursion, we moved to searching techniques. A reusable
+            Linear Search function was implemented to locate elements inside a
+            list.
+        </p>
+
+        <p>
+            Instead of hardcoding values, the search operation accepted
+            parameters, making it reusable for different datasets.
         </p>
 
         <ul>
-            <li>=</li>
-            <li>+=</li>
-            <li>-=</li>
-            <li>*=</li>
-            <li>/=</li>
-            <li>//=</li>
-            <li>%=</li>
-            <li>**=</li>
+            <li>Linear Search</li>
+            <li>Reusable search functions</li>
+            <li>Searching using parameters</li>
         </ul>
 
-        <h2>Comparison, Identity, Membership & Logical Operators</h2>
+        <img src="../assets/images/day7-linear-search.png"
+            alt="Linear Search"
+            class="activity-image">
+                <h2>Bubble Sort</h2>
 
         <p>
-            Learned how Python evaluates conditions using comparison operators,
-            identity operators (<code>is</code>, <code>is not</code>), membership
-            operators (<code>in</code>, <code>not in</code>) and logical operators
-            (<code>and</code>, <code>or</code>, <code>not</code>).
+            We implemented the Bubble Sort algorithm to arrange elements in
+            ascending order. The trainer explained how adjacent elements are
+            repeatedly compared and swapped until the list becomes completely
+            sorted.
         </p>
 
         <p>
-            Implemented a simple login validation program using logical operators.
+            This activity helped us understand the working of one of the most
+            fundamental sorting algorithms and the importance of nested loops
+            while implementing comparison-based sorting techniques.
         </p>
 
-        <img src="../assets/images/day5-conditional-operators.png" alt="Conditional Operators" class="activity-image">
+        <img src="../assets/images/day7-bubble-sort.png"
+            alt="Bubble Sort"
+            class="activity-image">
 
-        <h2>Bitwise Operators</h2>
+        <h2>Filtering Data</h2>
 
         <p>
-            Explored binary representation of integers and practiced bitwise
-            operators:
+            After implementing searching and sorting, we learned how to filter
+            datasets by selecting only those records that satisfy a given
+            condition.
         </p>
+
+        <p>
+            Filtering was demonstrated using both simple lists and a collection
+            of dictionaries, preparing us to work with structured real-world
+            datasets.
+        </p>
+
+        <img src="../assets/images/day7-filter.png"
+            alt="Filtering Data"
+            class="activity-image">
+
+        <h2>Search, Sort & Filter on Flight Data</h2>
+
+        <p>
+            Towards the end of the session, we applied searching, sorting and
+            filtering techniques on a flight management dataset represented as
+            a <strong>list of dictionaries</strong>.
+        </p>
+
+        <p>
+            Each flight stored multiple attributes including flight code,
+            airline, source, destination, fare and duration. Reusable functions
+            were created to search flights, sort them dynamically and prepare
+            the dataset for filtering operations.
+        </p>
+
+        <img src="../assets/images/day7-flight-data.png"
+            alt="Flight Data Structure"
+            class="activity-image">
+
+        <img src="../assets/images/day7-flight-sort.png"
+            alt="Flight Sorting"
+            class="activity-image">
+
+        <h2>Python Programs Implemented</h2>
 
         <ul>
-            <li>AND (&)</li>
-            <li>OR (|)</li>
-            <li>XOR (^)</li>
-            <li>Left Shift (<<)< /li>
-            <li>Right Shift (>>)</li>
+            <li><strong>session7.py</strong> – Finding the maximum element using recursion.</li>
+
+            <li><strong>session7A.py</strong> – Calculating the product of list elements recursively.</li>
+
+            <li><strong>session7B.py</strong> – Implementing Linear Search using reusable functions.</li>
+
+            <li><strong>session7C.py</strong> – Bubble Sort implementation using nested loops.</li>
+
+            <li><strong>session7D.py</strong> – Filtering elements based on conditions.</li>
+
+            <li><strong>session7E.py</strong> – Creating a flight dataset using a list of dictionaries.</li>
+
+            <li><strong>session7F.py</strong> – Searching and sorting flight records dynamically.</li>
+
+            <li><strong>session7G.py</strong> – Completing the flight filtering system.</li>
         </ul>
-
-        <p>
-            The trainer also explained how negative numbers are represented using
-            two's complement while performing right shift operations.
-        </p>
-
-        <img src="../assets/images/day5-bitwise.png" alt="Bitwise Operators" class="activity-image">
-
-        <h2>Conditional Constructs</h2>
-
-        <p>
-            Practiced writing programs using:
-        </p>
-
-        <ul>
-            <li>if</li>
-            <li>if-else</li>
-            <li>if-elif-else</li>
-            <li>Nested if statements</li>
-        </ul>
-
-        <p>
-            These constructs were used to implement authentication and promo-code
-            validation systems.
-        </p>
-
-        <h2>Loops</h2>
-
-        <p>
-            Revised Python looping constructs and applied them to solve logical
-            programming problems using both <strong>for</strong> and
-            <strong>while</strong> loops.
-        </p>
 
         <h2>Class Activity</h2>
 
         <p>
-            The classroom activity was to implement a promo-code validation system
-            similar to an e-commerce checkout page.
+            During today's practical session, we implemented recursive
+            algorithms and visualized their execution using Stack and Heap
+            memory representation.
         </p>
 
         <p>
-            Using nested dictionaries and conditional statements, the program:
+            We also developed reusable functions for searching and sorting
+            flight records stored inside a list of dictionaries, demonstrating
+            how common algorithms can be applied to structured real-world data.
+        </p>
+
+        <img src="../assets/images/day7-class-activity.png"
+            alt="Class Activity"
+            class="activity-image">
+                <h2>Assignment</h2>
+
+        <p>
+            The assignment for today's session was to complete the filtering
+            functionality of the Flight Management System developed during the
+            practical session.
+        </p>
+
+        <p>
+            I implemented a reusable filtering function capable of retrieving
+            flights based on different user-defined criteria. The program
+            supports filtering using:
         </p>
 
         <ul>
-            <li>Accepted cart amount and promo code.</li>
-            <li>Validated the entered promo code.</li>
-            <li>Checked minimum purchase requirements.</li>
-            <li>Calculated percentage discounts.</li>
-            <li>Applied maximum discount limits.</li>
-            <li>Displayed the final payable amount.</li>
+            <li>Carrier</li>
+            <li>Fare (Greater Than / Less Than)</li>
+            <li>Duration (Greater Than / Less Than)</li>
+            <li>Source</li>
+            <li>Destination</li>
         </ul>
 
-        <img src="../assets/images/day5-promo-code.png" alt="Promo Code Activity" class="activity-image">
+        <p>
+            The solution also validates user input and uses reusable helper
+            functions to improve code readability and maintainability.
+        </p>
 
-        <h2>Assignment</h2>
+        <img src="../assets/images/day7-assignment.png"
+            alt="Flight Filter Assignment"
+            class="activity-image">
+
+        <h2>Assignment Solution</h2>
 
         <p>
-            Solved the programming challenge <strong>"Another Brick in the Wall"</strong>.
+            I completed the assignment by implementing a reusable
+            <strong>filter_flights()</strong> function that filters the flight
+            dataset according to the selected criteria. Numeric attributes such
+            as fare and duration support both greater-than and less-than
+            comparisons, while textual attributes are matched directly.
         </p>
 
         <p>
-            The objective was to determine which worker placed the final brick and
-            how many bricks they placed using loops, conditional statements and
-            incremental logic.
+            This assignment combined searching, sorting and filtering concepts
+            with real-world structured data, reinforcing the importance of
+            modular and reusable programming.
         </p>
-
-        <img src="../assets/images/day5-brick-problem.png" alt="Brick Problem Assignment" class="activity-image">
-
-        <h2>Discussion Points & Mini Tasks</h2>
 
         <ul>
             <li>
-                Discussed the difference between <strong>Static Memory Management</strong>
-                and <strong>Dynamic Memory Management</strong>, and why Python relies on
-                dynamic memory allocation.
-            </li>
-
-            <li>
-                Learned that many security algorithms such as
-                <strong>AES</strong> and <strong>SHA-256</strong> internally make use of
-                bitwise operations and bit shifting for efficient data processing.
-            </li>
-
-            <li>
-                Explored how the promo-code validation program could also be implemented
-                using an <strong>if-elif-else ladder</strong> instead of nested dictionary
-                lookups.
+                <a href="https://github.com/Jaiinderveer/agentic-ai-python-training/blob/main/day7/session7G.py"
+                    target="_blank">
+                    View Assignment Solution on GitHub
+                </a>
             </li>
         </ul>
+
         <h2>Key Learning Outcomes</h2>
 
         <ul>
-            <li>Learned arithmetic and assignment operators.</li>
-            <li>Understood comparison, logical, identity and membership operators.</li>
-            <li>Explored bitwise operators and binary representation.</li>
-            <li>Practiced conditional statements.</li>
-            <li>Revised for and while loops.</li>
-            <li>Implemented a promo-code validation system.</li>
-            <li>Solved a logical programming assignment using loops.</li>
+            <li>Understood recursion using stack and heap memory visualization.</li>
+            <li>Learned the importance of base cases in recursive functions.</li>
+            <li>Implemented recursive algorithms for solving list-based problems.</li>
+            <li>Practiced Linear Search and Bubble Sort from scratch.</li>
+            <li>Applied filtering techniques to structured datasets.</li>
+            <li>Worked with real-world flight data using a list of dictionaries.</li>
+            <li>Designed reusable Search, Sort and Filter functions.</li>
         </ul>
 
         <h2>Personal Reflection</h2>
 
         <p>
-            Today's session covered many of the core building blocks of Python.
-            Instead of learning individual syntax, I was able to combine operators,
-            conditions and loops to solve practical programming problems. The
-            promo-code system and brick placement assignment demonstrated how these
-            concepts are used together in real applications.
+            Today's session was one of the most interesting and practical so
+            far. Visualizing recursion using stack and heap memory made the
+            execution flow much easier to understand. Implementing searching,
+            sorting and filtering algorithms on a real-world flight dataset
+            demonstrated how fundamental programming concepts can be applied to
+            solve practical problems. The assignment also helped strengthen my
+            understanding of writing reusable and modular Python functions.
         </p>
 
         <h2>Next Session</h2>
 
         <p>
-            Looking forward to learning more advanced Python concepts and continuing
-            to build real-world programming solutions throughout the training.
+            The trainer informed us that the next session will continue with
+            advanced Python concepts and further strengthen problem-solving
+            skills through practical programming exercises.
         </p>
 
     </div>
