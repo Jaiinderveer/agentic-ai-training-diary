@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 8 - Agentic AI Training Diary</title>
+
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+    <div class="day-page">
+
+        <a href="../index.html" class="btn">← Back to Home</a>
+
+        <h1>Day 8 – Object-Oriented Programming (OOP)</h1>
+
+        <p><strong>Date:</strong> 4 July 2026</p>
+        <p><strong>Duration:</strong> 2:00 Hrs</p>
+        <p><strong>Training Company:</strong> Auribises Technologies</p>
+        <p><strong>Trainer:</strong> Ishant Kumar</p>
+
+        <hr>
+
+        <h2>Session Overview</h2>
+
+        <p>
+            Today's session marked the beginning of Object-Oriented Programming
+            (OOP) in Python. Instead of writing programs using only functions
+            and variables, we learned how real-world entities can be modeled
+            using classes and objects. The trainer explained the complete OOP
+            design process through practical examples such as a food delivery
+            application and a WhatsApp messaging system.
+        </p>
+
+        <h2>Introduction to Object-Oriented Programming</h2>
+
+        <p>
+            The session started with understanding the two fundamental concepts
+            of Object-Oriented Programming:
+        </p>
+
+        <ul>
+            <li><strong>Object</strong> – A real-world entity having attributes and behaviour.</li>
+            <li><strong>Class</strong> – A blueprint or textual representation used to create objects.</li>
+        </ul>
+
+        <p>
+            The trainer explained the basic OOP design methodology:
+        </p>
+
+        <ol>
+            <li>Identify the object.</li>
+            <li>Create its representation.</li>
+            <li>Define relationships between objects.</li>
+            <li>Create real objects in memory.</li>
+        </ol>
+
+        <img src="../assets/images/day8-oops-introduction.png"
+            alt="Introduction to OOPS"
+            class="activity-image">
+
+        <h2>Designing Real-World Applications</h2>
+
+        <p>
+            To understand object-oriented design, we analyzed how a food
+            delivery application can be represented using objects. We identified
+            the major entities involved in the system and listed their
+            attributes before creating relationships between them.
+        </p>
+
+        <p>
+            The trainer emphasized that software development begins by thinking
+            about real-world objects rather than immediately writing code.
+        </p>
+
+        <h2>Restaurant Object Model</h2>
+
+        <p>
+            A Restaurant Management System was designed using multiple related
+            classes including <strong>Restaurant</strong>,
+            <strong>Menu</strong> and <strong>Dish</strong>.
+        </p>
+
+        <p>
+            We mapped one-to-one and one-to-many relationships such as:
+        </p>
+
+        <ul>
+            <li>One Restaurant has one Menu.</li>
+            <li>One Menu contains multiple Dishes.</li>
+            <li>Each Dish stores its own properties such as name, price, category and rating.</li>
+        </ul>
+
+        <img src="../assets/images/day8-restaurant-model.png"
+            alt="Restaurant Object Model"
+            class="activity-image">
+
+        <h2>Creating Objects in Memory</h2>
+
+        <p>
+            After designing the object model, we implemented the corresponding
+            Python classes and created actual objects in memory. Attributes were
+            dynamically added, modified and deleted to understand how Python
+            stores object data during execution.
+        </p>
+
+        <p>
+            We also used the <code>vars()</code> function to inspect the
+            internal state of objects and observe how attributes are maintained
+            inside each instance.
+        </p>
+
+        <img src="../assets/images/day8-object-creation.png"
+            alt="Creating Objects"
+            class="activity-image">
+                <h2>Constructors in Python</h2>
+
+        <p>
+            The trainer introduced constructors using the
+            <code>__init__()</code> method. A constructor is automatically
+            executed whenever a new object is created and is primarily used to
+            initialize object attributes.
+        </p>
+
+        <p>
+            We learned how constructors help ensure that every object is created
+            with the required initial data instead of manually assigning
+            attributes after object creation.
+        </p>
+
+        <img src="../assets/images/day8-constructor.png"
+            alt="Python Constructor"
+            class="activity-image">
+
+        <h2>The <code>self</code> Reference</h2>
+
+        <p>
+            One of the most important concepts covered today was the
+            <code>self</code> reference. The trainer explained that
+            <code>self</code> stores the reference (memory address) of the
+            current object and allows access to its attributes and methods.
+        </p>
+
+        <p>
+            We observed that every object has a different memory location, and
+            the <code>self</code> parameter automatically refers to the object
+            that invokes the constructor or method.
+        </p>
+
+        <img src="../assets/images/day8-self.png"
+            alt="Self Reference"
+            class="activity-image">
+
+        <h2>Reference Copying</h2>
+
+        <p>
+            We explored how assigning one object reference to another variable
+            does not create a new object. Instead, both variables point to the
+            same object in memory.
+        </p>
+
+        <p>
+            Updating or deleting attributes through one reference immediately
+            affects the other reference because both refer to the same object.
+            This reinforced our understanding of object references in Python.
+        </p>
+
+        <img src="../assets/images/day8-reference-copy.png"
+            alt="Reference Copy"
+            class="activity-image">
+
+        <h2>Dynamic Object Attributes</h2>
+
+        <p>
+            Python allows attributes to be created, modified and deleted
+            dynamically during program execution. We experimented with adding
+            new attributes, updating existing values and removing attributes
+            using the <code>del</code> statement.
+        </p>
+
+        <p>
+            The <code>vars()</code> function was used repeatedly to inspect the
+            internal state of objects after each modification.
+        </p>
+
+        <img src="../assets/images/day8-dynamic-attributes.png"
+            alt="Dynamic Attributes"
+            class="activity-image">
+
+        <h2>Object Relationships</h2>
+
+        <p>
+            We also discussed relationship mapping between objects while
+            designing software systems.
+        </p>
+
+        <ul>
+            <li>One-to-One (1 : 1)</li>
+            <li>One-to-Many (1 : *)</li>
+            <li>Many-to-Many (* : *)</li>
+        </ul>
+
+        <p>
+            These relationships were applied while designing the Restaurant
+            Management System and later while modelling the WhatsApp
+            application.
+        </p>
+
+        <img src="../assets/images/day8-relationships.png"
+            alt="Object Relationships"
+            class="activity-image">
+                <h2>WhatsApp Object Model</h2>
+
+        <p>
+            The final part of today's session focused on designing a simplified
+            WhatsApp application using Object-Oriented Programming principles.
+            Instead of directly writing code, we first identified the real-world
+            objects involved in the application and then converted them into
+            Python classes.
+        </p>
+
+        <p>
+            Multiple classes were created including
+            <strong>User</strong>,
+            <strong>Contact</strong>,
+            <strong>Message</strong>,
+            <strong>Story</strong>,
+            <strong>Group</strong> and
+            <strong>Community</strong>. Relationships between these classes
+            were established to simulate how a real messaging platform works.
+        </p>
+
+        <img src="../assets/images/day8-whatsapp-model.png"
+            alt="WhatsApp Object Model"
+            class="activity-image">
+
+        <h2>Class Activity</h2>
+
+        <p>
+            During the practical session, we implemented the complete WhatsApp
+            object model by creating multiple interconnected objects and
+            establishing relationships between them. User, Contact, Message,
+            Story, Group and Community objects were instantiated and linked
+            together to simulate the behaviour of a real-world messaging
+            application.
+        </p>
+
+        <p>
+            Finally, we inspected each object using the
+            <code>vars()</code> function to understand how object attributes
+            and relationships are stored in memory.
+        </p>
+
+        <img src="../assets/images/day8-whatsapp-objects.png"
+            alt="WhatsApp Objects"
+            class="activity-image">
+
+        <h2>Assignment</h2>
+
+        <p>
+            The assignment was to design and implement a simplified WhatsApp
+            system using Object-Oriented Programming concepts. The objective
+            was to identify the major entities involved in the application,
+            define appropriate classes for each object and establish the
+            relationships between them.
+        </p>
+
+        <p>
+            The completed implementation includes User, Contact, Message,
+            Story, Group and Community classes along with one-to-one and
+            one-to-many object relationships, closely resembling the
+            architecture of a real messaging application.
+        </p>
+
+        <ul>
+            <li>
+                <a href="https://github.com/Jaiinderveer/agentic-ai-python-training/blob/main/day8/assignment.py"
+                    target="_blank">
+                    View Assignment Solution on GitHub
+                </a>
+            </li>
+        </ul>
+
+        <h2>Key Learning Outcomes</h2>
+
+        <ul>
+            <li>Understood the difference between classes and objects.</li>
+
+            <li>Learned the complete Object-Oriented Programming design process.</li>
+
+            <li>Created Python classes representing real-world entities.</li>
+
+            <li>Understood constructors and the purpose of the <code>__init__()</code> method.</li>
+
+            <li>Learned how the <code>self</code> reference points to the current object.</li>
+
+            <li>Explored reference copying and dynamic object attributes.</li>
+
+            <li>Implemented one-to-one and one-to-many object relationships.</li>
+
+            <li>Designed and implemented a real-world WhatsApp object model.</li>
+        </ul>
+
+        <h2>Personal Reflection</h2>
+
+        <p>
+            Today's session completely changed the way I look at software
+            development. Instead of thinking only in terms of variables and
+            functions, I learned how to model real-world systems using classes,
+            objects and relationships. Designing applications like a Restaurant
+            Management System and WhatsApp demonstrated how Object-Oriented
+            Programming makes complex software easier to organize, extend and
+            maintain.
+        </p>
+
+        <h2>Next Session</h2>
+
+        <p>
+            The trainer informed us that the upcoming sessions will continue
+            building upon Object-Oriented Programming concepts and gradually
+            introduce more advanced features used in real-world software
+            development.
+        </p>
+
+    </div>
+
+</body>
+
+</html>
