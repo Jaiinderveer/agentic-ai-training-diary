@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 10 - Stack, Queue & Strings in Python | Agentic AI Training Diary</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+    <div class="day-page">
+
+        <a href="../index.html" class="btn">
+            ← Back to Home
+        </a>
+
+        <h1>Day 10 - Stack, Queue & Strings in Python</h1>
+
+        <p><strong>Date:</strong> 7th July 2026</p>
+        <p><strong>Duration:</strong> 2:00 Hrs</p>
+        <p><strong>Training Company:</strong> Auribises Technologies</p>
+        <p><strong>Trainer:</strong> Ishant Kumar</p>
+
+        <hr>
+
+        <h2>Session Overview</h2>
+
+        <p>
+            Day 10 introduced two fundamental Computer Science topics—<strong>Stack & Queue Data Structures</strong> and
+            <strong>Strings in Python</strong>. Rather than studying these concepts theoretically, the trainer
+            demonstrated
+            their practical applications by designing a real-world Toll Plaza Management System using Object-Oriented
+            Programming.
+        </p>
+
+        <p>
+            The session began by revisiting object relationships through a <strong>Vehicle</strong> and
+            <strong>FastTag</strong> model before implementing a queue that simulates vehicles arriving at a toll plaza.
+            The second half of the class focused on Python strings, covering immutability, formatting techniques,
+            indexing, slicing, and several commonly used string operations.
+        </p>
+
+        <h2>Modeling a Toll Plaza System</h2>
+
+        <p>
+            To understand Queue data structures, we first modeled a Toll Plaza Management System. Each vehicle was
+            represented
+            as an object containing its registration number, vehicle type, and a FastTag object. This demonstrated how
+            one object
+            can contain another object to model real-world relationships effectively.
+        </p>
+
+        <p>
+            The FastTag object stored details such as the FastTag ID, issuing bank, and available balance, while the
+            Vehicle
+            object maintained a reference to its associated FastTag.
+        </p>
+
+        <img src="../assets/images/day10-vehicle-model.png" alt="Vehicle and FastTag Object Model"
+            class="activity-image">
+
+        <h2>Implementing a Queue using Circular Doubly Linked List</h2>
+
+        <p>
+            Instead of implementing a queue using Python lists, we reused the Circular Doubly Linked List developed in
+            previous
+            sessions. The queue maintained references to the <strong>head</strong> (front) and
+            <strong>tail</strong> (rear), allowing efficient insertion and deletion of vehicles while preserving the
+            FIFO
+            (First In, First Out) principle.
+        </p>
+
+        <p>
+            As vehicles entered the toll plaza, they were added to the rear of the queue. After toll deduction, the
+            processed
+            vehicle was removed from the front, closely simulating the workflow of an actual toll plaza.
+        </p>
+
+        <img src="../assets/images/day10-toll-plaza.png" alt="Toll Plaza Queue" class="activity-image">
+
+        <h2>Queue Operations</h2>
+
+        <p>
+            Several essential queue operations were implemented during the session. These operations demonstrated how a
+            Queue
+            can be efficiently managed using object references instead of Python's built-in data structures.
+        </p>
+
+        <ul>
+            <li>Adding a vehicle to the rear of the queue</li>
+            <li>Removing a vehicle from the front after processing</li>
+            <li>Maintaining head and tail references</li>
+            <li>Tracking the current queue size</li>
+            <li>Traversing the queue to display all vehicles</li>
+        </ul>
+
+        <p>
+            The trainer also explained the relationship between Queues and Stacks by implementing separate deletion
+            methods
+            for FIFO (Queue) and LIFO (Stack) behavior using the same underlying data structure.
+        </p>
+
+        <img src="../assets/images/day10-queue-operations.png" alt="Queue Operations" class="activity-image">
+        <h2>Automatic Toll Deduction</h2>
+
+        <p>
+            One of the most interesting parts of the session was implementing automatic toll deduction using the Queue
+            data structure. Every vehicle entering the toll plaza was processed in the order of arrival. Depending on
+            the vehicle type, the toll amount was deducted directly from its associated FastTag balance before the
+            vehicle exited the queue.
+        </p>
+
+        <p>
+            The implementation demonstrated how Queue operations can automate real-world workflows while maintaining
+            fairness through the <strong>FIFO (First In, First Out)</strong> principle. Four-wheelers and two-wheelers
+            were charged different toll amounts based on predefined conditions.
+        </p>
+
+        <img src="../assets/images/day10-fasttag-deduction.png" alt="FastTag Toll Deduction" class="activity-image">
+
+        <h2>Assignment</h2>
+
+        <p>
+            The assignment extended the Toll Plaza Queue by introducing an exceptional scenario. Instead of always
+            allowing vehicles to pass, the system needed to identify vehicles with insufficient FastTag balance.
+        </p>
+
+        <p>
+            If a vehicle did not have enough balance to pay the toll, it had to be highlighted and retained in the queue
+            instead of being removed. This introduced conditional processing into the Queue implementation and simulated
+            a realistic toll plaza workflow.
+        </p>
+
+        <h2>Assignment Solution</h2>
+
+        <p>
+            For my solution, I modified the toll deduction logic to validate the available FastTag balance before
+            deducting the toll amount. Vehicles with sufficient balance completed the transaction successfully and were
+            removed from the queue. If the balance was insufficient, the system displayed a warning message and
+            prevented the vehicle from leaving the queue.
+        </p>
+
+        <p>
+            This enhancement demonstrated how Queue operations can incorporate real-world validation while preserving
+            the integrity of the data structure and maintaining the correct processing order.
+        </p>
+
+        <p>
+            <a href="https://github.com/Jaiinderveer/agentic-ai-python-training/blob/main/day10/session10A.py"
+                class="btn" target="_blank">
+                View Assignment Solution on GitHub
+            </a>
+        </p>
+
+        <h2>Formatted Strings in Python</h2>
+
+        <p>
+            Before beginning string manipulation, the trainer introduced different techniques for formatting text in
+            Python. We explored formatted string literals (<strong>f-strings</strong>), the <code>format()</code>
+            method, and <code>format_map()</code>, which allow values stored in variables or dictionaries to be inserted
+            into strings in a clean and readable manner.
+        </p>
+
+        <p>
+            These formatting techniques improve code readability and are commonly used while generating reports,
+            displaying object information, and creating user-friendly output.
+        </p>
+
+        <h2>Strings in Python</h2>
+
+        <p>
+            The second half of the session focused on Python strings and their built-in operations. The trainer
+            explained that strings are <strong>immutable</strong>, meaning their contents cannot be modified directly.
+            Instead, every string manipulation operation creates a new string object in memory.
+        </p>
+
+        <p>
+            Several useful string operations were demonstrated, including converting text to uppercase, splitting
+            strings into lists, searching for keywords using the membership operator, and validating user input through
+            simple conditions.
+        </p>
+
+        <p>
+            The session also covered indexing, negative indexing, slicing, reversing strings using Python's slicing
+            syntax, string concatenation, and removing unnecessary whitespace using methods such as
+            <code>strip()</code>, <code>lstrip()</code>, and <code>rstrip()</code>.
+        </p>
+
+        <img src="../assets/images/day10-string-methods.png" alt="Python String Methods" class="activity-image">
+
+        <img src="../assets/images/day10-string-slicing.png" alt="String Indexing and Slicing" class="activity-image">
+        <h2>Key Learning Outcomes</h2>
+
+        <ul>
+            <li>Understood the fundamental difference between <strong>Stack (LIFO)</strong> and <strong>Queue
+                    (FIFO)</strong> data structures.</li>
+            <li>Learned how Queue operations can be implemented using a Circular Doubly Linked List.</li>
+            <li>Applied Object-Oriented Programming concepts to model a real-world Toll Plaza Management System.</li>
+            <li>Implemented queue operations such as insertion, deletion, traversal, and size management.</li>
+            <li>Learned how business logic, such as automatic toll deduction, can be integrated into data structures.
+            </li>
+            <li>Enhanced the Queue implementation by handling insufficient FastTag balance as an exceptional case.</li>
+            <li>Explored different techniques for string formatting using <code>f-strings</code>, <code>format()</code>,
+                and <code>format_map()</code>.</li>
+            <li>Understood the immutable nature of Python strings.</li>
+            <li>Practiced common string operations including indexing, slicing, reversing, splitting, concatenation, and
+                whitespace removal.</li>
+            <li>Developed a better understanding of how data structures and Python's built-in string features are
+                applied in real-world software development.</li>
+        </ul>
+
+        <h2>Personal Reflection</h2>
+
+        <p>
+            Day 10 demonstrated how data structures become significantly more meaningful when applied to practical
+            problems instead of isolated examples. Designing a Toll Plaza Management System using Queue operations
+            helped me understand how the FIFO principle works in real-world scenarios and how Object-Oriented
+            Programming can be combined with data structures to build modular applications.
+        </p>
+
+        <p>
+            The assignment further strengthened my understanding by introducing an exceptional case where vehicles with
+            insufficient FastTag balance remained in the queue instead of being processed. Implementing this validation
+            required thinking beyond basic Queue operations and applying logical conditions to handle real-life
+            situations.
+        </p>
+
+        <p>
+            The session concluded with Python strings, where I learned that strings are immutable objects and explored
+            several commonly used operations such as formatting, slicing, splitting, reversing, and trimming whitespace.
+            These concepts are essential for everyday Python programming and will be useful while developing larger
+            applications throughout the training.
+        </p>
+
+        <h2>Next Session</h2>
+
+        <p>
+            The next session will continue building on Python programming and data structures by introducing more
+            advanced concepts, allowing us to solve increasingly complex real-world problems while writing cleaner, more
+            efficient, and reusable code.
+        </p>
+
+    </div>
+
+</body>
+
+</html>

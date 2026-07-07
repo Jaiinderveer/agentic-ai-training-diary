@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 9 - Circular Doubly Linked List using OOP | Agentic AI Training Diary</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+    <div class="day-page">
+
+        <a href="../index.html" class="btn">
+            ← Back to Home
+        </a>
+
+        <h1>Day 9 - Circular Doubly Linked List using OOP</h1>
+
+        <p><strong>Date:</strong> 6th July 2026</p>
+        <p><strong>Duration:</strong> 2:30 Hrs</p>
+        <p><strong>Training Company:</strong> Auribises Technologies</p>
+        <p><strong>Trainer:</strong> Ishant Kumar</p>
+
+        <hr>
+
+        <h2>Session Overview</h2>
+
+        <p>
+            Day 9 focused on applying Object-Oriented Programming concepts to build a real-world data structure instead
+            of studying linked lists as isolated algorithms. The session demonstrated how a Circular Doubly Linked List
+            (CDLL) can be designed using classes and objects, making it reusable for practical applications such as
+            music playlists.
+        </p>
+
+        <p>
+            Rather than manually connecting objects, we created a dedicated <strong>CircularDoublyLinkedList</strong>
+            class responsible for managing relationships between song objects. This separation of responsibilities
+            highlighted one of the core principles of Object-Oriented Programming—encapsulation.
+        </p>
+
+        <p>
+            The trainer also explained how objects are stored in heap memory while references are maintained by other
+            objects, reinforcing our understanding of memory management and object relationships through detailed stack
+            and heap visualizations.
+        </p>
+
+        <h2>Designing a Playlist using Objects</h2>
+
+        <p>
+            The session began by modelling a music playlist similar to the one used by Gaana.com. Each song was
+            represented as an independent object containing its own data along with references to the next and previous
+            songs in the playlist.
+        </p>
+
+        <p>
+            This demonstrated how complex software systems are built by connecting multiple objects instead of relying
+            on primitive data types alone.
+        </p>
+
+        <img src="../assets/images/day9-memory-diagram.png" alt="Circular Doubly Linked List Memory Representation"
+            class="activity-image">
+
+        <h2>Song Object</h2>
+
+        <p>
+            A dedicated <strong>Song</strong> class was created to model every song in the playlist. Each object stored
+            essential information such as the song title, artist, duration, and two references pointing to the next and
+            previous songs.
+        </p>
+
+        <p>
+            The class also contained a display method for printing complete information about each object, allowing us
+            to verify how every node was connected inside the Circular Doubly Linked List.
+        </p>
+
+        <img src="../assets/images/day9-song-class.png" alt="Song Class" class="activity-image">
+
+        <h2>Building the Circular Doubly Linked List</h2>
+
+        <p>
+            Instead of hardcoding connections between songs, we developed a reusable
+            <strong>CircularDoublyLinkedList</strong> class. The playlist object maintained three important attributes:
+        </p>
+
+        <ul>
+            <li><strong>Head</strong> – Reference to the first song.</li>
+            <li><strong>Tail</strong> – Reference to the last song.</li>
+            <li><strong>Size</strong> – Total number of songs present in the playlist.</li>
+        </ul>
+
+        <p>
+            Whenever songs were added or removed, these references were automatically updated, ensuring that the
+            playlist always remained circular and doubly linked.
+        </p>
+
+        <img src="../assets/images/day9-cdll-class.png" alt="Circular Doubly Linked List Class" class="activity-image">
+
+        <h2>CDLL Operations</h2>
+
+        <p>
+            The majority of the session was devoted to implementing essential playlist operations. Each function
+            required careful manipulation of object references so that no links were broken after insertion or deletion.
+        </p>
+
+        <ul>
+            <li>Add Song</li>
+            <li>Add Song at Front</li>
+            <li>Add Song Between Two Songs</li>
+            <li>Delete First Song</li>
+            <li>Delete Last Song</li>
+            <li>Delete Specific Song</li>
+            <li>Forward Traversal</li>
+            <li>Reverse Traversal</li>
+        </ul>
+
+        <p>
+            Unlike singly linked lists, every operation required updating both the next and previous references while
+            preserving the circular structure of the playlist.
+        </p>
+
+        <img src="../assets/images/day9-add-operation.png" alt="CDLL Operations" class="activity-image">
+        <h2>Class Activity</h2>
+
+        <p>
+            During the practical session, we implemented a complete <strong>Gaana.com Playlist Manager</strong> using a
+            Circular Doubly Linked List. Instead of connecting song objects manually, every song was inserted
+            dynamically into the playlist using dedicated CDLL methods. This demonstrated how data structures can be
+            designed as reusable software components rather than isolated algorithms.
+        </p>
+
+        <p>
+            The trainer also explained how every insertion and deletion modifies object references in memory. By
+            observing the stack and heap diagrams alongside the execution of the program, we gained a much clearer
+            understanding of how objects communicate with one another through references.
+        </p>
+
+        <img src="../assets/images/day9-playlist-demo.png" alt="Gaana Playlist Demonstration" class="activity-image">
+
+        <h2>Assignment</h2>
+
+        <p>
+            The assignment required us to implement the same <strong>Circular Doubly Linked List</strong> using a
+            completely different real-world object instead of songs. The objective was to prove that the data structure
+            is generic and reusable regardless of the application domain.
+        </p>
+
+        <p>
+            Possible examples included Flights, Chat Messages, Browser Tabs, Video Playlists, or any similar system
+            involving sequential navigation.
+        </p>
+
+        <h2>Assignment Solution</h2>
+
+        <p>
+            For my implementation, I chose to build a <strong>YouTube Playlist Manager</strong>. I created a custom
+            <code>Video</code> class where every video object stores its title, channel name, duration, and references
+            to both the next and previous videos in the playlist.
+        </p>
+
+        <p>
+            The playlist itself was managed by the reusable <code>CircularDoublyLinkedList</code> class developed during
+            the session. By simply changing the node object from <code>Song</code> to <code>Video</code>, I was able to
+            reuse the same data structure without modifying its internal implementation, demonstrating the flexibility
+            of Object-Oriented Programming.
+        </p>
+
+        <p>
+            The YouTube playlist supports several important operations including:
+        </p>
+
+        <ul>
+            <li>Adding a video at the end of the playlist</li>
+            <li>Adding a video at the front</li>
+            <li>Deleting the first video</li>
+            <li>Deleting the last video</li>
+            <li>Deleting a specific video</li>
+            <li>Forward playlist traversal</li>
+            <li>Reverse playlist traversal</li>
+        </ul>
+
+        <p>
+            This assignment reinforced the concept that a well-designed data structure can be reused across multiple
+            applications simply by changing the type of object it stores.
+        </p>
+
+        <img src="../assets/images/day9-youtube-playlist.png" alt="YouTube Playlist Assignment" class="activity-image">
+
+        <p>
+            <a href="https://github.com/Jaiinderveer/agentic-ai-python-training/blob/main/day9/assignment.py"
+                class="btn" target="_blank">
+                View Assignment Solution on GitHub
+            </a>
+        </p>
+        <h2>Key Learning Outcomes</h2>
+
+        <ul>
+            <li>Applied Object-Oriented Programming principles to implement a real-world data structure.</li>
+            <li>Understood the architecture and working of a Circular Doubly Linked List.</li>
+            <li>Learned how <strong>head</strong>, <strong>tail</strong>, and <strong>size</strong> are managed within a
+                playlist.</li>
+            <li>Implemented insertion operations including adding elements at the front, end, and between existing
+                nodes.</li>
+            <li>Implemented deletion operations for the first node, last node, and any specific node in the playlist.
+            </li>
+            <li>Learned forward and backward traversal using next and previous references.</li>
+            <li>Visualized object relationships through stack and heap memory diagrams.</li>
+            <li>Discovered how the same data structure can be reused for different applications by changing only the
+                object model.</li>
+            <li>Strengthened understanding of encapsulation, object references, and reusable class design.</li>
+        </ul>
+
+        <h2>Personal Reflection</h2>
+
+        <p>
+            Day 9 was one of the most practical sessions of the training so far because it connected Object-Oriented
+            Programming with Data Structures. Rather than implementing a Circular Doubly Linked List as a standalone
+            algorithm, we designed it as a reusable class capable of managing real-world objects. This approach made the
+            implementation much easier to understand and demonstrated how software systems are actually developed.
+        </p>
+
+        <p>
+            The memory diagrams explaining the interaction between the stack and heap helped me visualize how objects
+            are connected through references. Seeing the <code>head</code>, <code>tail</code>, and song objects linked
+            together made concepts that usually feel abstract much more intuitive.
+        </p>
+
+        <p>
+            I particularly enjoyed the assignment because I was able to reuse the same Circular Doubly Linked List
+            implementation for a completely different application—a YouTube Playlist Manager. It reinforced the
+            importance of writing modular, reusable code and showed how a well-designed data structure can solve
+            problems across multiple domains with minimal modifications.
+        </p>
+
+        <h2>Next Session</h2>
+
+        <p>
+            The next session will continue building on Object-Oriented Programming by exploring more advanced concepts,
+            applying reusable class designs to larger problems, and implementing additional real-world applications
+            using Python.
+        </p>
+
+    </div>
+
+</body>
+
+</html>
