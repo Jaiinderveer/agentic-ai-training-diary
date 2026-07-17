@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 11 - Stack, Queue & Strings in Python | Agentic AI Training Diary</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+    <div class="day-page">
+
+        <a href="../index.html" class="btn">
+            ← Back to Home
+        </a>
+
+        <h1>Day 11 – File Handling, JSON & Working with APIs</h1>
+
+        <p><strong>Date:</strong> 8th July 2026</p>
+        <p><strong>Duration:</strong> 2 Hours</p>
+        <p><strong>Training Company:</strong> Auribises Technologies</p>
+        <p><strong>Trainer:</strong> Ishant Kumar</p>
+
+        <hr>
+
+        <h2>Session Overview</h2>
+
+        <p>
+            Day 11 marked an important transition in the training as we moved beyond writing standalone Python programs
+            and
+            began interacting with external resources. The session introduced file handling for persistent data storage,
+            JSON serialization for exchanging structured data, virtual environments for project dependency management,
+            and
+            REST APIs for retrieving live information from the internet. These concepts form the foundation of modern
+            Python
+            application development.
+        </p>
+
+        <p>
+            Through multiple hands-on activities, we learned how Python can read and write files, analyze source code,
+            convert dictionaries into JSON format, communicate with web APIs using the Requests library, and process
+            real-world data returned by online services.
+        </p>
+
+        <h2>File Handling in Python</h2>
+
+        <p>
+            The session began with Python's file handling capabilities. We learned how to open files in different modes,
+            read complete file contents, process files line by line, and safely close files after use. Understanding
+            file
+            operations is essential for creating applications that permanently store or retrieve information instead of
+            relying solely on variables stored in memory.
+        </p>
+
+        <p>
+            Different file modes such as <strong>Read (r)</strong>, <strong>Write (w)</strong>, and <strong>Append
+                (a)</strong> were demonstrated. We also explored the difference between <code>read()</code>, which loads
+            the
+            complete file, and <code>readlines()</code>, which returns each line as an individual element inside a list.
+        </p>
+
+        <p>
+            The trainer also introduced the <strong>with open()</strong> context manager, which automatically closes
+            files
+            after execution and is considered the recommended approach for handling files in Python.
+        </p>
+
+        <img src="../assets/images/day11-file-reading.png" alt="Python File Handling" class="activity-image">
+
+        <h2>Quote Storage Activity</h2>
+
+        <p>
+            To practice file writing, we created a simple Quote Storage application. The program accepted a quote from
+            the
+            user and stored it inside a text file using Append Mode. This ensured that every new quote was added to the
+            existing file instead of replacing previous entries.
+        </p>
+
+        <p>
+            Although simple, this activity demonstrated how Python programs can persist user-generated data and maintain
+            records across multiple executions.
+        </p>
+
+        <img src="../assets/images/day11-quotes-file.png" alt="Quote Storage Program" class="activity-image">
+
+        <h2>Object Analysis using File Processing</h2>
+
+        <p>
+            The next activity involved reading an existing Python source file and performing basic analysis on its
+            contents.
+            Instead of manually inspecting the code, the program processed each line to identify occurrences of
+            important
+            classes such as <strong>Vehicle</strong>, <strong>FastTag</strong>, and <strong>TollPlazaQueue</strong>.
+        </p>
+
+        <p>
+            The calculated object counts were then exported into a CSV file, demonstrating how Python can automate
+            simple
+            code analysis and generate structured reports from source files.
+        </p>
+
+        <img src="../assets/images/day11-object-analysis.png" alt="Object Analysis using File Processing"
+            class="activity-image">
+        <h2>Working with JSON in Python</h2>
+
+        <p>
+            After understanding file handling, we explored <strong>JSON (JavaScript Object Notation)</strong>, one of
+            the
+            most widely used formats for storing and exchanging structured data between applications. Since APIs
+            commonly
+            return data in JSON format, learning how to work with JSON is an essential Python skill.
+        </p>
+
+        <p>
+            The trainer demonstrated how a Python dictionary can be converted into a JSON string using
+            <code>json.dumps()</code>. Similarly, a JSON string can be converted back into a Python dictionary using
+            <code>json.loads()</code>. This conversion allows Python programs to easily exchange data with web services
+            and
+            external applications.
+        </p>
+
+        <p>
+            A sample food order dictionary was used to demonstrate both serialization and deserialization, helping us
+            understand the relationship between Python objects and JSON representations.
+        </p>
+
+        <img src="../assets/images/day11-json-conversion.png" alt="Dictionary to JSON Conversion"
+            class="activity-image">
+
+        <h2>Virtual Environments</h2>
+
+        <p>
+            The session then introduced <strong>Virtual Environments</strong>, an important concept in Python project
+            development. A virtual environment creates an isolated workspace where project-specific libraries can be
+            installed without affecting the global Python installation.
+        </p>
+
+        <p>
+            We learned how to create a virtual environment using the <code>venv</code> module, activate it on Windows,
+            and
+            install external libraries using the <code>pip</code> package manager. This approach helps maintain separate
+            dependencies for different projects and avoids version conflicts between libraries.
+        </p>
+
+        <p>
+            The trainer also explained the difference between Python's built-in modules and third-party packages that
+            must
+            be installed separately.
+        </p>
+
+        <h2>Working with REST APIs</h2>
+
+        <p>
+            After setting up the development environment, we used the <strong>Requests</strong> library to communicate
+            with
+            a REST API over the internet. Using an HTTP GET request, the program connected to the News API and retrieved
+            the
+            latest news headlines in JSON format.
+        </p>
+
+        <p>
+            The response received from the server was initially a JSON string. Using the JSON module, the response was
+            converted into a Python dictionary, making it possible to access individual fields and extract useful
+            information from the returned data.
+        </p>
+
+        <img src="../assets/images/day11-news-api.png" alt="Working with News API" class="activity-image">
+
+        <h2>Class Activity</h2>
+
+        <p>
+            As a practical activity, we developed a News Headlines application that fetched live news articles using the
+            News API. The program parsed the JSON response and displayed the title and description of each article in a
+            readable format.
+        </p>
+
+        <p>
+            This exercise demonstrated the complete workflow of making an HTTP request, receiving a server response,
+            converting JSON data into Python objects, and processing the extracted information. It was our first
+            experience
+            integrating an external web service into a Python application.
+        </p>
+
+        <img src="../assets/images/day11-news-output.png" alt="News API Output" class="activity-image">
+
+        <h2>Assignment</h2>
+
+        <p>
+            No separate programming assignment was provided during this session. Instead, the class focused on multiple
+            practical demonstrations involving file handling, JSON processing, virtual environments, and API
+            integration.
+            These activities collectively served as hands-on practice for understanding how Python applications interact
+            with files and external web services.
+        </p>
+        <h2>Key Learning Outcomes</h2>
+
+        <ul>
+            <li>Learned how to perform file operations using <code>open()</code> in different modes such as Read, Write,
+                and
+                Append.</li>
+            <li>Understood the difference between <code>read()</code> and <code>readlines()</code> for reading file
+                contents.</li>
+            <li>Learned to use the <code>with open()</code> context manager for safe and automatic file handling.</li>
+            <li>Implemented a simple Quote Storage application to persist user input in a text file.</li>
+            <li>Performed basic source code analysis by reading Python files and exporting the results into a CSV file.
+            </li>
+            <li>Learned the purpose of JSON as a standard data exchange format.</li>
+            <li>Converted Python dictionaries into JSON strings using <code>json.dumps()</code> and converted them back
+                using <code>json.loads()</code>.</li>
+            <li>Understood the importance of Virtual Environments for managing project dependencies.</li>
+            <li>Learned how to install third-party libraries using the <code>pip</code> package manager.</li>
+            <li>Built a Python application that consumed a REST API using the Requests library and processed live JSON
+                data.
+            </li>
+        </ul>
+
+        <h2>Personal Reflection</h2>
+
+        <p>
+            Day 11 introduced several concepts that are widely used in real-world Python development. Unlike previous
+            sessions, where most programs worked entirely within Python, this session focused on interacting with
+            external
+            resources such as files and web services. Learning file handling helped me understand how applications
+            permanently store and retrieve information, while JSON showed how data is exchanged between different
+            systems.
+        </p>
+
+        <p>
+            The News API activity was particularly interesting because it demonstrated how a Python program can
+            communicate
+            with an online service, receive live information, and process it into a readable format. This was my first
+            experience working with REST APIs, making the session an important milestone in understanding how modern
+            applications fetch and use external data.
+        </p>
+
+        <p>
+            Another valuable concept was Virtual Environments, which highlighted the importance of keeping project
+            dependencies isolated. Overall, this session provided a strong foundation for building applications that
+            interact with files, APIs, and third-party libraries, preparing us for more advanced topics in the upcoming
+            training sessions.
+        </p>
+
+        <h2>Next Session</h2>
+
+        <p>
+            The next session will continue exploring Python's capabilities by introducing databases and application
+            development concepts, allowing us to build programs that can store, retrieve, and manage data more
+            efficiently
+            while moving closer to developing complete real-world applications.
+        </p>
+
+    </div>
+
+</body>
+
+</html>
