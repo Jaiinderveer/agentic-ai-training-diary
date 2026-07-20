@@ -1,7 +1,7 @@
 const diaryContainer = document.getElementById("diaryContainer");
 const TOTAL_DAYS = 30;
 const btn = document.querySelector('#latestEntryBtn');
-const completedEntries = [1,2,3,4,5,6,7,8,9,10,11];
+const completedEntries = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18];
 const COMPLETED_DAYS = completedEntries.length;
 const progressPercentage =
     ((COMPLETED_DAYS / TOTAL_DAYS) * 100).toFixed(1);

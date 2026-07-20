@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 17 - Python Collections and Data Structure Operations</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+    <div class="day-page">
+
+        <a href="../index.html" class="btn">
+            ← Back to Home
+        </a>
+
+        <h1>Day 17 – Python Collections and Data Structure Operations</h1>
+
+        <p><strong>Date:</strong> 17th July 2026</p>
+        <p><strong>Duration:</strong> 2 Hours</p>
+        <p><strong>Training Company:</strong> Auribises Technologies</p>
+        <p><strong>Trainer:</strong> Ishant Kumar</p>
+
+        <hr>
+
+        <h2>Session Overview</h2>
+
+        <p>
+            Day 17 focused on strengthening our understanding of Python's built-in collection data types. The session
+            covered advanced operations on lists, sets, and dictionaries while introducing concepts such as slicing,
+            membership operators, exception handling, and common collection methods. These data structures form the
+            backbone of almost every Python application, making it essential to understand how to manipulate them
+            efficiently.
+        </p>
+
+        <p>
+            Through several practical examples, we explored how Python provides powerful built-in methods that simplify
+            data storage, retrieval, searching, sorting, and modification without requiring complex implementations.
+        </p>
+
+        <h2>Exception Handling and Collection Basics</h2>
+
+        <p>
+            The session began with a discussion on runtime errors and the importance of exception handling using the
+            <code>try</code> and <code>except</code> blocks. The trainer demonstrated how applications can continue
+            executing gracefully even when unexpected runtime errors occur, preventing abrupt program termination.
+        </p>
+
+        <p>
+            We also revised indexing on one-dimensional, two-dimensional, and three-dimensional lists before exploring
+            list slicing techniques for extracting portions of data efficiently.
+        </p>
+
+        <img src="../assets/images/day17-slicing.png" alt="List Slicing and Exception Handling" class="activity-image">
+
+        <h2>Working with Lists</h2>
+
+        <p>
+            A significant portion of the session focused on Python lists and the wide range of operations available on
+            them. We practiced adding elements using <code>append()</code> and <code>insert()</code>, calculating
+            aggregate values using built-in functions like <code>sum()</code>, <code>min()</code>, <code>max()</code>,
+            and <code>len()</code>, and converting lists into other collection types.
+        </p>
+
+        <p>
+            The trainer also demonstrated reversing lists, sorting in ascending and descending order, searching using
+            <code>index()</code>, removing elements, clearing lists, and deleting objects. These operations highlighted
+            why lists are one of the most flexible data structures in Python.
+        </p>
+
+        <img src="../assets/images/day17-list-operations.png" alt="Python List Operations" class="activity-image">
+
+        <h2>Membership Operators</h2>
+
+        <p>
+            We explored Python's membership operators <code>in</code> and <code>not in</code>, learning how they behave
+            differently for lists, sets, and dictionaries. While lists and sets check for values, dictionaries perform
+            membership tests on keys by default. Understanding this distinction is important when searching through
+            different collection types.
+        </p>
+
+        <img src="../assets/images/day17-membership.png" alt="Membership Operators" class="activity-image">
+        <h2>Exploring Python Sets</h2>
+
+        <p>
+            The next topic introduced Python's <strong>Set</strong> data structure, which stores only unique elements
+            and automatically removes duplicate values. We practiced adding and removing elements while exploring
+            various mathematical set operations that are widely used in data processing and logical comparisons.
+        </p>
+
+        <p>
+            Using practical examples based on social media followers, we learned how to identify mutual followers
+            through <code>intersection()</code>, verify subset and superset relationships, and perform operations such
+            as <code>union()</code>, <code>difference()</code>, and <code>symmetric difference</code>. These operations
+            demonstrated the efficiency of sets when working with unique collections of data.
+        </p>
+
+        <img src="../assets/images/day17-set-operations.png" alt="Python Set Operations" class="activity-image">
+
+        <h2>Working with Dictionaries</h2>
+
+        <p>
+            The session continued with Python dictionaries, focusing on storing information as key-value pairs. We
+            explored how to retrieve values using keys, add new entries, update existing records, delete items, and
+            iterate through dictionary keys and values.
+        </p>
+
+        <p>
+            The trainer also demonstrated useful dictionary methods such as <code>keys()</code>, <code>items()</code>,
+            and <code>get()</code>, highlighting how dictionaries provide efficient lookup operations and are commonly
+            used to represent structured data throughout Python applications.
+        </p>
+
+        <img src="../assets/images/day17-dictionary.png" alt="Dictionary Operations" class="activity-image">
+
+        <h2>Class Activity</h2>
+
+        <p>
+            Throughout the session, we practiced various operations on Python's built-in collection types by writing
+            small programs for lists, sets, and dictionaries. These activities helped reinforce the strengths of each
+            data structure and demonstrated when each collection type is most appropriate for solving different
+            programming problems.
+        </p>
+
+        <p>
+            By comparing lists, sets, and dictionaries side by side, we developed a better understanding of their
+            performance characteristics, supported operations, and practical use cases in software development.
+        </p>
+
+        <h2>Assignment</h2>
+
+        <p>
+            The assignment was to explore the implementation of a <strong>Queue</strong> using Python lists. The
+            objective was to simulate queue behavior by inserting elements at one end and removing them from the front
+            while maintaining the First-In, First-Out (FIFO) principle.
+        </p>
+
+        <p>
+            This exercise provided practical experience with one of the most fundamental linear data structures and
+            demonstrated how Python lists can be used to implement queue operations, even though specialized data
+            structures such as <code>collections.deque</code> offer better performance for production applications.
+        </p>
+
+        <h2>Assignment Solution</h2>
+
+        <p>
+            I implemented a queue using a Python list by creating enqueue and dequeue operations that maintained FIFO
+            order. New elements were appended to the rear of the queue, while elements were removed from the front
+            during dequeue operations. I also displayed the queue after each operation to verify that it behaved
+            correctly.
+        </p>
+
+        <p>
+            Completing this assignment reinforced my understanding of queue operations and helped me relate Python's
+            built-in list methods to the implementation of classical data structures studied in computer science.
+        </p>
+
+        <img src="../assets/images/day17-queue-assignment.png" alt="Queue Implementation using List"
+            class="activity-image">
+        <h2>Key Learning Outcomes</h2>
+
+        <ul>
+            <li>Learned how runtime errors can be handled gracefully using <code>try</code> and <code>except</code>
+                blocks.</li>
+            <li>Revised one-dimensional, two-dimensional, and three-dimensional lists along with Python indexing
+                techniques.</li>
+            <li>Understood list slicing and how subsets of data can be extracted efficiently.</li>
+            <li>Practiced various list operations including <code>append()</code>, <code>insert()</code>,
+                <code>sort()</code>, <code>reverse()</code>, <code>remove()</code>, <code>pop()</code>, and
+                <code>clear()</code>.</li>
+            <li>Explored Python's built-in functions such as <code>sum()</code>, <code>min()</code>, <code>max()</code>,
+                and <code>len()</code> for working with collections.</li>
+            <li>Learned how membership operators behave differently for lists, sets, and dictionaries.</li>
+            <li>Studied Python sets and performed operations like union, intersection, difference, symmetric difference,
+                subset, and superset.</li>
+            <li>Explored dictionaries by creating, updating, deleting, retrieving, and iterating through key-value
+                pairs.</li>
+            <li>Implemented a Queue using Python lists and understood the FIFO (First-In, First-Out) principle.</li>
+            <li>Strengthened understanding of Python's core collection data structures that are widely used in software
+                development and AI applications.</li>
+        </ul>
+
+        <h2>Personal Reflection</h2>
+
+        <p>
+            Day 17 was an excellent revision and expansion of Python's built-in collection types. Although I was already
+            familiar with lists, this session introduced many useful operations and built-in methods that make working
+            with collections much more efficient. Learning different slicing techniques and collection methods helped me
+            understand how Python simplifies common programming tasks.
+        </p>
+
+        <p>
+            I particularly enjoyed exploring sets because their mathematical operations such as union and intersection
+            have many practical applications in data analysis and backend development. The discussion on dictionaries
+            also reinforced how efficiently structured information can be stored and retrieved using key-value pairs.
+        </p>
+
+        <p>
+            The queue assignment connected Python programming with the data structures I have studied academically.
+            Implementing FIFO behavior using lists helped bridge theoretical concepts with practical coding. Overall,
+            this session strengthened my confidence in using Python's collection framework and prepared me for building
+            more complex applications involving structured data.
+        </p>
+
+        <h2>Next Session</h2>
+
+        <p>
+            The next session will continue expanding our Python and Agentic AI journey by introducing additional
+            concepts that will further strengthen our programming skills and prepare us for developing more advanced
+            intelligent applications.
+        </p>
+
+    </div>
+
+</body>
+
+</html>

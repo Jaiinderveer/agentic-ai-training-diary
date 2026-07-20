@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 12 - MongoDB Integration & Data Persistence</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+    <div class="day-page">
+
+        <a href="../index.html" class="btn">
+            ← Back to Home
+        </a>
+
+        <h1>Day 12 – MongoDB Integration & Data Persistence</h1>
+
+        <p><strong>Date:</strong> 10th July 2026</p>
+        <p><strong>Duration:</strong> 2 Hours</p>
+        <p><strong>Training Company:</strong> Auribises Technologies</p>
+        <p><strong>Trainer:</strong> Ishant Kumar</p>
+
+        <hr>
+
+        <h2>Session Overview</h2>
+
+        <p>
+            Day 12 marked the beginning of database programming using MongoDB. Until now, our applications stored data
+            either in variables or text files. In this session, we learned how to connect Python applications to a
+            cloud-hosted MongoDB Atlas database and permanently store user information. The trainer also emphasized
+            writing modular and reusable code by separating application logic into dedicated helper classes.
+        </p>
+
+        <p>
+            The session introduced password hashing for improved security, reusable File and Database helper classes,
+            and object serialization techniques that prepared us for building complete applications in the upcoming
+            sessions.
+        </p>
+
+        <h2>Connecting Python with MongoDB Atlas</h2>
+
+        <p>
+            The session began by connecting Python to a MongoDB Atlas cluster using the <strong>PyMongo</strong>
+            library. We created a <code>MongoClient</code> instance using the database connection URI and verified the
+            connection by sending a <code>ping</code> command to the server.
+        </p>
+
+        <p>
+            This activity demonstrated how cloud-hosted databases can be accessed directly from Python applications,
+            enabling persistent storage without relying on local files.
+        </p>
+
+        <img src="../assets/images/day12-mongodb-connection.png" alt="MongoDB Atlas Connection" class="activity-image">
+
+        <h2>Exploring MongoDB Databases and Collections</h2>
+
+        <p>
+            After establishing the connection, we explored how MongoDB organizes information into databases and
+            collections. Using PyMongo, we listed the available collections inside our database and learned how
+            documents are grouped within collections instead of traditional SQL tables.
+        </p>
+
+        <p>
+            Understanding this structure helped us prepare for storing application data in MongoDB during the remainder
+            of the session.
+        </p>
+
+        <h2>Designing the User Class</h2>
+
+        <p>
+            To organize user information efficiently, we designed a dedicated <strong>User</strong> class containing
+            attributes such as name, phone number, email address, and password. The class also included methods for
+            accepting user input, displaying information, exporting data as CSV, and converting objects into Python
+            dictionaries for database storage.
+        </p>
+
+        <p>
+            This reinforced the principles of Object-Oriented Programming by encapsulating both data and related
+            operations inside a single reusable class.
+        </p>
+
+        <img src="../assets/images/day12-user-class.png" alt="User Class Design" class="activity-image">
+
+        <h2>Password Encryption using SHA-256</h2>
+
+        <p>
+            Instead of storing passwords in plain text, the trainer introduced password hashing using Python's built-in
+            <code>hashlib</code> module. User passwords were converted into SHA-256 hash values before storage,
+            demonstrating a more secure approach to handling sensitive information.
+        </p>
+
+        <p>
+            Although simplified for learning purposes, this activity introduced an important cybersecurity concept that
+            is widely used in modern authentication systems.
+        </p>
+
+        <img src="../assets/images/day12-password-encryption.png" alt="Password Hashing using SHA-256"
+            class="activity-image">
+        <h2>Creating Reusable Helper Classes</h2>
+
+        <p>
+            To improve the overall structure of the application, the trainer introduced the concept of helper classes.
+            Instead of placing all the logic inside a single file, responsibilities were divided into separate classes,
+            making the code more modular, reusable, and easier to maintain.
+        </p>
+
+        <p>
+            A <strong>FileHelper</strong> class was created to manage file operations such as writing user data into a
+            CSV file, while a <strong>DBHelper</strong> class handled all MongoDB-related tasks, including establishing
+            database connections, selecting collections, and inserting documents. This separation of responsibilities
+            follows good software engineering practices and makes future application development much more organized.
+        </p>
+
+        <img src="../assets/images/day12-file-db-helper.png" alt="FileHelper and DBHelper Classes"
+            class="activity-image">
+
+        <h2>Building the Database Helper</h2>
+
+        <p>
+            The <strong>DBHelper</strong> class encapsulated all MongoDB operations inside reusable methods. During
+            initialization, it established a connection to the MongoDB Atlas cluster and selected the required database.
+            Additional methods allowed the program to choose a collection and save user documents without exposing
+            database-specific code to the rest of the application.
+        </p>
+
+        <p>
+            This abstraction simplified database interactions and demonstrated how helper classes can hide
+            implementation details while providing clean interfaces for application development.
+        </p>
+
+        <h2>Integrating the Complete Application</h2>
+
+        <p>
+            The final program combined all previously created components into a single workflow. A <strong>User</strong>
+            object collected user details, converted the information into both CSV and dictionary formats, and passed
+            the dictionary to the <strong>DBHelper</strong> for storage inside MongoDB.
+        </p>
+
+        <p>
+            This demonstrated how multiple classes can work together to build a complete application where each class
+            performs a specific responsibility while contributing to the overall system.
+        </p>
+
+        <img src="../assets/images/day12-main-program.png" alt="Main Application Flow" class="activity-image">
+
+        <h2>Class Activity</h2>
+
+        <p>
+            The primary class activity involved developing a simple user registration system that accepted user
+            information, encrypted the password using SHA-256, converted the object into different formats, and finally
+            stored the data inside a MongoDB collection.
+        </p>
+
+        <p>
+            This activity connected several concepts learned throughout the training, including Object-Oriented
+            Programming, file handling, password hashing, helper classes, and cloud database integration. It also
+            demonstrated how applications can separate business logic from storage logic to improve maintainability.
+        </p>
+
+        <img src="../assets/images/day12-mongodb-output.png" alt="MongoDB Document Insertion Output"
+            class="activity-image">
+
+        <h2>Assignment</h2>
+
+        <p>
+            No separate programming assignment was provided during this session. The focus remained on designing
+            reusable helper classes and successfully integrating MongoDB with a Python application. The hands-on
+            implementation itself served as practical experience for understanding cloud database connectivity and
+            modular application architecture.
+        </p>
+        <h2>Key Learning Outcomes</h2>
+
+        <ul>
+            <li>Learned how to connect Python applications with MongoDB Atlas using the PyMongo library.</li>
+            <li>Understood how MongoDB organizes information into databases, collections, and documents.</li>
+            <li>Explored how to establish a secure database connection and verify it using the <code>ping</code>
+                command.</li>
+            <li>Designed a reusable <strong>User</strong> class following Object-Oriented Programming principles.</li>
+            <li>Implemented password hashing using Python's <code>hashlib</code> module and the SHA-256 algorithm.</li>
+            <li>Learned how to serialize objects into CSV format and Python dictionaries for different storage
+                mechanisms.</li>
+            <li>Created reusable <strong>FileHelper</strong> and <strong>DBHelper</strong> classes to separate file and
+                database operations from application logic.</li>
+            <li>Integrated multiple classes into a complete user registration workflow.</li>
+            <li>Successfully stored user information inside a cloud-hosted MongoDB Atlas database.</li>
+            <li>Developed a better understanding of modular application architecture and code reusability.</li>
+        </ul>
+
+        <h2>Personal Reflection</h2>
+
+        <p>
+            Day 12 was one of the most significant sessions of the training because it introduced database programming
+            and demonstrated how Python applications interact with cloud-hosted databases. Connecting a local Python
+            program to MongoDB Atlas made the learning experience much more practical, as the application was no longer
+            limited to temporary variables or text files.
+        </p>
+
+        <p>
+            Another valuable lesson was the importance of writing modular and maintainable code. Separating
+            responsibilities into dedicated classes such as <strong>User</strong>, <strong>FileHelper</strong>, and
+            <strong>DBHelper</strong> made the overall application cleaner, easier to understand, and more reusable.
+            This reinforced the software engineering principle of dividing complex systems into smaller, manageable
+            components.
+        </p>
+
+        <p>
+            Learning about password hashing also highlighted the importance of protecting sensitive user information.
+            Although this project was created for educational purposes, it introduced real-world security practices that
+            are commonly used in modern applications. Overall, this session laid the foundation for building
+            database-driven applications that will be expanded further in the upcoming training sessions.
+        </p>
+
+        <h2>Next Session</h2>
+
+        <p>
+            The next session will build upon the database concepts introduced today by performing CRUD (Create, Read,
+            Update, Delete) operations and integrating MongoDB with user interfaces, allowing us to develop more
+            interactive and feature-rich Python applications.
+        </p>
+
+    </div>
+
+</body>
+
+</html>

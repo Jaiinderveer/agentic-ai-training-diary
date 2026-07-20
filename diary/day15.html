@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 15 - Building an AI-Powered Agentic Task Assistant</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+    <div class="day-page">
+
+        <a href="../index.html" class="btn">
+            ← Back to Home
+        </a>
+
+        <h1>Day 15 – Building an AI-Powered Agentic Task Assistant</h1>
+
+        <p><strong>Date:</strong> 15th July 2026</p>
+        <p><strong>Duration:</strong> 2 Hours</p>
+        <p><strong>Training Company:</strong> Auribises Technologies</p>
+        <p><strong>Trainer:</strong> Ishant Kumar</p>
+
+        <hr>
+
+        <h2>Session Overview</h2>
+
+        <p>
+            Day 15 marked one of the biggest milestones of the training as we transformed our rule-based chat
+            application into an AI-powered Agentic Assistant using the OpenAI Responses API. Instead of manually
+            checking user commands with multiple conditional statements, we allowed a Large Language Model (LLM) to
+            understand natural language, decide which backend function should be executed, and automatically provide the
+            required arguments.
+        </p>
+
+        <p>
+            The session introduced OpenAI's Function Calling feature (Tools), enabling our application to intelligently
+            connect AI-generated decisions with Python functions responsible for interacting with MongoDB. This
+            significantly improved the flexibility and scalability of the project.
+        </p>
+
+        <h2>Introduction to the OpenAI Responses API</h2>
+
+        <p>
+            We began by learning how to interact with OpenAI models using the official Python SDK. After securely
+            loading the API key, we created an OpenAI client and generated responses using the
+            <code>client.responses.create()</code> method with the <strong>gpt-4o-mini</strong> model.
+        </p>
+
+        <p>
+            This simple exercise demonstrated how Large Language Models can understand prompts and generate meaningful
+            responses, laying the foundation for integrating AI capabilities into our applications.
+        </p>
+
+        <img src="../assets/images/day15-openai-api.png" alt="OpenAI Responses API" class="activity-image">
+
+        <h2>Understanding Function Calling</h2>
+
+        <p>
+            The most important concept introduced during this session was <strong>Function Calling</strong>. Instead of
+            asking the model to directly generate text, we described the Python functions that our application could
+            perform, including their names, descriptions, and required parameters.
+        </p>
+
+        <p>
+            When the user entered a request, the language model analyzed the instruction and selected the most
+            appropriate function to execute, automatically generating all required arguments in JSON format. This
+            eliminated the need for manual command parsing and made the application significantly more intelligent.
+        </p>
+
+        <img src="../assets/images/day15-function-calling.png" alt="OpenAI Function Calling" class="activity-image">
+
+        <h2>Creating AI Tools</h2>
+
+        <p>
+            Each backend operation—including creating, listing, updating, and deleting tasks—was represented as a
+            callable tool. Every tool contained a detailed schema describing the expected input parameters, allowing the
+            language model to correctly identify which function should be invoked based on the user's request.
+        </p>
+
+        <p>
+            This architecture closely resembles modern AI agents, where an LLM acts as the decision-making component
+            while Python functions perform real-world operations such as database interactions.
+        </p>
+
+        <img src="../assets/images/day15-tools-schema.png" alt="Tool Schema Definition" class="activity-image">
+        <h2>Integrating AI with the Task Management System</h2>
+
+        <p>
+            After understanding Function Calling, we integrated the OpenAI model into our existing Streamlit
+            application. Instead of manually identifying commands such as "create task" or "delete task", every user
+            message was sent directly to the language model. The model analyzed the user's intent and decided whether a
+            backend function needed to be executed or if a normal conversational response should be returned.
+        </p>
+
+        <p>
+            This significantly simplified the application logic while making the chatbot much more flexible. Users could
+            now communicate naturally instead of following a fixed command format.
+        </p>
+
+        <img src="../assets/images/day15-agentic-chat.png" alt="AI Powered Agentic Chat" class="activity-image">
+
+        <h2>Executing Backend Functions</h2>
+
+        <p>
+            When the language model selected a function, the application extracted both the function name and its
+            generated arguments from the API response. These arguments were converted from JSON into Python dictionaries
+            before invoking the corresponding backend function such as <code>save_task()</code>,
+            <code>list_tasks()</code>, <code>update_task()</code>, or <code>delete_task()</code>.
+        </p>
+
+        <p>
+            Each function interacted with MongoDB through the reusable <strong>DBHelper</strong> class, allowing the AI
+            assistant to manage tasks without any manual parsing of user input.
+        </p>
+
+        <img src="../assets/images/day15-function-execution.png" alt="Executing AI Function Calls"
+            class="activity-image">
+
+        <h2>Supporting Complete CRUD Operations</h2>
+
+        <p>
+            The application was expanded to support all CRUD operations through AI-powered function calls. Whether the
+            user wanted to create a new task, retrieve existing tasks, update specific task details, or delete a
+            completed task, the language model automatically selected the appropriate backend function and supplied the
+            required parameters.
+        </p>
+
+        <p>
+            This demonstrated how an LLM can act as an intelligent decision-making layer while Python functions perform
+            the actual business logic and database operations.
+        </p>
+
+        <img src="../assets/images/day15-crud-tools.png" alt="AI Controlled CRUD Operations" class="activity-image">
+
+        <h2>Class Activity</h2>
+
+        <p>
+            The class activity involved upgrading the Day 14 Agentic Chat UI into an AI-powered assistant using the
+            OpenAI Responses API. We replaced manual command parsing with Function Calling, allowing the chatbot to
+            understand natural language instructions and execute Python functions automatically. The application then
+            displayed the results back to the user inside the Streamlit chat interface.
+        </p>
+
+        <p>
+            Another important exercise involved inspecting the API response structure to understand how the model
+            returns function names, arguments, normal messages, and output types. This helped us understand how AI
+            applications communicate with backend services.
+        </p>
+
+        <img src="../assets/images/day15-response-structure.png" alt="Understanding OpenAI Response Structure"
+            class="activity-image">
+
+        <h2>Assignment</h2>
+
+        <p>
+            No separate assignment was given during this session. The primary objective was to successfully integrate
+            OpenAI Function Calling into the existing Agentic Chat application and ensure that all CRUD operations could
+            be executed through natural language interactions using the AI model.
+        </p>
+        <h2>Key Learning Outcomes</h2>
+
+        <ul>
+            <li>Learned how to integrate the OpenAI Python SDK into a real-world application.</li>
+            <li>Understood how the <code>Responses API</code> processes prompts and generates AI-powered responses.</li>
+            <li>Explored OpenAI Function Calling (Tools) to connect Large Language Models with Python functions.</li>
+            <li>Designed tool schemas using JSON to describe callable backend functions.</li>
+            <li>Learned how the model automatically selects the most appropriate function based on natural language
+                input.</li>
+            <li>Parsed AI-generated JSON arguments and executed corresponding Python functions.</li>
+            <li>Integrated OpenAI with MongoDB to perform complete CRUD operations through natural language.</li>
+            <li>Replaced rule-based command parsing with AI-driven intent recognition.</li>
+            <li>Strengthened understanding of how LLMs communicate with backend services using structured outputs.</li>
+            <li>Built the foundation of a true Agentic AI application capable of reasoning about user requests and
+                invoking appropriate tools.</li>
+        </ul>
+
+        <h2>Personal Reflection</h2>
+
+        <p>
+            Day 15 was one of the most significant sessions of the entire training because it transformed our chatbot
+            from a rule-based application into an AI-powered assistant. Until this point, the application relied on
+            manually checking user commands, but integrating the OpenAI Responses API allowed the language model to
+            understand requests in natural language and determine the correct backend function automatically.
+        </p>
+
+        <p>
+            Learning about Function Calling completely changed my understanding of how modern AI applications are built.
+            Instead of generating only conversational responses, the model became capable of interacting with external
+            systems by invoking Python functions with structured arguments. Watching the AI create, retrieve, update,
+            and delete MongoDB records through backend functions made the project feel much closer to real-world AI
+            assistants.
+        </p>
+
+        <p>
+            This session also highlighted the importance of designing clear tool schemas and reusable backend functions.
+            Separating the AI's decision-making process from the application's business logic made the project cleaner,
+            more scalable, and easier to maintain. Overall, Day 15 provided valuable insight into how Large Language
+            Models can be integrated into software applications to build intelligent, action-oriented systems rather
+            than simple chatbots.
+        </p>
+
+        <h2>Next Session</h2>
+
+        <p>
+            The next session will continue enhancing the Agentic AI assistant by introducing more advanced capabilities,
+            enabling the application to perform increasingly complex tasks through intelligent reasoning and deeper
+            integration between the language model and backend services.
+        </p>
+
+    </div>
+
+</body>
+
+</html>

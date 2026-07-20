@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 18 - Regular Expressions and Agentic AI Dashboard</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+    <div class="day-page">
+
+        <a href="../index.html" class="btn">
+            ← Back to Home
+        </a>
+
+        <h1>Day 18 – Regular Expressions and Agentic AI Dashboard</h1>
+
+        <p><strong>Date:</strong> 20th July 2026</p>
+        <p><strong>Duration:</strong> 2 Hours</p>
+        <p><strong>Training Company:</strong> Auribises Technologies</p>
+        <p><strong>Trainer:</strong> Ishant Kumar</p>
+
+        <hr>
+
+        <h2>Session Overview</h2>
+
+        <p>
+            Day 18 introduced two important areas of Python development. The session began with <strong>Regular
+                Expressions (Regex)</strong>, where we learned how pattern matching simplifies searching, validating,
+            and extracting structured information from text. Later, we continued building our Agentic AI application by
+            creating a multi-page Streamlit dashboard and integrating OpenAI Function Calling with MongoDB to build an
+            intelligent task management system.
+        </p>
+
+        <p>
+            The combination of text processing, AI reasoning, database operations, and modern user interfaces
+            demonstrated how multiple Python technologies can be combined to build practical AI-powered applications.
+        </p>
+
+        <h2>Regular Expressions (Regex)</h2>
+
+        <p>
+            We explored Python's <code>re</code> module to perform pattern matching on text. The session covered
+            functions such as <code>re.search()</code>, <code>re.findall()</code>, and <code>re.fullmatch()</code>.
+            These functions allow developers to search for patterns, extract matching data, and validate whether an
+            input completely satisfies a required format.
+        </p>
+
+        <p>
+            Several practical examples demonstrated how regular expressions can simplify otherwise complex
+            string-processing tasks while making programs more reliable and concise.
+        </p>
+
+        <img src="../assets/images/day18-regex-basics.png" alt="Regular Expressions" class="activity-image">
+
+        <h2>Data Extraction and Validation</h2>
+
+        <p>
+            The trainer demonstrated how Regex can be used to extract useful information such as phone numbers, email
+            addresses, vehicle registration numbers, and numeric values from larger blocks of text. We also validated
+            structured inputs including Indian phone numbers, PAN card numbers, and vehicle registration formats using
+            pattern matching.
+        </p>
+
+        <p>
+            A particularly interesting example combined multiple patterns into a single regular expression capable of
+            extracting different types of information simultaneously. This showed how Regex can become a powerful tool
+            for intelligent text processing and information extraction.
+        </p>
+
+        <img src="../assets/images/day18-regex-validation.png" alt="Regex Validation" class="activity-image">
+
+        <h2>Building Multi-Page Streamlit Applications</h2>
+
+        <p>
+            The second half of the session introduced Streamlit's multi-page navigation system. We created an
+            application containing separate pages for a dashboard, AI chat interface, and patient management module. The
+            dashboard displayed key performance metrics, charts, and tabular data using Streamlit components such as
+            metrics, columns, charts, and dataframes.
+        </p>
+
+        <p>
+            This demonstrated how professional web applications can be organized into multiple pages while maintaining a
+            clean and intuitive user experience.
+        </p>
+
+        <img src="../assets/images/day18-streamlit-dashboard.png" alt="Streamlit Dashboard" class="activity-image">
+        <h2>Building an AI-Powered Agentic Task Manager</h2>
+
+        <p>
+            The primary focus of the session was extending our Agentic AI application by integrating the OpenAI
+            Responses API with MongoDB Atlas. Instead of relying on manually written conditions to understand user
+            requests, the application now uses a Large Language Model to determine the user's intent and automatically
+            invoke the appropriate backend function.
+        </p>
+
+        <p>
+            We defined multiple Python functions responsible for saving, listing, updating, and deleting tasks from
+            MongoDB. These functions served as the backend logic, while the AI model acted as an intelligent controller
+            capable of deciding which function should be executed based on natural language instructions.
+        </p>
+
+        <img src="../assets/images/day18-agentic-chat.png" alt="Agentic AI Task Manager" class="activity-image">
+
+        <h2>OpenAI Function Calling</h2>
+
+        <p>
+            A major concept introduced during the session was <strong>Function Calling</strong>. We created JSON tool
+            schemas describing each available backend function, including their names, descriptions, parameters, and
+            required fields. These tool definitions were supplied to the OpenAI model, enabling it to understand the
+            application's available capabilities.
+        </p>
+
+        <p>
+            Whenever a user entered a request such as creating, updating, deleting, or listing tasks, the AI generated a
+            structured function call containing the required arguments. The application parsed this response, executed
+            the corresponding Python function, and returned the result to the user. This architecture allowed natural
+            language to directly control backend operations while keeping the application modular and scalable.
+        </p>
+
+        <img src="../assets/images/day18-function-calling.png" alt="OpenAI Function Calling" class="activity-image">
+
+        <h2>MongoDB Integration</h2>
+
+        <p>
+            The session also strengthened our understanding of database operations using the custom
+            <code>DBHelper</code> class. MongoDB Atlas was used as persistent storage for all tasks, while helper
+            methods handled document insertion, retrieval, updating, and deletion. Additional task metadata such as
+            creation time and status were automatically generated before storing new records.
+        </p>
+
+        <p>
+            By separating database operations into reusable helper functions, the application became easier to maintain
+            and allowed the AI layer to remain independent of the underlying database implementation.
+        </p>
+
+        <img src="../assets/images/day18-mongodb-integration.png" alt="MongoDB Integration" class="activity-image">
+
+        <h2>Class Activity</h2>
+
+        <p>
+            During the practical session, we built a complete AI-powered task management application capable of
+            understanding natural language commands. We tested various scenarios including creating new tasks,
+            displaying stored tasks, updating task details, and deleting completed tasks. The application combined
+            Streamlit for the user interface, OpenAI for intelligent reasoning, and MongoDB Atlas for persistent
+            storage.
+        </p>
+
+        <p>
+            We also explored Streamlit features such as session state, chat interfaces, typing animations, cached
+            resources, and multi-page navigation, giving the application a more polished and interactive user
+            experience.
+        </p>
+
+        <h2>Assignment</h2>
+
+        <p>
+            No separate assignment was given during today's session. The entire class focused on building and improving
+            the Agentic AI Task Management application by integrating OpenAI Function Calling, MongoDB Atlas, and
+            Streamlit into a single working project.
+        </p>
+
+        <img src="../assets/images/day18-final-application.png" alt="Final Agentic AI Application"
+            class="activity-image">
+        <h2>Key Learning Outcomes</h2>
+
+        <ul>
+            <li>Learned the fundamentals of Regular Expressions (Regex) using Python's <code>re</code> module.</li>
+            <li>Understood how to use <code>re.search()</code>, <code>re.findall()</code>, and
+                <code>re.fullmatch()</code> for searching, extracting, and validating text.</li>
+            <li>Extracted structured information such as phone numbers, email addresses, vehicle numbers, and numeric
+                values from unstructured text.</li>
+            <li>Validated real-world inputs including Indian phone numbers, PAN card numbers, and vehicle registration
+                numbers using Regex.</li>
+            <li>Built a professional multi-page Streamlit application using Streamlit Navigation.</li>
+            <li>Created interactive dashboards using metrics, columns, charts, and dataframes.</li>
+            <li>Integrated OpenAI Function Calling with a Streamlit application to understand natural language commands.
+            </li>
+            <li>Connected the application with MongoDB Atlas through the reusable <code>DBHelper</code> class for
+                performing CRUD operations.</li>
+            <li>Learned how JSON tool schemas enable Large Language Models to invoke backend Python functions
+                automatically.</li>
+            <li>Developed a complete AI-powered Agentic Task Manager combining Streamlit, OpenAI, and MongoDB into a
+                single intelligent application.</li>
+        </ul>
+
+        <h2>Personal Reflection</h2>
+
+        <p>
+            Day 18 was one of the most practical sessions of the training because it combined several technologies that
+            I had been learning over the past few days into a complete AI application. The introduction to Regular
+            Expressions showed how complex text processing tasks such as validation and information extraction can be
+            performed using concise pattern matching techniques.
+        </p>
+
+        <p>
+            The most exciting part of the session was implementing OpenAI Function Calling. Instead of manually writing
+            conditional statements to identify user intent, the language model itself determined which backend function
+            should be executed and generated the required arguments automatically. This demonstrated how Large Language
+            Models can act as intelligent controllers for real-world software applications.
+        </p>
+
+        <p>
+            Building the multi-page Streamlit dashboard and integrating MongoDB Atlas further improved my understanding
+            of full-stack AI application development. By the end of the session, I had a much clearer understanding of
+            how frontend interfaces, databases, and AI models work together to create intelligent systems capable of
+            performing useful real-world tasks through natural language interactions.
+        </p>
+
+        <h2>Next Session</h2>
+
+        <p>
+            The next session will continue expanding our Agentic AI journey by introducing more advanced concepts and
+            enhancements that will make our AI applications increasingly intelligent, interactive, and production-ready.
+        </p>
+
+    </div>
+
+</body>
+
+</html>

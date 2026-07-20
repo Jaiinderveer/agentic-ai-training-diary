@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 14 - Building an Agentic Task Management Chat UI</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+    <div class="day-page">
+
+        <a href="../index.html" class="btn">
+            ← Back to Home
+        </a>
+
+        <h1>Day 14 – Building an Agentic Task Management Chat UI</h1>
+
+        <p><strong>Date:</strong> 14th July 2026</p>
+        <p><strong>Duration:</strong> 2 Hours</p>
+        <p><strong>Training Company:</strong> Auribises Technologies</p>
+        <p><strong>Trainer:</strong> Ishant Kumar</p>
+
+        <hr>
+
+        <h2>Session Overview</h2>
+
+        <p>
+            Day 14 focused on developing an interactive task management application using Streamlit. Instead of
+            traditional forms, we designed a conversational interface where users could create, view, update, and delete
+            tasks by typing simple commands inside a chat window. This session demonstrated how conversational
+            interfaces can simplify task management while integrating seamlessly with MongoDB.
+        </p>
+
+        <p>
+            The application combined Streamlit's chat components, MongoDB CRUD operations, session management, and
+            structured command parsing into a single project. This was also the first step toward developing an Agentic
+            AI application capable of understanding user instructions and performing actions automatically.
+        </p>
+
+        <h2>Designing the Agentic Chat Interface</h2>
+
+        <p>
+            The application began with Streamlit's chat interface, allowing users to communicate with the system using
+            natural language-like commands. Messages entered by the user were displayed inside a conversational layout,
+            while assistant responses appeared dynamically, creating a chatbot-style experience instead of a traditional
+            web form.
+        </p>
+
+        <p>
+            To improve performance, the database connection was initialized only once using Streamlit's
+            <code>@st.cache_resource</code> decorator. Session state was also used to preserve the conversation history
+            throughout the application's execution.
+        </p>
+
+        <img src="../assets/images/day14-chat-interface.png" alt="Agentic Chat Interface" class="activity-image">
+
+        <h2>Managing Conversation State</h2>
+
+        <p>
+            A key concept introduced during this session was <strong>Session State</strong>. Every user and assistant
+            message was stored inside <code>st.session_state</code>, ensuring that previous conversations remained
+            visible even after the application refreshed. This created a much more natural chat experience similar to
+            modern AI assistants.
+        </p>
+
+        <p>
+            The trainer also demonstrated how Streamlit's chat components could be combined with typing animations to
+            make assistant responses appear progressively, improving the overall user experience.
+        </p>
+
+        <img src="../assets/images/day14-session-state.png" alt="Streamlit Session State" class="activity-image">
+
+        <h2>Providing Built-in Task Guidance</h2>
+
+        <p>
+            To help users understand the supported commands, a dictionary of predefined task clues was created. Whenever
+            users asked how to create, update, delete, or list tasks, the assistant immediately responded with the
+            expected command format, making the interface easier to use without requiring separate documentation.
+        </p>
+
+        <img src="../assets/images/day14-task-clues.png" alt="Task Clues Dictionary" class="activity-image">
+        <h2>Creating Tasks through Chat Commands</h2>
+
+        <p>
+            The primary feature of the application was the ability to create tasks by simply typing structured commands
+            into the chat interface. The program parsed the user's input, extracted important details such as the task
+            title, description, action, contact person, and phone number, and then stored the information in MongoDB.
+        </p>
+
+        <p>
+            Each newly created task was automatically assigned a default status of <strong>PENDING</strong> along with
+            the current timestamp. This demonstrated how conversational commands could be converted into structured
+            database documents without requiring traditional input forms.
+        </p>
+
+        <img src="../assets/images/day14-create-task.png" alt="Creating Tasks from Chat Commands"
+            class="activity-image">
+
+        <h2>Viewing Stored Tasks</h2>
+
+        <p>
+            Users could retrieve every stored task by typing <code>list all tasks</code>. The application queried
+            MongoDB using the <strong>retrieve()</strong> method from the DBHelper class and formatted each document
+            into a readable response containing the task title, description, assigned action, contact information,
+            current status, and creation time.
+        </p>
+
+        <p>
+            This exercise demonstrated how backend data can be dynamically displayed inside a conversational interface
+            while maintaining a clean and organized presentation.
+        </p>
+
+        <img src="../assets/images/day14-list-tasks.png" alt="Displaying Stored Tasks" class="activity-image">
+
+        <h2>Updating and Deleting Tasks</h2>
+
+        <p>
+            The chat interface also supported updating and deleting tasks through simple text commands. For updates, the
+            application identified the target task using its title and replaced the stored information with the new
+            values provided by the user. Similarly, delete operations removed matching tasks from the database and
+            returned confirmation messages indicating whether the operation was successful.
+        </p>
+
+        <p>
+            By implementing all four CRUD operations inside a conversational interface, the application became a
+            complete task management system capable of handling the full lifecycle of task records.
+        </p>
+
+        <img src="../assets/images/day14-update-delete.png" alt="Updating and Deleting Tasks" class="activity-image">
+
+        <h2>Class Activity</h2>
+
+        <p>
+            The class activity involved building the complete Agentic Chat UI capable of understanding predefined task
+            commands and interacting directly with MongoDB. The application processed user messages, identified the
+            requested operation, performed the corresponding CRUD action, and generated conversational responses inside
+            the Streamlit interface.
+        </p>
+
+        <p>
+            An additional practice exercise focused on understanding how command parsing works. A sample input string
+            was divided into individual components using Python's string manipulation methods before converting the
+            extracted values into a structured task dictionary. This helped reinforce the concept of transforming
+            natural language-like input into machine-readable data.
+        </p>
+
+        <img src="../assets/images/day14-command-parsing.png" alt="Command Parsing Activity" class="activity-image">
+
+        <h2>Assignment</h2>
+
+        <p>
+            No separate assignment was given during this session. The primary objective was to complete the Agentic Task
+            Management Chat UI in class and ensure that all CRUD operations worked correctly through conversational
+            commands. The completed project served as the practical implementation for the day's learning objectives.
+        </p>
+        <h2>Key Learning Outcomes</h2>
+
+        <ul>
+            <li>Learned how to build an interactive chat-based application using Streamlit.</li>
+            <li>Understood the use of <code>st.chat_input()</code> and <code>st.chat_message()</code> for creating
+                conversational user interfaces.</li>
+            <li>Used <code>@st.cache_resource</code> to efficiently manage and reuse database connections.</li>
+            <li>Learned how to maintain conversation history using <code>st.session_state</code>.</li>
+            <li>Implemented a complete CRUD (Create, Read, Update, Delete) task management system backed by MongoDB.
+            </li>
+            <li>Practiced parsing structured text commands into individual data fields using Python string manipulation.
+            </li>
+            <li>Learned how to dynamically generate assistant responses with typing animations for a better user
+                experience.</li>
+            <li>Strengthened understanding of integrating frontend interfaces with backend database operations.</li>
+            <li>Gained insight into the fundamentals of building Agentic AI applications that interpret user
+                instructions and execute corresponding actions.</li>
+        </ul>
+
+        <h2>Personal Reflection</h2>
+
+        <p>
+            Day 14 was one of the most engaging sessions of the training because it shifted our focus from traditional
+            web forms to a conversational interface. Building a chat-based application using Streamlit made the project
+            feel much closer to modern AI assistants, where users interact through natural language instead of clicking
+            buttons and filling lengthy forms.
+        </p>
+
+        <p>
+            I particularly enjoyed implementing the complete task management workflow using MongoDB CRUD operations.
+            Seeing tasks being created, retrieved, updated, and deleted directly from chat commands demonstrated how
+            backend logic can be integrated with an intuitive user interface. Understanding session state also helped me
+            appreciate how chat applications preserve conversation history and deliver a seamless user experience.
+        </p>
+
+        <p>
+            Overall, this session strengthened my understanding of full-stack Python development and provided a strong
+            foundation for future Agentic AI projects. It was exciting to see how a few well-designed Python components
+            could work together to create an intelligent task management system capable of responding to user commands
+            in real time.
+        </p>
+
+        <h2>Next Session</h2>
+
+        <p>
+            The next session will build upon the Agentic Chat UI by introducing OpenAI integration, enabling the
+            application to understand natural language more intelligently and generate AI-powered responses. This will
+            move the project beyond rule-based command processing toward a true AI-assisted task management system.
+        </p>
+
+    </div>
+
+</body>
+
+</html>

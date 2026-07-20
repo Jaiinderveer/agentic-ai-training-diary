@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 13 - CRUD Operations & Streamlit User Registration</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+    <div class="day-page">
+
+        <a href="../index.html" class="btn">
+            ← Back to Home
+        </a>
+
+        <h1>Day 13 – CRUD Operations & Streamlit User Registration</h1>
+
+        <p><strong>Date:</strong> 13th July 2026</p>
+        <p><strong>Duration:</strong> 2 Hours</p>
+        <p><strong>Training Company:</strong> Auribises Technologies</p>
+        <p><strong>Trainer:</strong> Ishant Kumar</p>
+
+        <hr>
+
+        <h2>Session Overview</h2>
+
+        <p>
+            Day 13 focused on expanding our MongoDB knowledge by implementing complete CRUD (Create, Read, Update,
+            Delete) operations and introducing <strong>Streamlit</strong> for building interactive web applications.
+            Instead of interacting with the application through the terminal, we created a graphical user interface that
+            allowed users to register through a web form while storing their information directly in MongoDB.
+        </p>
+
+        <p>
+            The session combined database programming, Object-Oriented Programming, and frontend development using
+            Streamlit, giving us our first experience in developing a full-stack style Python application.
+        </p>
+
+        <h2>Implementing CRUD Operations in MongoDB</h2>
+
+        <p>
+            The first part of the session focused on extending the previously created <strong>DBHelper</strong> class by
+            implementing CRUD operations. In addition to inserting new documents, we learned how to retrieve documents
+            using search conditions, update existing records, and delete unwanted documents from a MongoDB collection.
+        </p>
+
+        <p>
+            These operations form the foundation of database-driven applications, enabling programs to manage
+            information efficiently throughout an application's lifecycle.
+        </p>
+
+        <img src="../assets/images/day13-dbhelper-crud.png" alt="CRUD Operations in DBHelper" class="activity-image">
+
+        <h2>Testing Database Operations</h2>
+
+        <p>
+            After implementing the CRUD methods, we created a separate program to test different database operations.
+            Using various search conditions, we experimented with retrieving user documents, updating existing
+            information, and deleting records from the MongoDB collection.
+        </p>
+
+        <p>
+            This practical exercise demonstrated how individual CRUD operations interact with MongoDB documents and
+            reinforced the importance of separating database logic from application code.
+        </p>
+
+        <img src="../assets/images/day13-crud-operations.png" alt="Testing CRUD Operations" class="activity-image">
+
+        <h2>Introduction to Streamlit</h2>
+
+        <p>
+            The second half of the session introduced <strong>Streamlit</strong>, a Python framework for building
+            interactive web applications with minimal code. Instead of creating console-based programs, we developed a
+            simple web interface that accepted user information through text fields and buttons.
+        </p>
+
+        <p>
+            The trainer explained how Streamlit automatically converts Python scripts into responsive web applications,
+            making it an excellent framework for rapidly developing dashboards, AI tools, and data-driven applications.
+        </p>
+
+        <img src="../assets/images/day13-streamlit-ui.png" alt="First Streamlit Application" class="activity-image">
+        <h2>Building a User Registration System</h2>
+
+        <p>
+            Using Streamlit, we developed a simple User Registration application that collected user information such as
+            name, phone number, email address, and password through an interactive web interface. After submitting the
+            form, the entered information was converted into a Python dictionary and stored directly inside a MongoDB
+            collection using the previously developed <strong>DBHelper</strong> class.
+        </p>
+
+        <p>
+            This activity demonstrated how frontend components and backend database operations can be connected
+            seamlessly, allowing users to interact with a web application while data is processed and stored in the
+            background.
+        </p>
+
+        <img src="../assets/images/day13-streamlit-ui.png" alt="Streamlit User Registration Application"
+            class="activity-image">
+
+        <h2>Class Activity</h2>
+
+        <p>
+            The primary class activity involved creating a basic registration page using Streamlit. The application
+            accepted user details through text input fields and, upon clicking the Register button, created a
+            <strong>User</strong> object, converted it into a dictionary, and inserted the document into MongoDB.
+        </p>
+
+        <p>
+            This exercise demonstrated how Object-Oriented Programming, database connectivity, and web interfaces can be
+            combined to build complete Python applications with minimal code.
+        </p>
+
+        <h2>Assignment</h2>
+
+        <p>
+            The assignment was to enhance the registration application by replacing individual input fields with a
+            proper <strong>Streamlit Form</strong>. Additional improvements included validating user input, displaying
+            appropriate success and error messages, and ensuring that invalid data could not be stored inside the
+            database.
+        </p>
+
+        <p>
+            The trainer also encouraged us to explore navigation after successful registration, helping us understand
+            how larger Streamlit applications can be organized into multiple pages.
+        </p>
+
+        <h2>Assignment Solution</h2>
+
+        <p>
+            For my implementation, I redesigned the registration page using <code>st.form()</code>, creating a cleaner
+            and more structured user interface. Before storing any information, the application validates each field by
+            checking for empty inputs, verifying the email format, and ensuring that passwords contain at least six
+            characters.
+        </p>
+
+        <p>
+            Only after successful validation is the user object created and saved into MongoDB. The application then
+            displays a confirmation message along with a personalized welcome message, while any database-related
+            exceptions are handled gracefully using error notifications.
+        </p>
+
+        <img src="../assets/images/day13-streamlit-form.png" alt="Improved Streamlit Form" class="activity-image">
+
+        <img src="../assets/images/day13-validation.png" alt="Input Validation in Streamlit" class="activity-image">
+
+        <img src="../assets/images/day13-success-message.png" alt="Successful User Registration" class="activity-image">
+        <h2>Key Learning Outcomes</h2>
+
+        <ul>
+            <li>Understood the complete CRUD (Create, Read, Update, Delete) operations available in MongoDB.</li>
+            <li>Extended the <strong>DBHelper</strong> class with reusable methods for retrieving, updating, and
+                deleting documents.</li>
+            <li>Learned how to query MongoDB collections using conditions and perform document modifications.</li>
+            <li>Built the first web application using the <strong>Streamlit</strong> framework.</li>
+            <li>Created an interactive User Registration interface using Streamlit input widgets.</li>
+            <li>Integrated the Streamlit frontend with a MongoDB backend to store user information.</li>
+            <li>Designed a cleaner registration workflow using <code>st.form()</code>.</li>
+            <li>Implemented client-side validation for empty fields, email format, and password length.</li>
+            <li>Learned how to provide user-friendly success and error messages within a web application.</li>
+            <li>Developed a better understanding of how frontend interfaces, backend logic, and databases work together
+                to create complete applications.</li>
+        </ul>
+
+        <h2>Personal Reflection</h2>
+
+        <p>
+            Day 13 was one of the most exciting sessions because it transformed our console-based Python programs into
+            interactive web applications using Streamlit. Seeing a Python script become a functional web interface with
+            only a few lines of code demonstrated how quickly user-friendly applications can be developed using modern
+            Python frameworks.
+        </p>
+
+        <p>
+            Another important learning experience was implementing complete CRUD operations in MongoDB. Understanding
+            how to retrieve, update, and delete documents completed the database workflow that began in the previous
+            session. This made the application much more practical and closer to how real-world software manages user
+            information.
+        </p>
+
+        <p>
+            The assignment was particularly rewarding because it encouraged us to improve the original implementation
+            rather than simply reproducing it. By replacing individual input fields with a proper Streamlit form, adding
+            input validation, and displaying meaningful success and error messages, I gained a better appreciation for
+            user experience and application reliability. Overall, this session marked an important step toward
+            developing complete database-driven web applications using Python.
+        </p>
+
+        <h2>Next Session</h2>
+
+        <p>
+            The next session will continue expanding our Streamlit application by improving database interactions,
+            building reusable backend components, and introducing more advanced features that will eventually lead to
+            developing an Agentic AI-powered application.
+        </p>
+
+    </div>
+
+</body>
+
+</html>

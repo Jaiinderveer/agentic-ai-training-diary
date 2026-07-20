@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 16 - Functional Programming & Python Design Patterns</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+    <div class="day-page">
+
+        <a href="../index.html" class="btn">
+            ← Back to Home
+        </a>
+
+        <h1>Day 16 – Functional Programming & Python Design Patterns</h1>
+
+        <p><strong>Date:</strong> 16th July 2026</p>
+        <p><strong>Duration:</strong> 2 Hours</p>
+        <p><strong>Training Company:</strong> Auribises Technologies</p>
+        <p><strong>Trainer:</strong> Ishant Kumar</p>
+
+        <hr>
+
+        <h2>Session Overview</h2>
+
+        <p>
+            Day 16 focused on several advanced Python concepts that are commonly used in modern software development,
+            data processing, and AI applications. We explored functional programming techniques using lambda functions
+            and higher-order functions, understood how iterators and generators produce data efficiently, and learned
+            two different applications of decorators. These concepts emphasized writing cleaner, reusable, and more
+            efficient Python code.
+        </p>
+
+        <p>
+            The session also demonstrated how Python supports powerful programming paradigms beyond object-oriented
+            programming, enabling developers to build modular, scalable, and maintainable applications.
+        </p>
+
+        <h2>Lambda Functions</h2>
+
+        <p>
+            The session began with an introduction to lambda functions, which provide a concise way to create anonymous
+            functions without defining them using the <code>def</code> keyword. We implemented simple examples for
+            calculating taxes, adding numbers, and computing the square of a value to understand how lambda expressions
+            simplify small reusable operations.
+        </p>
+
+        <p>
+            We also explored higher-order lambda functions by creating a discount generator that returned another
+            function capable of applying different discount percentages. This demonstrated how Python functions can be
+            passed around like variables and even returned from other functions.
+        </p>
+
+        <img src="../assets/images/day16-lambda-functions.png" alt="Lambda Functions" class="activity-image">
+
+        <h2>Functional Programming using Map, Filter and Reduce</h2>
+
+        <p>
+            The trainer introduced three important higher-order functions available in Python: <strong>map()</strong>,
+            <strong>filter()</strong>, and <strong>reduce()</strong>. These functions allow operations to be applied
+            across collections without writing explicit loops, resulting in shorter and more expressive code.
+        </p>
+
+        <p>
+            Through product pricing examples, we learned how <code>map()</code> transforms every element,
+            <code>filter()</code> selects elements that satisfy a condition, and <code>reduce()</code> combines multiple
+            values into a single result. These functions are widely used in data science, machine learning pipelines,
+            and backend development.
+        </p>
+
+        <img src="../assets/images/day16-map-filter-reduce.png" alt="Map Filter Reduce" class="activity-image">
+
+        <h2>Iterators and Generators</h2>
+
+        <p>
+            The next topic focused on Python iterators and generators. We learned how every iterable object internally
+            provides an iterator using the <code>iter()</code> function and how individual elements can be accessed
+            sequentially using <code>next()</code>.
+        </p>
+
+        <p>
+            The trainer then introduced generators using the <code>yield</code> keyword. Unlike regular functions,
+            generators produce values one at a time, making them memory efficient for processing large datasets or
+            continuous streams of information.
+        </p>
+
+        <img src="../assets/images/day16-generators.png" alt="Iterators and Generators" class="activity-image">
+        <h2>Understanding Function Decorators</h2>
+
+        <p>
+            The session introduced Python decorators as a technique for extending the behavior of existing functions
+            without modifying their original implementation. We created a logging decorator that printed messages before
+            and after the execution of a function, demonstrating how decorators can be used to add reusable
+            functionality such as logging, authentication, performance monitoring, and exception handling.
+        </p>
+
+        <p>
+            Using the <code>@decorator</code> syntax made the implementation simple and highlighted how Python supports
+            clean separation between business logic and additional application features.
+        </p>
+
+        <img src="../assets/images/day16-function-decorator.png" alt="Function Decorator" class="activity-image">
+
+        <h2>Decorator Design Pattern</h2>
+
+        <p>
+            We also explored the Decorator Design Pattern from Object-Oriented Programming. Instead of modifying an
+            existing object directly, a decorator class was used to extend the object's behavior. In the demonstration,
+            a basic burger object was wrapped inside a meal decorator that upgraded it into a complete meal by adding
+            fries and a soft drink while increasing its overall price.
+        </p>
+
+        <p>
+            This example illustrated how object behavior can be enhanced dynamically without changing the original class
+            implementation, making applications more modular and extensible.
+        </p>
+
+        <img src="../assets/images/day16-decorator-pattern.png" alt="Decorator Design Pattern" class="activity-image">
+
+        <h2>Class Activity</h2>
+
+        <p>
+            Throughout the session, we implemented several practical examples covering lambda functions, higher-order
+            functions, iterators, generators, and decorators. These activities demonstrated different programming
+            paradigms available in Python and showed how each technique contributes to writing cleaner, reusable, and
+            efficient code.
+        </p>
+
+        <p>
+            The exercises reinforced the importance of functional programming concepts, especially when processing
+            collections of data, creating reusable utilities, and optimizing memory usage through generators.
+        </p>
+
+        <h2>Assignment</h2>
+
+        <p>
+            The assignment required applying functional programming concepts to a collection of flight records
+            represented as a list of dictionaries. Using <code>map()</code>, each flight's ticket price was discounted
+            by 50%. The <code>filter()</code> function was then used to identify flights satisfying a specified duration
+            condition, while <code>reduce()</code> calculated the combined ticket price of all available flights.
+        </p>
+
+        <p>
+            This assignment demonstrated how higher-order functions can efficiently process structured datasets without
+            relying on traditional loops, making the implementation shorter, more readable, and easier to maintain.
+        </p>
+
+        <h2>Assignment Solution</h2>
+
+        <p>
+            I completed the assignment by applying lambda expressions together with <code>map()</code>,
+            <code>filter()</code>, and <code>reduce()</code> on a list of flight dictionaries. The solution generated a
+            discounted flight list while preserving the remaining flight information, filtered flights based on their
+            duration, and computed the total ticket price across all flights using reduction.
+        </p>
+
+        <p>
+            This exercise strengthened my understanding of functional programming techniques and demonstrated how these
+            concepts can be applied to real-world data structures instead of simple numerical examples.
+        </p>
+
+        <img src="../assets/images/day16-flight-assignment.png" alt="Flight Assignment Solution" class="activity-image">
+        <h2>Key Learning Outcomes</h2>
+
+        <ul>
+            <li>Learned how to create anonymous functions using Python lambda expressions.</li>
+            <li>Understood the concept of higher-order functions and functions returning other functions.</li>
+            <li>Applied <code>map()</code>, <code>filter()</code>, and <code>reduce()</code> to process collections
+                efficiently.</li>
+            <li>Explored iterators using <code>iter()</code> and <code>next()</code> for sequential data traversal.</li>
+            <li>Learned how generators use the <code>yield</code> keyword to produce values lazily and optimize memory
+                usage.</li>
+            <li>Implemented function decorators to add reusable functionality without modifying existing code.</li>
+            <li>Studied the Decorator Design Pattern to dynamically extend the behavior of objects.</li>
+            <li>Applied functional programming concepts to solve a real-world flight management assignment.</li>
+            <li>Strengthened understanding of writing modular, reusable, and maintainable Python programs.</li>
+            <li>Recognized how these advanced Python features are widely used in AI frameworks, backend development, and
+                data processing applications.</li>
+        </ul>
+
+        <h2>Personal Reflection</h2>
+
+        <p>
+            Day 16 introduced several advanced Python concepts that initially appeared independent but were closely
+            connected through the idea of writing cleaner and more reusable code. Learning lambda functions and
+            higher-order functions helped me understand how complex operations can often be expressed with concise and
+            readable code, especially when working with collections of data.
+        </p>
+
+        <p>
+            The concepts of iterators and generators were particularly interesting because they demonstrated how Python
+            can process data efficiently without loading everything into memory at once. I also enjoyed learning about
+            decorators, as they showed how additional functionality such as logging can be added to existing functions
+            without changing their original implementation. The Decorator Design Pattern further illustrated how
+            object-oriented programming supports extending object behavior while keeping the base classes unchanged.
+        </p>
+
+        <p>
+            The flight assignment provided an excellent opportunity to apply these concepts to structured data instead
+            of simple numerical examples. Overall, this session strengthened my understanding of Python's functional
+            programming capabilities and highlighted why these features are commonly used in production software, AI
+            applications, and data engineering workflows.
+        </p>
+
+        <h2>Next Session</h2>
+
+        <p>
+            The next session will continue expanding our Agentic AI development journey by introducing additional Python
+            and AI concepts that will further enhance the capabilities of our intelligent applications and prepare us
+            for building more sophisticated AI-powered systems.
+        </p>
+
+    </div>
+
+</body>
+
+</html>
