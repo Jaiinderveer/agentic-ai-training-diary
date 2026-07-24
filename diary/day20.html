@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 20 - Delegate AI: Project Foundation & Contact Management</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+    <div class="day-page">
+
+        <a href="../index.html" class="btn">← Back to Home</a>
+
+        <h1>Day 20 - Delegate AI: Project Foundation & Contact Management</h1>
+
+        <p><strong>Date:</strong> 22nd July 2026</p>
+        <p><strong>Duration:</strong> 2 Hours</p>
+        <p><strong>Training Company:</strong> Auribises Technologies</p>
+        <p><strong>Trainer:</strong> Mr. Ishant Kumar</p>
+
+        <hr>
+
+        <h2>Session Overview</h2>
+
+        <p>
+            Today marked the official beginning of our capstone project, <strong>Delegate AI</strong>. Unlike previous
+            sessions where individual concepts were explored separately, this project combines everything learned
+            throughout the training into a single intelligent application. The focus of today's session was setting up
+            the project architecture, organizing the source files, configuring the required services, establishing the
+            MongoDB database connection, and importing contact information that will later be used by the AI calling
+            system. A strong project foundation was created to support the advanced features that will be implemented in
+            the upcoming sessions.
+        </p>
+
+        <h2>Project Directory Setup</h2>
+
+        <p>
+            We started by creating the complete project directory for Delegate AI. Instead of writing the entire
+            application in a single file, the project was divided into multiple Python modules, each responsible for a
+            specific task. Separate files were created for application configuration, database connectivity, AI
+            processing, contact management, and future calling functionality. Organizing the project in this modular
+            manner makes the application easier to maintain, debug, and extend as new features are added.
+        </p>
+
+        <img src="../assets/images/day20-project-directory.png" class="activity-image">
+
+        <h2>Project Configuration</h2>
+
+        <p>
+            A centralized configuration file was created to manage all external services required by the application.
+            Environment variables were loaded securely using the <code>python-dotenv</code> package, allowing API keys
+            and database credentials to remain outside the source code. During this step, clients for OpenAI,
+            ElevenLabs, and MongoDB were initialized so they could be accessed throughout the project whenever needed.
+            This approach improves both security and code organization.
+        </p>
+
+        <img src="../assets/images/day20-config-file.png" class="activity-image">
+
+        <h2>Database Initialization</h2>
+
+        <p>
+            The next stage involved connecting the application to MongoDB Atlas. A reusable <code>DBHelper</code> class
+            was implemented to simplify interactions with the database. The helper class provides methods for selecting
+            collections, inserting documents, retrieving stored data, updating existing records, and deleting unwanted
+            documents. This abstraction allows the rest of the application to communicate with the database without
+            repeatedly writing MongoDB-specific code.
+        </p>
+
+        <img src="../assets/images/day20-database-helper.png" class="activity-image">
+
+        <h2>Contact Management</h2>
+
+        <p>
+            Before the AI assistant can place phone calls, it requires a list of contacts. A JSON file containing sample
+            contact information was created, and a utility function was developed to read the file and store all
+            contacts inside the MongoDB database. Using JSON for initial data population makes the system flexible, as
+            new contacts can easily be added or modified without changing the application's source code. This contact
+            collection will later be accessed whenever the AI agent needs to initiate an outbound call.
+        </p>
+
+        <img src="../assets/images/day20-contacts-import.png" class="activity-image">
+
+        <h2>Class Activity</h2>
+
+        <ul>
+            <li>Created the Delegate AI project directory and source files.</li>
+            <li>Installed all required Python dependencies for the project.</li>
+            <li>Configured OpenAI, ElevenLabs, and MongoDB using environment variables.</li>
+            <li>Implemented the reusable MongoDB helper class.</li>
+            <li>Imported contact information from a JSON file into MongoDB Atlas.</li>
+        </ul>
+
+        <h2>Assignment</h2>
+
+        <p>
+            Build the complete Delegate AI project foundation by creating the directory structure, configuring all
+            required services, connecting MongoDB Atlas, and successfully importing the contact list into the database.
+        </p>
+
+        <p style="text-align:center;">
+            <a href="https://github.com/Jaiinderveer/delegateai" class="btn" target="_blank">
+                View Project Source on GitHub
+            </a>
+        </p>
+
+        <h2>Key Learning Outcomes</h2>
+
+        <ul>
+            <li>Learned how to organize a real-world Python project using a modular architecture.</li>
+            <li>Understood the importance of separating configuration from application logic.</li>
+            <li>Configured external AI services securely using environment variables.</li>
+            <li>Strengthened understanding of MongoDB collections and reusable database helper classes.</li>
+            <li>Learned how JSON data can be imported into MongoDB for application initialization.</li>
+        </ul>
+
+        <h2>Personal Reflection</h2>
+
+        <p>
+            Today's session demonstrated that building an AI application involves much more than writing machine
+            learning code. Creating a well-organized project structure, configuring external services securely, and
+            designing reusable database components are equally important. By the end of the session, Delegate AI had a
+            solid technical foundation that would support the intelligent task management and AI calling features we
+            planned to develop in the following days.
+        </p>
+
+        <h2>Next Session</h2>
+
+        <p>
+            In the next session, we will begin developing the user interface for Delegate AI and implement an
+            AI-powered task manager using OpenAI Function Calling. The application will be capable of understanding
+            natural language instructions and performing task management operations through an interactive Streamlit
+            chat interface.
+        </p>
+
+    </div>
+
+</body>
+
+</html>

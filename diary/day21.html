@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 21 - Delegate AI: AI Task Manager Implementation</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+    <div class="day-page">
+
+        <a href="../index.html" class="btn">← Back to Home</a>
+
+        <h1>Day 21 - Delegate AI: AI Task Manager Implementation</h1>
+
+        <p><strong>Date:</strong> 23rd July 2026</p>
+        <p><strong>Duration:</strong> 2 Hours</p>
+        <p><strong>Training Company:</strong> Auribises Technologies</p>
+        <p><strong>Trainer:</strong> Mr. Ishant Kumar</p>
+
+        <hr>
+
+        <h2>Session Overview</h2>
+
+        <p>
+            After establishing the foundation of the Delegate AI project, today's session focused on developing its
+            first functional component—an intelligent task management system. Using Streamlit, we designed an
+            interactive chat-based interface through which users could describe tasks in natural language. OpenAI
+            Function Calling was then integrated to interpret user requests and automatically execute the appropriate
+            database operations such as creating, updating, listing, and deleting tasks. By the end of the session,
+            Delegate AI had evolved from a project structure into an AI-powered application capable of managing tasks
+            autonomously.
+        </p>
+
+        <h2>Building the Streamlit User Interface</h2>
+
+        <p>
+            The development began by creating the application's user interface using Streamlit. A clean chat-based
+            layout was implemented using <code>st.chat_input()</code> and <code>st.chat_message()</code>, allowing users
+            to interact with the AI assistant naturally instead of filling out traditional forms. Session state was also
+            introduced to preserve the conversation history throughout the user's interaction, creating a seamless chat
+            experience.
+        </p>
+
+        <img src="../assets/images/day21-chat-ui.png" class="activity-image">
+
+        <h2>Designing the Agentic Task Manager</h2>
+
+        <p>
+            The primary objective of today's implementation was to build an Agentic Task Manager capable of handling
+            task-related operations automatically. Backend functions were developed for saving new tasks, listing all
+            stored tasks, updating existing tasks, and deleting completed or unwanted tasks. Every task stored in
+            MongoDB contained details such as title, description, action type, contact name, creation timestamp, and
+            current status, allowing Delegate AI to maintain a structured workflow for future automation.
+        </p>
+
+        <img src="../assets/images/day21-agentic-manager.png" class="activity-image">
+
+        <h2>OpenAI Function Calling</h2>
+
+        <p>
+            A major highlight of the session was integrating OpenAI Function Calling into the application. Instead of
+            manually selecting which operation to perform, users could simply describe their intentions in natural
+            language. The language model analyzed each request, selected the most appropriate backend function, and
+            generated the required parameters automatically. Depending on the user's request, Delegate AI could save a
+            new task, update an existing one, retrieve all stored tasks, or remove tasks directly from the database.
+            This demonstrated how large language models can act as intelligent decision-making agents within software
+            applications.
+        </p>
+
+        <img src="../assets/images/day21-function-calling.png" class="activity-image">
+
+        <h2>Natural Language Task Management</h2>
+
+        <p>
+            By combining Streamlit, OpenAI, and MongoDB, the application became capable of understanding conversational
+            instructions such as creating reminders, modifying task details, displaying pending work, or deleting
+            unnecessary entries. The chatbot translated user requests into structured function calls, making task
+            management significantly more intuitive than traditional menu-driven interfaces. This marked the first stage
+            of Delegate AI where artificial intelligence actively controlled the application's business logic.
+        </p>
+
+        <img src="../assets/images/day21-task-demo.png" class="activity-image">
+
+        <h2>Class Activity</h2>
+
+        <ul>
+            <li>Developed the Delegate AI chat interface using Streamlit.</li>
+            <li>Implemented CRUD operations for task management.</li>
+            <li>Integrated OpenAI Function Calling into the application.</li>
+            <li>Connected the AI assistant with MongoDB Atlas.</li>
+            <li>Tested task creation, updating, deletion, and retrieval using natural language.</li>
+        </ul>
+
+        <h2>Assignment</h2>
+
+        <p>
+            Complete the Agentic Task Manager by integrating OpenAI Function Calling with MongoDB so that the AI
+            assistant can understand natural language requests and perform all CRUD operations without requiring manual
+            user input.
+        </p>
+
+        <p style="text-align:center;">
+            <a href="https://github.com/Jaiinderveer/delegateai" class="btn" target="_blank">
+                View Project Source on GitHub
+            </a>
+        </p>
+
+        <h2>Key Learning Outcomes</h2>
+
+        <ul>
+            <li>Learned how to build conversational user interfaces using Streamlit.</li>
+            <li>Understood the complete workflow of OpenAI Function Calling.</li>
+            <li>Implemented CRUD operations through AI-generated function calls.</li>
+            <li>Strengthened understanding of integrating OpenAI with MongoDB.</li>
+            <li>Experienced how natural language can be transformed into executable backend operations.</li>
+        </ul>
+
+        <h2>Personal Reflection</h2>
+
+        <p>
+            Today's session was one of the most exciting parts of the training because it demonstrated how artificial
+            intelligence can directly control software applications. Instead of relying on buttons and forms, the AI
+            assistant interpreted user requests and performed the required database operations automatically. Watching
+            Delegate AI manage tasks through simple conversations highlighted the practical power of LLMs and gave me a
+            deeper understanding of how modern AI assistants are built.
+        </p>
+
+        <h2>Next Session</h2>
+
+        <p>
+            In the next session, Delegate AI will be extended beyond task management by integrating an AI-powered caller
+            agent using ElevenLabs. The application will begin executing pending tasks through automated phone calls,
+            monitor conversation status, and retrieve complete call transcripts for users.
+        </p>
+
+    </div>
+
+</body>
+
+</html>

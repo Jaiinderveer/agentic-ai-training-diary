@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 22 - Delegate AI: AI Caller Agent & Conversation Tracking</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+    <div class="day-page">
+
+        <a href="../index.html" class="btn">← Back to Home</a>
+
+        <h1>Day 22 - Delegate AI: AI Caller Agent & Conversation Tracking</h1>
+
+        <p><strong>Date:</strong> 24th July 2026</p>
+        <p><strong>Duration:</strong> 2 Hours</p>
+        <p><strong>Training Company:</strong> Auribises Technologies</p>
+        <p><strong>Trainer:</strong> Mr. Ishant Kumar</p>
+
+        <hr>
+
+        <h2>Session Overview</h2>
+
+        <p>
+            Today's session completed the core workflow of the <strong>Delegate AI</strong> project by enabling the
+            application to execute tasks through AI-powered phone calls. After creating and managing tasks in the
+            previous sessions, we integrated ElevenLabs Conversational AI to automatically place outbound calls,
+            communicate with contacts, monitor conversation progress, and retrieve complete call transcripts. We also
+            developed a dashboard to track call status, making Delegate AI a complete intelligent task delegation
+            platform.
+        </p>
+
+        <h2>Developing the Caller Agent</h2>
+
+        <p>
+            The first major feature implemented today was the <strong>Caller Agent</strong>. Instead of requiring users
+            to manually contact people, Delegate AI now automatically searches for all pending call tasks stored in
+            MongoDB, identifies the corresponding contact, and initiates an outbound phone call using the ElevenLabs
+            Conversational AI API. Dynamic variables such as the contact name and task summary are passed to the voice
+            agent so every conversation is personalized according to the assigned task.
+        </p>
+
+        <img src="../assets/images/day22-caller-agent.png" class="activity-image">
+
+        <h2>Executing Pending Calls</h2>
+
+        <p>
+            A dedicated "Execute Calls" page was created within the Streamlit application to simplify call management.
+            The interface displays all available tasks along with their current status and provides a single button to
+            initiate every pending phone call. Once a call request is submitted successfully, the application stores the
+            generated conversation ID and updates the task status to <strong>CALLING</strong>, allowing future progress
+            to be monitored automatically.
+        </p>
+
+        <img src="../assets/images/day22-execute-calls.png" class="activity-image">
+
+        <h2>Conversation Status Monitoring</h2>
+
+        <p>
+            Since phone conversations execute asynchronously, a dashboard was developed to periodically check the status
+            of every active conversation. Using the stored conversation ID, Delegate AI communicates with the
+            ElevenLabs API to determine whether a conversation is still in progress or has been completed. Once the call
+            finishes successfully, the corresponding MongoDB task is automatically updated from
+            <strong>CALLING</strong> to <strong>COMPLETED</strong>, ensuring that task records always reflect the latest
+            execution status.
+        </p>
+
+        <img src="../assets/images/day22-dashboard-status.png" class="activity-image">
+
+        <h2>Conversation Transcript Retrieval</h2>
+
+        <p>
+            The final enhancement added the ability to retrieve complete AI conversation transcripts. For every
+            completed call, Delegate AI fetches the transcript from ElevenLabs and displays it inside Streamlit using
+            chat-style message components. This allows users to review exactly what the AI assistant discussed with each
+            contact, making the system transparent, easy to audit, and useful for verifying whether delegated tasks were
+            communicated correctly.
+        </p>
+
+        <img src="../assets/images/day22-transcript.png" class="activity-image">
+
+        <h2>Complete Delegate AI Workflow</h2>
+
+        <p>
+            By the end of today's session, Delegate AI supported the complete task delegation lifecycle. Users could
+            create tasks using natural language, store them in MongoDB, execute them through AI-powered phone calls,
+            monitor live conversation status, and review detailed transcripts after completion. This integrated workflow
+            demonstrated how multiple technologies—including Streamlit, OpenAI, MongoDB, and ElevenLabs—can work
+            together to build a practical real-world AI automation platform.
+        </p>
+
+        <img src="../assets/images/day22-complete-workflow.png" class="activity-image">
+
+        <h2>Class Activity</h2>
+
+        <ul>
+            <li>Implemented the Caller Agent for automated outbound phone calls.</li>
+            <li>Integrated ElevenLabs Conversational AI with Delegate AI.</li>
+            <li>Built the Execute Calls page for managing pending tasks.</li>
+            <li>Developed a dashboard to monitor conversation status.</li>
+            <li>Retrieved and displayed AI-generated conversation transcripts.</li>
+            <li>Tested the complete Delegate AI workflow from task creation to call completion.</li>
+        </ul>
+
+        <h2>Assignment</h2>
+
+        <p>
+            No separate assignment was provided. The session focused on completing the Delegate AI project by
+            integrating automated calling, conversation tracking, dashboard monitoring, and transcript visualization
+            into a fully functional application.
+        </p>
+
+        <p style="text-align:center;">
+            <a href="https://github.com/Jaiinderveer/delegateai" class="btn" target="_blank">
+                View Delegate AI Project on GitHub
+            </a>
+        </p>
+
+        <h2>Key Learning Outcomes</h2>
+
+        <ul>
+            <li>Learned how AI voice agents can automate outbound communication.</li>
+            <li>Integrated ElevenLabs Conversational AI into a production-style application.</li>
+            <li>Understood asynchronous task execution using conversation IDs.</li>
+            <li>Implemented automatic task status tracking through a dashboard.</li>
+            <li>Learned how AI-generated conversation transcripts can improve transparency and task verification.</li>
+            <li>Experienced the complete development cycle of an AI-powered automation platform.</li>
+        </ul>
+
+        <h2>Personal Reflection</h2>
+
+        <p>
+            Today's session was the culmination of everything learned throughout the training. It was rewarding to see
+            Delegate AI evolve from a simple project structure into a complete intelligent automation system capable of
+            understanding user requests, managing tasks, placing AI-powered phone calls, tracking live conversations,
+            and presenting detailed transcripts. Working on a project that combines multiple AI services with cloud
+            databases and modern web technologies provided valuable insight into how production-ready AI applications
+            are designed and implemented.
+        </p>
+
+        <h2>Training Reflection</h2>
+
+        <p>
+            Completing Delegate AI marked the successful conclusion of the Agentic AI with Python Summer Training. Over
+            the course of the program, I progressed from learning Python fundamentals and object-oriented programming to
+            developing a full-stack AI application that integrates OpenAI, MongoDB, Streamlit, and ElevenLabs. This
+            project not only strengthened my programming skills but also demonstrated how modern AI technologies can be
+            combined to solve real-world automation problems through intelligent software solutions.
+        </p>
+
+    </div>
+
+</body>
+
+</html>

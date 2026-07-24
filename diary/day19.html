@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 19 - Agentic AI with Python Summer Training</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+    <div class="day-page">
+
+        <a href="../index.html" class="btn">← Back to Home</a>
+
+        <h1>Day 19 - ElevenLabs Voice Agent Integration</h1>
+
+        <p><strong>Date:</strong> 21st July 2026</p>
+        <p><strong>Duration:</strong> 2 Hours</p>
+        <p><strong>Training Company:</strong> Auribises Technologies</p>
+        <p><strong>Trainer:</strong> Mr. Ishant Kumar</p>
+
+        <hr>
+
+        <h2>Session Overview</h2>
+
+        <p>
+            Today's session focused on making our Agentic AI application more interactive by integrating an AI-powered
+            voice assistant using ElevenLabs Conversational AI. We also organized the application into multiple
+            Streamlit pages, allowing users to navigate between the dashboard, AI chat, patient records, and the voice
+            assistant through a single interface.
+        </p>
+
+        <h2>Multi-Page Streamlit Application</h2>
+
+        <p>
+            The application was structured using Streamlit Navigation. Individual pages such as Home, AI Chat, Patients,
+            and Voice Agent were registered and combined into a single navigation menu, making the project easier to
+            maintain and extend.
+        </p>
+
+        <img src="../assets/images/day19-navigation.png" class="activity-image">
+
+        <h2>AI Task Management Module</h2>
+
+        <p>
+            The existing Agentic AI Chat was enhanced further by continuing the integration of OpenAI Function Calling
+            with MongoDB. The chatbot could understand natural language requests, identify the appropriate backend
+            function, and perform CRUD operations on stored tasks.
+        </p>
+        <img src="../assets/images/day19-agentic-chat.png" class="activity-image">
+        <h2>Voice Agent using ElevenLabs</h2>
+
+        <p>
+            The major highlight of today's session was embedding an ElevenLabs Conversational AI widget inside the
+            Streamlit application. Instead of typing commands, users could communicate with the AI assistant through
+            voice. The voice assistant was configured using an ElevenLabs Agent ID and embedded using HTML components
+            within Streamlit.
+        </p>
+
+        <img src="../assets/images/day19-elevenlabs-widget.png" class="activity-image">
+
+        <h2>Customer Support Assistant</h2>
+
+        <p>
+            A dedicated Customer Support page was created to guide users through the Task Delegation System. The
+            assistant can explain application features, help users create, update, delete, and view tasks, making the
+            system more user-friendly through conversational interaction.
+        </p>
+
+        <img src="../assets/images/day19-customer-support.png" class="activity-image">
+
+        <h2>Database Integration</h2>
+
+        <p>
+            The MongoDB <code>DBHelper</code> class continued to manage all database operations including inserting,
+            retrieving, updating, and deleting task documents. This reusable helper class simplified communication
+            between the Streamlit frontend and MongoDB Atlas.
+        </p>
+
+        <h2>Class Activity</h2>
+
+        <ul>
+            <li>Built a complete multi-page Streamlit application.</li>
+            <li>Integrated an ElevenLabs Conversational AI voice widget.</li>
+            <li>Connected the voice assistant with the Task Delegation application.</li>
+            <li>Tested navigation between Dashboard, AI Chat, Patients, and Voice Assistant pages.</li>
+        </ul>
+
+        <h2>Assignment</h2>
+
+        <p>
+            No separate assignment was given. The class focused on integrating the ElevenLabs Voice Agent into the
+            existing Agentic AI Task Management application and testing the complete workflow.
+        </p>
+
+        <h2>Key Learning Outcomes</h2>
+
+        <ul>
+            <li>Learned how to organize large Streamlit projects using multiple pages.</li>
+            <li>Understood how third-party AI widgets can be embedded using HTML components.</li>
+            <li>Integrated ElevenLabs Conversational AI into a Python application.</li>
+            <li>Improved understanding of combining OpenAI, MongoDB, Streamlit, and ElevenLabs into one intelligent
+                system.</li>
+            <li>Experienced how voice interfaces can enhance user interaction in AI-powered applications.</li>
+        </ul>
+
+        <h2>Personal Reflection</h2>
+
+        <p>
+            Today's session demonstrated how modern AI applications can move beyond text-based interactions. Integrating
+            ElevenLabs with Streamlit showed how conversational voice interfaces can be added to existing AI systems
+            with minimal code changes. Seeing the voice assistant work alongside OpenAI Function Calling and MongoDB
+            made the project feel much closer to a real-world AI product.
+        </p>
+
+        <h2>Project Milestone</h2>
+        
+        <p>
+            With the concepts covered over the previous sessions, our training shifted from learning individual technologies to
+            building a complete real-world project. Starting from the next session, we began developing <strong>Delegate
+                AI</strong>, an AI-powered task delegation system that combines OpenAI, MongoDB, Streamlit, Twilio, and
+            ElevenLabs into a single intelligent platform.
+        </p>
+        
+        <p>
+            Rather than working on isolated examples, every upcoming session would contribute directly to building and improving
+            Delegate AI by adding new features such as contact management, task scheduling, AI calling agents, voice
+            interactions, and automation workflows.
+        </p>
+        
+        <h2>Next Session</h2>
+        
+        <p>
+            The next session marks the beginning of the <strong>Delegate AI</strong> project, where we will start building the
+            project structure and progressively develop a production-style AI task delegation application using everything
+            learned throughout the training.
+        </p>
+
+    </div>
+
+</body>
+
+</html>
