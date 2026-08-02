@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 24 - Delegate AI: Flask APIs & Firebase Firestore</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+    <div class="day-page">
+
+        <a href="../index.html" class="btn">← Back to Home</a>
+
+        <h1>Day 24 - Delegate AI: Flask APIs & Firebase Firestore</h1>
+
+        <p><strong>Date:</strong> 29th July 2026</p>
+        <p><strong>Duration:</strong> 2 Hours</p>
+        <p><strong>Training Company:</strong> Auribises Technologies</p>
+        <p><strong>Trainer:</strong> Mr. Ishant Kumar</p>
+
+        <hr>
+
+        <h2>Session Overview</h2>
+
+        <p>
+            Today's session introduced backend web development using the Flask framework and explored Firebase
+            Firestore as an alternative cloud database. We learned how Flask applications expose routes that can return
+            HTML pages, plain text, and JSON responses, making them suitable for building REST APIs and dynamic web
+            applications. Alongside Flask, we connected Python with Google Firestore to perform cloud-based CRUD
+            operations and integrated a simple user registration system.
+        </p>
+
+        <h2>Introduction to Flask</h2>
+
+        <p>
+            We started by building our first Flask application and understanding how routing works. Multiple endpoints
+            were created to return HTML pages, plain text responses, dynamic URL parameters, query parameters, and JSON
+            data. The session demonstrated how Flask can be used to quickly develop lightweight backend services and web
+            APIs that communicate over HTTP.
+        </p>
+
+        <img src="../assets/images/day24-flask-routes.png" class="activity-image">
+
+        <h2>HTML Templates and Dynamic Pages</h2>
+
+        <p>
+            After learning basic routing, we explored Flask's template engine using
+            <code>render_template()</code>. Instead of embedding HTML directly inside Python code, separate HTML files
+            were placed inside the <code>templates</code> directory and rendered dynamically. Data such as usernames
+            could be passed from Flask to HTML templates, enabling the creation of personalized and reusable web pages.
+        </p>
+
+        <h2>Firebase Firestore</h2>
+
+        <p>
+            The session then shifted to Google Firebase Firestore, a cloud-based NoSQL database that stores information
+            in a hierarchical structure of collections and documents. We authenticated using a Firebase service account,
+            established a Firestore connection, and explored how cloud-hosted databases differ from MongoDB while still
+            supporting efficient document-based storage.
+        </p>
+
+        <img src="../assets/images/day24-firestore.png" class="activity-image">
+
+        <h2>Performing CRUD Operations</h2>
+
+        <p>
+            We implemented Create, Read, Update, and Delete (CRUD) operations on Firestore collections. Tasks were
+            inserted as documents, filtered using query conditions, updated through document IDs, and removed when no
+            longer required. These examples demonstrated how Firestore can be integrated into Python applications to
+            manage cloud-hosted data efficiently.
+        </p>
+
+        <h2>User Registration using Flask & Firestore</h2>
+
+        <p>
+            The final part of the session combined Flask with Firestore by developing a basic user registration system.
+            User details submitted through an HTML form were collected using HTTP POST requests and stored in a
+            Firestore
+            collection. After successful registration, the application redirected users to a welcome page, illustrating
+            how frontend forms communicate with backend services and cloud databases.
+        </p>
+
+        <img src="../assets/images/day24-user-registration.png" class="activity-image">
+
+        <h2>Class Activity</h2>
+
+        <ul>
+            <li>Created multiple Flask routes returning HTML, text, and JSON responses.</li>
+            <li>Implemented dynamic HTML rendering using Flask templates.</li>
+            <li>Connected Python applications with Firebase Firestore.</li>
+            <li>Performed CRUD operations on Firestore collections.</li>
+            <li>Built a simple user registration system integrated with Firestore.</li>
+        </ul>
+
+        <h2>Assignment</h2>
+
+        <p>
+            Extend the Flask application by implementing the remaining CRUD operations for user management and create
+            additional HTML templates to list, update, and delete records stored in Firestore.
+        </p>
+
+        <p style="text-align:center;">
+            <a href="https://github.com/Jaiinderveer/delegateai" class="btn" target="_blank">
+                View Delegate AI Project on GitHub
+            </a>
+        </p>
+
+        <h2>Key Learning Outcomes</h2>
+
+        <ul>
+            <li>Learned the fundamentals of backend web development using Flask.</li>
+            <li>Understood HTTP routing, URL parameters, query parameters, and JSON responses.</li>
+            <li>Implemented dynamic web pages using Flask templates.</li>
+            <li>Connected Python applications with Firebase Firestore.</li>
+            <li>Performed Create, Read, Update, and Delete operations on cloud-hosted databases.</li>
+            <li>Integrated HTML forms with Flask and Firestore for user registration.</li>
+        </ul>
+
+        <h2>Personal Reflection</h2>
+
+        <p>
+            Today's session broadened my understanding of backend development by introducing Flask and Firebase
+            Firestore. While previous sessions focused primarily on AI and MongoDB, this class demonstrated how web
+            applications receive requests, process user input, and store information in cloud-hosted databases. It also
+            highlighted the importance of separating frontend templates from backend logic to build clean and scalable
+            web applications.
+        </p>
+
+        <h2>Next Session</h2>
+
+        <p>
+            The next session will continue enhancing Delegate AI by introducing additional backend capabilities and
+            integrations that further strengthen the project's real-world functionality.
+        </p>
+
+    </div>
+
+</body>
+
+</html>

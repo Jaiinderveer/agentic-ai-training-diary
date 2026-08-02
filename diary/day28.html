@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 28 - Relay AI: React Frontend Development</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+    <div class="day-page">
+
+        <a href="../index.html" class="btn">← Back to Home</a>
+
+        <h1>Day 28 - Relay AI: React Frontend Development</h1>
+        
+        <p><strong>Training Company:</strong> Auribises Technologies</p>
+        <p><strong>Trainer:</strong> Mr. Ishant Kumar</p>
+
+        <hr>
+
+        <h2>Session Overview</h2>
+
+        <p>
+            After completing the backend architecture, today's development focused on building the frontend of
+            Relay AI using React. The objective was to replace the earlier Streamlit interface with a modern,
+            responsive web application capable of interacting seamlessly with the FastAPI backend. During this
+            session, reusable UI components were developed, application routing was implemented, global state
+            management was introduced using Zustand, and the frontend was connected to backend APIs to create a
+            complete full-stack experience.
+        </p>
+
+        <h2>Application Layout</h2>
+
+        <p>
+            The application's user interface was designed around a responsive layout consisting of a collapsible
+            sidebar, a dynamic top navigation bar, and a content area that renders different modules using React
+            Router. This structure provides smooth navigation while maintaining a consistent user experience across
+            the entire application.
+        </p>
+
+        <img src="../assets/images/day28-app-layout.png" class="activity-image">
+
+        <h2>Routing and Navigation</h2>
+
+        <p>
+            React Router was configured to organize Relay AI into multiple functional modules including the Agentic
+            Workspace, Live Monitor, Executive Analytics, and Contact Directory. Each section is rendered as an
+            independent page while sharing the same overall application layout, making the project modular and easy
+            to extend in future development.
+        </p>
+
+        <img src="../assets/images/day28-sidebar.png" class="activity-image">
+
+        <h2>State Management with Zustand</h2>
+
+        <p>
+            To efficiently manage application state, Zustand was introduced as the global state management library.
+            Separate stores were created for chat conversations, analytics, contact management, and live monitoring.
+            Persisting selected application data improved the user experience by maintaining important information
+            across page navigation and browser refreshes.
+        </p>
+
+        <img src="../assets/images/day28-zustand-store.png" class="activity-image">
+
+        <h2>API Integration</h2>
+
+        <p>
+            Axios-based service modules were implemented to communicate with the FastAPI backend. Instead of placing
+            HTTP requests directly inside React components, dedicated API service files were created for chat,
+            contacts, analytics, and live monitoring. This separation keeps the frontend clean while making backend
+            communication reusable throughout the application.
+        </p>
+
+        <img src="../assets/images/day28-api-service.png" class="activity-image">
+
+        <h2>User Interface Components</h2>
+
+        <p>
+            The interface was developed using reusable React components such as cards, buttons, status badges,
+            metric panels, chat bubbles, loading placeholders, and animated containers. Creating reusable UI
+            elements reduced duplicate code while maintaining a consistent design language across every page of
+            Relay AI.
+        </p>
+
+        <h2>Class Activity</h2>
+
+        <ul>
+            <li>Built the React application layout.</li>
+            <li>Implemented routing using React Router.</li>
+            <li>Developed reusable UI components.</li>
+            <li>Integrated Zustand for global state management.</li>
+            <li>Connected the frontend to FastAPI using Axios.</li>
+            <li>Created a responsive dashboard interface for Relay AI.</li>
+        </ul>
+
+        <h2>Assignment</h2>
+
+        <p>
+            Continue integrating backend APIs into each frontend module and complete the remaining functionality of
+            Relay AI.
+        </p>
+
+        <h2>Project Repository</h2>
+
+        <div style="display:flex;justify-content:center;gap:15px;flex-wrap:wrap;margin-top:20px;">
+
+            <a href="https://github.com/Jaiinderveer/relayai-frontend" class="btn" target="_blank">
+                Relay AI Frontend
+            </a>
+
+            <a href="https://github.com/Jaiinderveer/relayai-backend" class="btn" target="_blank">
+                Relay AI Backend
+            </a>
+
+        </div>
+
+        <h2>Key Learning Outcomes</h2>
+
+        <ul>
+            <li>Learned how to structure a scalable React application.</li>
+            <li>Implemented navigation using React Router.</li>
+            <li>Managed global application state using Zustand.</li>
+            <li>Integrated FastAPI endpoints using Axios services.</li>
+            <li>Built reusable UI components for a consistent interface.</li>
+            <li>Strengthened understanding of frontend architecture for full-stack applications.</li>
+        </ul>
+
+        <h2>Personal Reflection</h2>
+
+        <p>
+            Developing the frontend of Relay AI provided valuable experience in modern React development. Instead of
+            creating isolated pages, the application was designed around reusable components, centralized state
+            management, and modular API integration. This approach significantly improved maintainability and
+            demonstrated how professional frontend applications are organized in real-world software projects.
+        </p>
+
+        <h2>Next Session</h2>
+
+        <p>
+            The next session will focus on integrating the frontend and backend modules completely, implementing
+            advanced AI-powered features, and refining Relay AI into a production-ready intelligent automation
+            platform.
+        </p>
+
+    </div>
+
+</body>
+
+</html>

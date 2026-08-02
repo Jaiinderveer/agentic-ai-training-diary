@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 27 - Relay AI: FastAPI Backend Architecture</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+    <div class="day-page">
+
+        <a href="../index.html" class="btn">← Back to Home</a>
+
+        <h1>Day 27 - Relay AI: FastAPI Backend Architecture</h1>
+        
+        <p><strong>Training Company:</strong> Auribises Technologies</p>
+        <p><strong>Trainer:</strong> Mr. Ishant Kumar</p>
+
+        <hr>
+
+        <h2>Session Overview</h2>
+
+        <p>
+            Today's development focused on designing the backend architecture for Relay AI using FastAPI. Instead of
+            keeping all business logic inside a single application, the project was organized into multiple services,
+            routers, and utility modules following a clean and scalable architecture. The backend became responsible for
+            handling AI requests, managing contacts, executing phone calls, retrieving analytics, and communicating
+            with Firestore.
+        </p>
+
+        <h2>FastAPI Application Structure</h2>
+
+        <p>
+            The FastAPI application was initialized with modular routing. Separate API endpoints were created for
+            Agentic Chat, Contacts, Calls, and Analytics. This modular design improves maintainability by separating
+            business logic into dedicated files instead of placing everything inside one application.
+        </p>
+
+        <img src="../assets/images/day27-project-structure.png" class="activity-image">
+
+        <h2>Routing and API Design</h2>
+
+        <p>
+            Multiple REST API endpoints were implemented to handle different parts of the application. Chat requests,
+            contact management, analytics, and call monitoring each expose their own API routes, allowing the React
+            frontend to communicate with the backend through HTTP requests.
+        </p>
+
+        <img src="../assets/images/day27-api-routes.png" class="activity-image">
+
+        <h2>Firestore Integration</h2>
+
+        <p>
+            Relay AI migrated from MongoDB to Google Firestore. A dedicated database helper was implemented to abstract
+            CRUD operations so that different services can access Firestore without duplicating database logic. This
+            abstraction keeps the application organized while making future database changes easier.
+        </p>
+
+        <img src="../assets/images/day27-firestore-service.png" class="activity-image">
+
+        <h2>Background Automation</h2>
+
+        <p>
+            One of the key improvements introduced during today's development was the automation engine. Instead of
+            requiring manual execution, background services periodically monitor pending tasks, execute scheduled phone
+            calls, and synchronize conversation statuses automatically. This allows Relay AI to function as an
+            autonomous task execution platform.
+        </p>
+
+        <h2>Class Activity</h2>
+
+        <ul>
+            <li>Designed the FastAPI project architecture.</li>
+            <li>Implemented modular API routing.</li>
+            <li>Integrated Google Firestore.</li>
+            <li>Created reusable database helper functions.</li>
+            <li>Implemented background automation services.</li>
+            <li>Prepared the backend for React frontend integration.</li>
+        </ul>
+
+        <h2>Assignment</h2>
+
+        <p>
+            Continue implementing backend services and connect the FastAPI APIs with the React frontend in the
+            following development sessions.
+        </p>
+
+        <h2>Project Repository</h2>
+
+        <div style="display:flex;justify-content:center;gap:15px;flex-wrap:wrap;margin-top:20px;">
+
+            <a href="https://github.com/Jaiinderveer/relayai-backend" class="btn" target="_blank">
+                Relay AI Backend
+            </a>
+
+            <a href="https://github.com/Jaiinderveer/relayai-frontend" class="btn" target="_blank">
+                Relay AI Frontend
+            </a>
+
+        </div>
+
+        <h2>Key Learning Outcomes</h2>
+
+        <ul>
+            <li>Designed a modular FastAPI backend architecture.</li>
+            <li>Learned how REST APIs communicate with frontend applications.</li>
+            <li>Integrated Google Firestore into a production-oriented backend.</li>
+            <li>Built reusable service and routing layers.</li>
+            <li>Implemented background automation for task execution.</li>
+            <li>Improved code organization using a layered project structure.</li>
+        </ul>
+
+        <h2>Personal Reflection</h2>
+
+        <p>
+            Developing the Relay AI backend demonstrated the importance of software architecture. Compared to earlier
+            prototypes, separating routers, services, utilities, and database operations resulted in a much cleaner and
+            more scalable codebase. This session provided valuable experience in designing backend systems that resemble
+            professional production applications rather than small classroom projects.
+        </p>
+
+        <h2>Next Session</h2>
+
+        <p>
+            The next session will focus on developing the React frontend and connecting it with the FastAPI backend to
+            create a complete full-stack AI application.
+        </p>
+
+    </div>
+
+</body>
+
+</html>

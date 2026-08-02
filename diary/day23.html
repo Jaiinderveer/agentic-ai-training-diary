@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 23 - Delegate AI: Web Search APIs & Web Scraping</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+    <div class="day-page">
+
+        <a href="../index.html" class="btn">← Back to Home</a>
+
+        <h1>Day 23 - Delegate AI: Web Search APIs & Web Scraping</h1>
+
+        <p><strong>Date:</strong> 25th July 2026</p>
+        <p><strong>Duration:</strong> 2 Hours</p>
+        <p><strong>Training Company:</strong> Auribises Technologies</p>
+        <p><strong>Trainer:</strong> Mr. Ishant Kumar</p>
+
+        <hr>
+
+        <h2>Session Overview</h2>
+
+        <p>
+            Today's session expanded the capabilities of Delegate AI by introducing techniques for retrieving
+            information directly from the internet. Instead of relying solely on predefined databases, we explored how
+            Python applications can communicate with external web services through REST APIs and extract information
+            from websites using web scraping. These concepts enable AI agents to access real-time information and enrich
+            their responses with external data sources.
+        </p>
+
+        <h2>Using Search APIs</h2>
+
+        <p>
+            We began by integrating the Serper Search API using Python's <code>requests</code> library. The application
+            sends a search query to the API as a JSON payload and receives structured search results in JSON format.
+            After parsing the response, the program extracts the organic search results and displays the title and
+            snippet for each result. This demonstrated how external APIs can provide reliable access to web search
+            information without manually scraping search engine pages.
+        </p>
+
+        <img src="../assets/images/day23-serper-api.png" class="activity-image">
+
+        <h2>Introduction to Web Scraping</h2>
+
+        <p>
+            The second part of the session introduced web scraping using the <code>requests</code> library together
+            with <code>BeautifulSoup</code>. We fetched the HTML content of a sample website and parsed its structure
+            using BeautifulSoup's HTML parser. By locating HTML elements such as anchor tags, we extracted and displayed
+            their text content, demonstrating how useful information can be collected from web pages when an API is not
+            available.
+        </p>
+
+        <img src="../assets/images/day23-web-scraping.png" class="activity-image">
+
+        <h2>Class Activity</h2>
+
+        <ul>
+            <li>Connected to the Serper Search API using HTTP POST requests.</li>
+            <li>Sent search queries as JSON payloads.</li>
+            <li>Parsed JSON responses to extract search results.</li>
+            <li>Fetched HTML content from a website using the Requests library.</li>
+            <li>Used BeautifulSoup to parse HTML and extract anchor tag content.</li>
+        </ul>
+
+        <h2>Assignment</h2>
+
+        <p>
+            No separate assignment was provided. The session focused on understanding how external APIs and web
+            scraping techniques can be integrated into AI applications to retrieve information from the internet.
+        </p>
+
+        <p style="text-align:center;">
+            <a href="https://github.com/Jaiinderveer/delegateai" class="btn" target="_blank">
+                View Delegate AI Project on GitHub
+            </a>
+        </p>
+
+        <h2>Key Learning Outcomes</h2>
+
+        <ul>
+            <li>Learned how Python applications communicate with REST APIs using the Requests library.</li>
+            <li>Understood how JSON payloads and responses are exchanged between clients and APIs.</li>
+            <li>Parsed structured search results returned by the Serper Search API.</li>
+            <li>Learned the fundamentals of web scraping using BeautifulSoup.</li>
+            <li>Extracted information from HTML pages by locating specific HTML elements.</li>
+            <li>Understood the difference between consuming an API and scraping a website.</li>
+        </ul>
+
+        <h2>Personal Reflection</h2>
+
+        <p>
+            Today's session introduced an important capability for AI-powered applications: accessing external
+            information sources. Learning how to integrate search APIs and perform basic web scraping highlighted two
+            different approaches to retrieving online data. These techniques will be valuable for building more capable
+            AI agents that can gather information dynamically rather than relying only on locally stored knowledge.
+        </p>
+
+        <h2>Next Session</h2>
+
+        <p>
+            The next session will continue enhancing Delegate AI by introducing additional integrations and automation
+            techniques that further expand the capabilities of the project.
+        </p>
+
+    </div>
+
+</body>
+
+</html>  

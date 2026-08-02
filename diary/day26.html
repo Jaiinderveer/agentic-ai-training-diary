@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 26 - Relay AI: Project Foundation & Technology Migration</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+    <div class="day-page">
+
+        <a href="../index.html" class="btn">← Back to Home</a>
+
+        <h1>Day 26 - Relay AI: Project Foundation & Technology Migration</h1>
+        
+        <p><strong>Training Company:</strong> Auribises Technologies</p>
+        <p><strong>Trainer:</strong> Mr. Ishant Kumar</p>
+
+        <hr>
+
+        <h2>Session Overview</h2>
+
+        <p>
+            Today's session marked the beginning of the final capstone project, <strong>Relay AI</strong>. Instead of
+            continuing with the Streamlit-based Delegate AI application, we started developing a production-style AI
+            application using a modern technology stack consisting of React for the frontend, FastAPI for the backend,
+            and Google Firestore as the cloud database. The objective was to redesign the earlier project using
+            technologies commonly adopted in modern web development while preserving the intelligent task delegation
+            workflow developed during previous sessions.
+        </p>
+
+        <h2>From Delegate AI to Relay AI</h2>
+
+        <p>
+            Delegate AI served as the prototype for the new application. During today's session, the project structure
+            was redesigned to separate the frontend and backend into independent applications. This separation provides
+            better scalability, improves maintainability, and follows the architecture commonly used in production
+            systems where client-side interfaces communicate with backend APIs over HTTP.
+        </p>
+
+        <img src="../assets/images/day26-project-structure.png" class="activity-image">
+
+        <h2>FastAPI Backend Setup</h2>
+
+        <p>
+            The backend project was initialized using FastAPI. Compared to the earlier Streamlit implementation,
+            FastAPI provides a dedicated framework for building RESTful APIs with excellent performance, automatic API
+            documentation, asynchronous request handling, and clean routing mechanisms. The backend will become the core
+            service responsible for AI processing, task management, and communication with external services.
+        </p>
+
+        <img src="../assets/images/day26-fastapi.png" class="activity-image">
+
+        <h2>React Frontend Setup</h2>
+
+        <p>
+            Alongside the backend, a React application was created to provide a modern user interface. React's
+            component-based architecture enables reusable UI elements and efficient state management while interacting
+            with backend APIs. This migration replaces the earlier Streamlit interface and provides greater flexibility
+            for developing scalable web applications.
+        </p>
+
+        <img src="../assets/images/day26-react-setup.png" class="activity-image">
+
+        <h2>Migrating to Firestore</h2>
+
+        <p>
+            The project's database layer was migrated from MongoDB Atlas to Google Firestore. Firestore stores
+            information as collections and documents while providing real-time synchronization, cloud hosting, and easy
+            integration with Google Cloud services. This migration lays the foundation for developing a more scalable
+            and cloud-native version of Relay AI.
+        </p>
+
+        <img src="../assets/images/day26-firestore.png" class="activity-image">
+
+        <h2>Project Architecture</h2>
+
+        <p>
+            By the end of the session, the complete architecture of Relay AI had been planned. The React frontend will
+            communicate with the FastAPI backend through REST APIs, while the backend will interact with Firestore,
+            AI models, and additional external services. This layered architecture separates presentation, business
+            logic, and data management into independent components, making the application easier to maintain and
+            extend.
+        </p>
+
+        <h2>Class Activity</h2>
+
+        <ul>
+            <li>Created the Relay AI project structure.</li>
+            <li>Initialized the FastAPI backend.</li>
+            <li>Set up the React frontend project.</li>
+            <li>Migrated the database architecture from MongoDB to Firestore.</li>
+            <li>Designed the overall architecture of the Relay AI application.</li>
+        </ul>
+
+        <h2>Assignment</h2>
+
+        <p>
+            Complete the initial setup of the React frontend, FastAPI backend, and Firestore integration in preparation
+            for implementing the application's core functionality during the following sessions.
+        </p>
+
+        <h2>Project Repository</h2>
+        
+        <p>
+            Relay AI is developed as two independent repositories following a modern full-stack architecture:
+        </p>
+        
+        <div style="display:flex;justify-content:center;gap:15px;flex-wrap:wrap;margin-top:20px;">
+        
+            <a href="https://github.com/Jaiinderveer/relayai-frontend" class="btn" target="_blank">
+                Relay AI Frontend
+            </a>
+        
+            <a href="https://github.com/Jaiinderveer/relayai-backend" class="btn" target="_blank">
+                Relay AI Backend
+            </a>
+        
+        </div>
+
+        <h2>Key Learning Outcomes</h2>
+
+        <ul>
+            <li>Understood the architecture of modern full-stack web applications.</li>
+            <li>Learned why frontend and backend applications are developed separately.</li>
+            <li>Explored FastAPI as a high-performance backend framework.</li>
+            <li>Learned the fundamentals of React project initialization.</li>
+            <li>Understood the advantages of Firestore as a cloud-hosted NoSQL database.</li>
+            <li>Experienced the migration of an AI application to a production-oriented technology stack.</li>
+        </ul>
+
+        <h2>Personal Reflection</h2>
+
+        <p>
+            Today's session represented an important transition from building prototypes to developing production-style
+            software. Migrating Delegate AI into Relay AI demonstrated how the same application can be redesigned using
+            industry-standard technologies such as React, FastAPI, and Firestore. This architecture not only improves
+            scalability but also aligns more closely with the technologies used in professional software development.
+        </p>
+
+        <h2>Next Session</h2>
+
+        <p>
+            In the next session, the core functionality of Relay AI will begin to take shape as the frontend and
+            backend are connected and the application's business logic is progressively implemented.
+        </p>
+
+    </div>
+
+</body>
+
+</html>
